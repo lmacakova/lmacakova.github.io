@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "repos.html",
+    "href": "repos.html",
+    "title": "My GitHub Repositories",
+    "section": "",
+    "text": "Below is a live list of all my public GitHub repositories.\n\n\nLoading…"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mysite",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  }
+]

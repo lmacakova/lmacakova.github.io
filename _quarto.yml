@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Lucia Macakova"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: repos.qmd
+        text: GitHub Repositories
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+
