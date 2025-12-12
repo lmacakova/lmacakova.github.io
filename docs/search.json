@@ -2,9 +2,9 @@
   {
     "objectID": "repos.html",
     "href": "repos.html",
-    "title": "My GitHub Repositories",
+    "title": "My Portfolio",
     "section": "",
-    "text": "Below is a live list of all my public GitHub repositories.\n\n\nLoading…"
+    "text": "Featured work\n\n\n\n\n\nPandas notebooks\n\n\nAll .ipynb notebooks from pandas repo, with View + Run.\n\n\n\n\n\nAPI integrations (Python)\n\n\nAll .py files from api_integrations repo, with View + Run.\n\n\n\n\n\nLatest weather data\n\n\nNewest JSON from weather_data_pipeline/data/weather, shown as a table."
   },
   {
     "objectID": "about.html",
