@@ -3,17 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "Lucia Macakova"
+  title: "My Portfolio"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: repos.qmd
-        text: GitHub Repositories
+        text: Portfolio
+      - href: https://luciamacakova.pythonanywhere.com
+        text: Live App
 
-format:
-  html:
-    theme: cosmo
-    toc: true
 
 
