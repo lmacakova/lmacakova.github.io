@@ -10,8 +10,7 @@ website:
         text: Home
       - href: repos.qmd
         text: Portfolio
-      - href: https://luciamacakova.pythonanywhere.com
-        text: Live App
+      
 
 
 
