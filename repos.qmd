@@ -1,5 +1,5 @@
 ---
-title: "Lucia Macakova"
+title: ""
 ---
 
 ```{=html}
