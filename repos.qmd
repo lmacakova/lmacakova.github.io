@@ -18,7 +18,7 @@ title: "My Portfolio"
   code { font-size: .95em; }
 </style>
 
-<h2>Featured work</h2>
+<h2>Some Examples</h2>
 <div id="featured" class="grid"></div>
 
 <h2 style="margin-top:2rem;">Pandas notebooks</h2>
@@ -220,27 +220,37 @@ title: "My Portfolio"
     });
   }
 
-  // ---- Weather JSON (newest in folder) ----
   async function renderLatestWeatherJson() {
-    const meta = document.getElementById("weather-meta");
-    const tableMount = document.getElementById("weather-table");
+  const meta = document.getElementById("weather-meta");
+  const mount = document.getElementById("weather-table");
 
-    const folder = await ghJson("https://api.github.com/repos/lmacakova/weather_data_pipeline/contents/data/weather");
-    const jsonFiles = folder
-      .filter(x => x.type === "file" && x.name.toLowerCase().endsWith(".json"))
-      // heuristic: newest by filename (works well if you use timestamps in names)
-      .sort((a,b) => b.name.localeCompare(a.name));
+  //  get the latest commit touching the folder
+  const commits = await fetch(
+    "https://api.github.com/repos/lmacakova/weather_data_pipeline/commits?path=data/weather&per_page=1"
+  ).then(r => r.json());
 
-    if (!jsonFiles.length) {
-      meta.textContent = "No JSON files found in data/weather.";
-      return;
-    }
+  const sha = commits?.[0]?.sha;
+  if (!sha) return meta.textContent = "No data found.";
 
-    const newest = jsonFiles[0];
-    meta.innerHTML = `Showing: <code>${newest.name}</code> &nbsp;·&nbsp; <a href="${newest.html_url}" target="_blank" rel="noopener">source</a>`;
-    const data = await (await fetch(newest.download_url)).json();
-    renderTableFromJson(data, tableMount);
-  }
+  //  get files changed in that commit
+  const commit = await fetch(
+    `https://api.github.com/repos/lmacakova/weather_data_pipeline/commits/${sha}`
+  ).then(r => r.json());
+
+  const file = commit.files
+    .map(f => f.filename)
+    .find(f => f.startsWith("data/weather/") && f.endsWith(".json"));
+
+  if (!file) return meta.textContent = "No JSON in latest commit.";
+
+  meta.textContent = `Showing ${file.split("/").pop()}`;
+
+  const data = await fetch(
+    `https://raw.githubusercontent.com/lmacakova/weather_data_pipeline/main/${file}`
+  ).then(r => r.json());
+
+  renderTableFromJson(data, mount);
+}
 
   // ---- run everything ----
   (async function init() {
