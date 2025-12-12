@@ -3,11 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "My Portfolio"
+  title: "Lucia Macakova"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: About Me
       - href: repos.qmd
         text: Portfolio
       
