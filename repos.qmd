@@ -2,16 +2,14 @@
 title: ""
 ---
 
-## Notebooks (rendered on this website)
+## Projects 
 
-These notebooks are rendered by **Quarto** and hosted on this site.
+- [Rohlik project](notebooks/rohlik_project.html) - Prediction of sales
+- [Iris analysis](notebooks/iris_analysis.html) - Analysis of classical dataset
+- [Penguins](notebooks/penguins.html) - Analyses of penguins dataset
+- [Applied statistics – problems](notebooks/problems.html) - A bit of theory of statistics
 
-- [Rohlik project](notebooks/rohlik_project.html)
-- [Iris analysis](notebooks/iris_analysis.html)
-- [Penguins](notebooks/penguins.html)
-- [Applied statistics – problems](notebooks/problems.html)
-
-## Run Python files (JupyterLite)
+ Run Python files
 
 Run the Python scripts from **api_integrations** in the browser (no Binder).
 
