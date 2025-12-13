@@ -4,7 +4,35 @@
     "href": "repos.html",
     "title": "Lucia Macakova",
     "section": "",
-    "text": "Some Examples\n\n\n\n\n\nPandas notebooks\n\n\nAll .ipynb notebooks from pandas repo, with View + Run.\n\n\n\n\n\nAPI integrations (Python)\n\n\nAll .py files from api_integrations repo, with View + Run.\n\n\n\n\n\nLatest weather data\n\n\nNewest JSON from weather_data_pipeline/data/weather, shown as a table."
+    "text": "These notebooks are rendered by Quarto and hosted on this site.\n\nRohlik project\nIris analysis\nPenguins\nApplied statistics – problems"
+  },
+  {
+    "objectID": "repos.html#notebooks-rendered-on-this-website",
+    "href": "repos.html#notebooks-rendered-on-this-website",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "These notebooks are rendered by Quarto and hosted on this site.\n\nRohlik project\nIris analysis\nPenguins\nApplied statistics – problems"
+  },
+  {
+    "objectID": "repos.html#run-python-files-jupyterlite",
+    "href": "repos.html#run-python-files-jupyterlite",
+    "title": "Lucia Macakova",
+    "section": "Run Python files (JupyterLite)",
+    "text": "Run Python files (JupyterLite)\nRun the Python scripts from api_integrations in the browser (no Binder).\n\nOpen JupyterLite\nAPI Integrations folder"
+  },
+  {
+    "objectID": "repos.html#source-code-github",
+    "href": "repos.html#source-code-github",
+    "title": "Lucia Macakova",
+    "section": "Source code (GitHub)",
+    "text": "Source code (GitHub)\n\nrohlik_project\niris_project\npenguins_project\napplied_statistics\npandas\napi_integrations\nweather_data_pipeline"
+  },
+  {
+    "objectID": "repos.html#inventory-management-app",
+    "href": "repos.html#inventory-management-app",
+    "title": "Lucia Macakova",
+    "section": "Inventory Management App",
+    "text": "Inventory Management App\n\nluciamacakova.pythonanywhere.com"
   },
   {
     "objectID": "about.html",
