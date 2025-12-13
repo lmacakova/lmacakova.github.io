@@ -13,10 +13,6 @@ website:
         text: About Me
       - href: repos.qmd
         text: Portfolio
-      - href: lite/lab/
-        text: Run Python (JupyterLite)
-      - href: https://luciamacakova.pythonanywhere.com
-      
 
 
 
