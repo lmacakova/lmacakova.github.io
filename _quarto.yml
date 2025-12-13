@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "notebooks/*.ipynb"
 
 website:
   title: "Lucia Macakova"
@@ -10,6 +13,10 @@ website:
         text: About Me
       - href: repos.qmd
         text: Portfolio
+      - href: lite/lab/
+        text: Run Python (JupyterLite)
+      - href: https://luciamacakova.pythonanywhere.com
+        text: Inventory Management App
       
 
 
