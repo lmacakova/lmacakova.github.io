@@ -16,7 +16,6 @@ website:
       - href: lite/lab/
         text: Run Python (JupyterLite)
       - href: https://luciamacakova.pythonanywhere.com
-        text: Inventory Management App
       
 
 

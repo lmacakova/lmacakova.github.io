@@ -11,7 +11,7 @@ title: ""
 
  Run Python files
 
-Run the Python scripts from **api_integrations** in the browser
+Run the Python scripts from **api_integrations** in the browser.
 
 - [Open JupyterLite](lite/lab/)
 - [API Integrations folder](lite/lab/index.html?path=files/api_integrations)
