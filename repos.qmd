@@ -4,7 +4,7 @@ title: ""
 
 ## Projects 
 
-- [Rohlik project](notebooks/rohlik_project.html) - Prediction of sales
+- [Rohlik project](notebooks/project.html) - Prediction of sales
 - [Iris analysis](notebooks/iris_analysis.html) - Analysis of classical dataset
 - [Penguins](notebooks/penguins.html) - Analyses of penguins dataset
 - [Applied statistics – problems](notebooks/problems.html) - A bit of theory of statistics
