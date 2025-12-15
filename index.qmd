@@ -12,4 +12,4 @@ title: ""
 -  Inventory Management App - Simple web-based inventory management application built with Python\
     [luciamacakova.pythonanywhere.com](https://luciamacakova.pythonanywhere.com)
 
-- Automated data colection pipeline - [weather_data_pipeline](https://github.com/lmacakova/weather_data_pipeline) - Automated data colection pipeline
+- Automated data colection pipeline - [weather_data_pipeline](https://github.com/lmacakova/weather_data_pipeline)
