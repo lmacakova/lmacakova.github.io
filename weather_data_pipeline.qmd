@@ -1,0 +1,132 @@
+---
+title: "weather_data_pipeline"
+navbar: false
+---
+
+This page shows the **latest committed JSON file** from `weather_data_pipeline/data/weather` as a table.
+
+```{=html}
+<style>
+  .muted { color:#6b7280; }
+  .table-wrap { overflow:auto; border:1px solid #e5e7eb; border-radius:12px; margin-top:1rem; }
+  table { border-collapse: collapse; width:100%; font-size:.95rem; }
+  th, td { border-bottom: 1px solid #eee; padding: .5rem .6rem; text-align:left; vertical-align: top; }
+  th { position: sticky; top: 0; background: #fafafa; }
+  code { font-size:.95em; }
+</style>
+
+<div id="meta" class="muted">Loading latest weather data…</div>
+<div class="table-wrap" id="tbl"></div>
+
+<script>
+  const OWNER="lmacakova";
+  const REPO="weather_data_pipeline";
+  const DIR="data/weather";
+
+  async function gh(url) {
+    const r = await fetch(url, {headers: {"Accept":"application/vnd.github+json"}});
+    if (!r.ok) throw new Error(`GitHub API error ${r.status}`);
+    return r.json();
+  }
+
+  // flatten nested JSON for table display
+  function flatten(obj, prefix="") {
+    const out = {};
+    if (obj === null || obj === undefined) return out;
+    if (typeof obj !== "object") { out[prefix || "value"] = obj; return out; }
+    if (Array.isArray(obj)) {
+      obj.forEach((v,i) => Object.assign(out, flatten(v, `${prefix}[${i}]`)));
+      return out;
+    }
+    for (const [k,v] of Object.entries(obj)) {
+      const key = prefix ? `${prefix}.${k}` : k;
+      if (v && typeof v === "object") Object.assign(out, flatten(v, key));
+      else out[key] = v;
+    }
+    return out;
+  }
+
+  function renderTable(data, mount) {
+    // Array of objects => rows
+    if (Array.isArray(data) && data.length && typeof data[0] === "object") {
+      const rows = data.map(d => flatten(d));
+      const cols = Array.from(new Set(rows.flatMap(r => Object.keys(r))));
+      const table = document.createElement("table");
+
+      const thead = document.createElement("thead");
+      const trh = document.createElement("tr");
+      cols.forEach(c => { const th=document.createElement("th"); th.textContent=c; trh.appendChild(th); });
+      thead.appendChild(trh);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        cols.forEach(c => {
+          const td = document.createElement("td");
+          td.textContent = (r[c] ?? "").toString();
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      mount.innerHTML = "";
+      mount.appendChild(table);
+      return;
+    }
+
+    // Otherwise key/value table
+    const flat = flatten(data);
+    const table = document.createElement("table");
+    table.innerHTML = "<thead><tr><th>Field</th><th>Value</th></tr></thead>";
+    const tbody = document.createElement("tbody");
+    for (const [k,v] of Object.entries(flat)) {
+      const tr = document.createElement("tr");
+      const td1 = document.createElement("td"); td1.textContent = k;
+      const td2 = document.createElement("td"); td2.textContent = (v ?? "").toString();
+      tr.appendChild(td1); tr.appendChild(td2);
+      tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+    mount.innerHTML = "";
+    mount.appendChild(table);
+  }
+
+  (async function main(){
+    const meta = document.getElementById("meta");
+    const tbl  = document.getElementById("tbl");
+
+    try {
+      // 1) latest commit affecting the folder
+      const commits = await gh(`https://api.github.com/repos/${OWNER}/${REPO}/commits?path=${encodeURIComponent(DIR)}&per_page=1`);
+      const sha = commits?.[0]?.sha;
+      if (!sha) { meta.textContent = "No commits found for data/weather."; return; }
+
+      // 2) commit detail -> list of changed files
+      const detail = await gh(`https://api.github.com/repos/${OWNER}/${REPO}/commits/${sha}`);
+      const date = detail?.commit?.committer?.date || detail?.commit?.author?.date || "";
+      const files = (detail.files || []).map(f => f.filename);
+
+      // pick a JSON file changed in this latest commit
+      const jsonFile = files.find(f => f.startsWith(`${DIR}/`) && f.toLowerCase().endsWith(".json"));
+      if (!jsonFile) { meta.textContent = "Latest folder commit did not change a JSON file."; return; }
+
+      const branch = "main"; // change if your default branch differs
+      const rawUrl  = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${branch}/${jsonFile}`;
+      const htmlUrl = `https://github.com/${OWNER}/${REPO}/blob/${branch}/${jsonFile}`;
+
+      meta.innerHTML =
+        `Showing: <code>${jsonFile.split("/").pop()}</code>` +
+        (date ? ` &nbsp;·&nbsp; commit: <code>${date}</code>` : "") +
+        ` &nbsp;·&nbsp; <a href="${htmlUrl}" target="_blank" rel="noopener">view on GitHub</a>`;
+
+      const data = await fetch(rawUrl).then(r => r.json());
+      renderTable(data, tbl);
+
+    } catch (e) {
+      console.error(e);
+      meta.textContent = "Failed to load data (GitHub API rate limit or network error). Try refresh.";
+    }
+  })();
+</script>
+
