@@ -53,7 +53,7 @@
     "href": "weather_data_pipeline.html",
     "title": "weather_data_pipeline",
     "section": "",
-    "text": "This page shows the latest committed JSON file from weather_data_pipeline/data/weather as a table.\n\n\nLoading latest weather data…"
+    "text": "The latest committed JSON file from weather_data_pipeline/data/weather\n\n\nLoading latest weather data…"
   },
   {
     "objectID": "aboutme.html",
@@ -67,7 +67,7 @@
     "href": "index.html",
     "title": "Lucia Macakova",
     "section": "",
-    "text": "Data Analysis\n\nPrediction of sales - Rohlik project\nAnalysis of classical Iris dataset - Iris analysis\nAnalyses of penguins dataset - Penguins\nA bit of theory of statistics - Applied statistics – problems\n\nInventory Management App - Simple web-based inventory management application built with Python\nluciamacakova.pythonanywhere.com\nAutomated data colection pipeline - weather_data_pipeline"
+    "text": "Data Analysis\n\nPrediction of sales - Rohlik project\nAnalysis of classical Iris dataset - Iris analysis\nAnalyses of penguins dataset - Penguins\nA bit of theory of statistics - Applied statistics – Problems\n\nInventory Management App - Simple web-based inventory management application built with Python\nluciamacakova.pythonanywhere.com\nAutomated data colection pipeline - weather_data_pipeline"
   },
   {
     "objectID": "notebooks/iris_analysis.html",
