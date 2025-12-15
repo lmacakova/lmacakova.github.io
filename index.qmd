@@ -2,6 +2,14 @@
 title: ""
 ---
 
+- Data Analysis 
 
+    - Prediction of sales - [Rohlik project](notebooks/project.html)
+    - Analysis of classical Iris dataset - [Iris analysis](notebooks/iris_analysis.html)
+    - Analyses of penguins dataset - [Penguins](notebooks/penguins.html) 
+    - A bit of theory of statistics - [Applied statistics – problems](notebooks/problems.html)
 
+-  Inventory Management App - Simple web-based inventory management application built with Python\
+    [luciamacakova.pythonanywhere.com](https://luciamacakova.pythonanywhere.com)
 
+- Automated data colection pipeline - [weather_data_pipeline](https://github.com/lmacakova/weather_data_pipeline) - Automated data colection pipeline

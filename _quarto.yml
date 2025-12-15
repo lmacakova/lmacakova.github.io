@@ -10,9 +10,10 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: About Me
-      - href: repos.qmd
         text: Portfolio
+      - href: aboutme.qmd
+        text: About Me
+      
 
 
 
