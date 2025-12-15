@@ -53,21 +53,7 @@
     "href": "repos.html",
     "title": "Lucia Macakova",
     "section": "",
-    "text": "Rohlik project - Prediction of sales\nIris analysis - Analysis of classical dataset\nPenguins - Analyses of penguins dataset\nApplied statistics – problems - A bit of theory of statistics"
-  },
-  {
-    "objectID": "repos.html#projects",
-    "href": "repos.html#projects",
-    "title": "Lucia Macakova",
-    "section": "",
-    "text": "Rohlik project - Prediction of sales\nIris analysis - Analysis of classical dataset\nPenguins - Analyses of penguins dataset\nApplied statistics – problems - A bit of theory of statistics"
-  },
-  {
-    "objectID": "repos.html#inventory-management-app",
-    "href": "repos.html#inventory-management-app",
-    "title": "Lucia Macakova",
-    "section": "Inventory Management App",
-    "text": "Inventory Management App\n\nluciamacakova.pythonanywhere.com\n\nRun the Python scripts from api_integrations in the browser.\n\nOpen JupyterLite\nAPI Integrations folder\nweather_data_pipeline"
+    "text": "Projects\n\nRohlik project - Prediction of sales\nIris analysis - Analysis of classical dataset\nPenguins - Analyses of penguins dataset\nApplied statistics – problems - A bit of theory of statistics\n\nInventory Management App\nluciamacakova.pythonanywhere.com\nweather_data_pipeline"
   },
   {
     "objectID": "about.html",
@@ -75,6 +61,13 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "A Student of programme Higher Diploma in Science in Computing in Data Analytics\nAtlantic TEchnological University - Campus Galway\n\nEmail: G00439449@atu.ie"
   },
   {
     "objectID": "notebooks/iris_analysis.html",
