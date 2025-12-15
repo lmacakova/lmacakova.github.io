@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lucia Macakova</title>
+<title>weather_data_pipeline – Lucia Macakova</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,61 +72,162 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Lucia Macakova</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Portfolio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./aboutme.html"> 
-<span class="menu-text">About Me</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">weather_data_pipeline</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<ul>
-<li><p>Data Analysis</p>
-<ul>
-<li>Prediction of sales - <a href="notebooks/project.html">Rohlik project</a></li>
-<li>Analysis of classical Iris dataset - <a href="notebooks/iris_analysis.html">Iris analysis</a></li>
-<li>Analyses of penguins dataset - <a href="notebooks/penguins.html">Penguins</a></li>
-<li>A bit of theory of statistics - <a href="notebooks/problems.html">Applied statistics – problems</a></li>
-</ul></li>
-<li><p>Inventory Management App - Simple web-based inventory management application built with Python<br>
-<a href="https://luciamacakova.pythonanywhere.com">luciamacakova.pythonanywhere.com</a></p></li>
-<li><p>Automated data colection pipeline - <a href="weather_data_pipeline.html">weather_data_pipeline</a></p></li>
-</ul>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This page shows the <strong>latest committed JSON file</strong> from <code>weather_data_pipeline/data/weather</code> as a table.</p>
+<style>
+  .muted { color:#6b7280; }
+  .table-wrap { overflow:auto; border:1px solid #e5e7eb; border-radius:12px; margin-top:1rem; }
+  table { border-collapse: collapse; width:100%; font-size:.95rem; }
+  th, td { border-bottom: 1px solid #eee; padding: .5rem .6rem; text-align:left; vertical-align: top; }
+  th { position: sticky; top: 0; background: #fafafa; }
+  code { font-size:.95em; }
+</style>
+<div id="meta" class="muted">
+Loading latest weather data…
+</div>
+<div id="tbl" class="table-wrap">
+
+</div>
+<script>
+  const OWNER="lmacakova";
+  const REPO="weather_data_pipeline";
+  const DIR="data/weather";
+
+  async function gh(url) {
+    const r = await fetch(url, {headers: {"Accept":"application/vnd.github+json"}});
+    if (!r.ok) throw new Error(`GitHub API error ${r.status}`);
+    return r.json();
+  }
+
+  // flatten nested JSON for table display
+  function flatten(obj, prefix="") {
+    const out = {};
+    if (obj === null || obj === undefined) return out;
+    if (typeof obj !== "object") { out[prefix || "value"] = obj; return out; }
+    if (Array.isArray(obj)) {
+      obj.forEach((v,i) => Object.assign(out, flatten(v, `${prefix}[${i}]`)));
+      return out;
+    }
+    for (const [k,v] of Object.entries(obj)) {
+      const key = prefix ? `${prefix}.${k}` : k;
+      if (v && typeof v === "object") Object.assign(out, flatten(v, key));
+      else out[key] = v;
+    }
+    return out;
+  }
+
+  function renderTable(data, mount) {
+    // Array of objects => rows
+    if (Array.isArray(data) && data.length && typeof data[0] === "object") {
+      const rows = data.map(d => flatten(d));
+      const cols = Array.from(new Set(rows.flatMap(r => Object.keys(r))));
+      const table = document.createElement("table");
+
+      const thead = document.createElement("thead");
+      const trh = document.createElement("tr");
+      cols.forEach(c => { const th=document.createElement("th"); th.textContent=c; trh.appendChild(th); });
+      thead.appendChild(trh);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        cols.forEach(c => {
+          const td = document.createElement("td");
+          td.textContent = (r[c] ?? "").toString();
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      mount.innerHTML = "";
+      mount.appendChild(table);
+      return;
+    }
+
+    // Otherwise key/value table
+    const flat = flatten(data);
+    const table = document.createElement("table");
+    table.innerHTML = "<thead><tr><th>Field</th><th>Value</th></tr></thead>";
+    const tbody = document.createElement("tbody");
+    for (const [k,v] of Object.entries(flat)) {
+      const tr = document.createElement("tr");
+      const td1 = document.createElement("td"); td1.textContent = k;
+      const td2 = document.createElement("td"); td2.textContent = (v ?? "").toString();
+      tr.appendChild(td1); tr.appendChild(td2);
+      tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+    mount.innerHTML = "";
+    mount.appendChild(table);
+  }
+
+  (async function main(){
+    const meta = document.getElementById("meta");
+    const tbl  = document.getElementById("tbl");
+
+    try {
+      // 1) latest commit affecting the folder
+      const commits = await gh(`https://api.github.com/repos/${OWNER}/${REPO}/commits?path=${encodeURIComponent(DIR)}&per_page=1`);
+      const sha = commits?.[0]?.sha;
+      if (!sha) { meta.textContent = "No commits found for data/weather."; return; }
+
+      // 2) commit detail -> list of changed files
+      const detail = await gh(`https://api.github.com/repos/${OWNER}/${REPO}/commits/${sha}`);
+      const date = detail?.commit?.committer?.date || detail?.commit?.author?.date || "";
+      const files = (detail.files || []).map(f => f.filename);
+
+      // pick a JSON file changed in this latest commit
+      const jsonFile = files.find(f => f.startsWith(`${DIR}/`) && f.toLowerCase().endsWith(".json"));
+      if (!jsonFile) { meta.textContent = "Latest folder commit did not change a JSON file."; return; }
+
+      const branch = "main"; // change if your default branch differs
+      const rawUrl  = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${branch}/${jsonFile}`;
+      const htmlUrl = `https://github.com/${OWNER}/${REPO}/blob/${branch}/${jsonFile}`;
+
+      meta.innerHTML =
+        `Showing: <code>${jsonFile.split("/").pop()}</code>` +
+        (date ? ` &nbsp;·&nbsp; commit: <code>${date}</code>` : "") +
+        ` &nbsp;·&nbsp; <a href="${htmlUrl}" target="_blank" rel="noopener">view on GitHub</a>`;
+
+      const data = await fetch(rawUrl).then(r => r.json());
+      renderTable(data, tbl);
+
+    } catch (e) {
+      console.error(e);
+      meta.textContent = "Failed to load data (GitHub API rate limit or network error). Try refresh.";
+    }
+  })();
+</script>
 
 
 
