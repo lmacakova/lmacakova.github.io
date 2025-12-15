@@ -3,7 +3,7 @@ title: "weather_data_pipeline"
 navbar: false
 ---
 
-This page shows the **latest committed JSON file** from `weather_data_pipeline/data/weather` as a table.
+The **latest committed JSON file** from `weather_data_pipeline/data/weather`
 
 ```{=html}
 <style>

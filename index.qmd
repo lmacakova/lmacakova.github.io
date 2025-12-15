@@ -7,7 +7,7 @@ title: ""
     - Prediction of sales - [Rohlik project](notebooks/project.html)
     - Analysis of classical Iris dataset - [Iris analysis](notebooks/iris_analysis.html)
     - Analyses of penguins dataset - [Penguins](notebooks/penguins.html) 
-    - A bit of theory of statistics - [Applied statistics – problems](notebooks/problems.html)
+    - A bit of theory of statistics - [Applied statistics – Problems](notebooks/problems.html)
 
 -  Inventory Management App - Simple web-based inventory management application built with Python\
     [luciamacakova.pythonanywhere.com](https://luciamacakova.pythonanywhere.com)
