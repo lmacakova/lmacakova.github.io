@@ -2,8 +2,7 @@
 title: ""
 ---
 
-A Student of programme Higher Diploma in Science in Computing in Data Analytics\
-Atlantic TEchnological University - Campus Galway\
+Data Analytics student with a background in environmental science and international work experience. Building practical projects using Python, SQL, APIs, and web technologies.
 
 Email: G00439449@atu.ie
 
