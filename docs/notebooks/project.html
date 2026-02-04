@@ -1401,7 +1401,7 @@ memory usage: 1.1+ GB</code></pre>
 </section>
 <section id="average-sales-during-holidays-and-common-days" class="level4">
 <h4 class="anchored" data-anchor-id="average-sales-during-holidays-and-common-days">Average sales during holidays and common days</h4>
-<div id="cell-52" class="cell">
+<div id="cell-52" class="cell" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>avg_holiday_sales<span class="op">=</span>data.groupby([<span class="st">'date'</span>, <span class="st">'warehouse'</span>]).agg({<span class="st">'sales'</span>:<span class="st">'mean'</span>, <span class="st">'holiday'</span>:<span class="st">'first'</span>, <span class="st">'holiday_name'</span>:<span class="st">'first'</span>, <span class="st">'warehouse'</span>:<span class="st">'first'</span>})</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1643,7 +1643,7 @@ memory usage: 1.2+ GB</code></pre>
 <span id="cb57-24"><a href="#cb57-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb57-25"><a href="#cb57-25" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.199274 seconds.
+<pre><code>[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.249818 seconds.
 You can set `force_row_wise=true` to remove the overhead.
 And if memory is not enough, you can set `force_col_wise=true`.
 [LightGBM] [Info] Total Bins 3463
