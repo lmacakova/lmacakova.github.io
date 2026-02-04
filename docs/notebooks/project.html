@@ -169,9 +169,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>This project analyzes historical sales data across multiple European warehouses. The goal is to understand sales patterns over time and engineer meaningful features that can later be used for demand forecasting.</p>
 <section id="modules-import" class="level2">
 <h2 class="anchored" data-anchor-id="modules-import">Modules Import</h2>
-<div id="cell-3" class="cell" data-execution_count="10">
+<div id="cell-4" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -186,47 +187,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> lightgbm <span class="im">as</span> lgb</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> voila</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact, interactive, fixed, interact_manual</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact, interactive, fixed, interact_manual</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="loading-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="loading-datasets">Loading Datasets</h2>
-<div id="cell-5" class="cell" data-execution_count="11">
+<div id="cell-6" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>FILENAME<span class="op">=</span> <span class="st">"calendar.csv"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>DATADIR <span class="op">=</span> <span class="st">"../rohlik_project/csv/"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>calendar_df <span class="op">=</span> pd.read_csv(DATADIR <span class="op">+</span> FILENAME, header<span class="op">=</span><span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-6" class="cell" data-execution_count="12">
+<div id="cell-7" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>FILENAME<span class="op">=</span> <span class="st">"inventory.csv"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>DATADIR <span class="op">=</span> <span class="st">"../rohlik_project/csv/"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>inventory_df <span class="op">=</span> pd.read_csv(DATADIR <span class="op">+</span> FILENAME, header<span class="op">=</span><span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-7" class="cell" data-execution_count="13">
+<div id="cell-8" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>FILENAME<span class="op">=</span> <span class="st">"sales_test.csv"</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>DATADIR <span class="op">=</span> <span class="st">"../rohlik_project/csv/"</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sales_test_df <span class="op">=</span> pd.read_csv(DATADIR <span class="op">+</span> FILENAME, header<span class="op">=</span><span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-8" class="cell" data-execution_count="14">
+<div id="cell-9" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>FILENAME<span class="op">=</span> <span class="st">"sales_train.csv"</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>DATADIR <span class="op">=</span> <span class="st">"../rohlik_project/csv/"</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>sales_train_df <span class="op">=</span> pd.read_csv(DATADIR <span class="op">+</span> FILENAME, low_memory<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-9" class="cell" data-execution_count="15">
+<div id="cell-10" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>FILENAME<span class="op">=</span> <span class="st">"solution.csv"</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>DATADIR <span class="op">=</span> <span class="st">"../rohlik_project/csv/"</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>solution_df <span class="op">=</span> pd.read_csv(DATADIR <span class="op">+</span> FILENAME)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-10" class="cell" data-execution_count="16">
+<div id="cell-11" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>FILENAME<span class="op">=</span> <span class="st">"test_weights.csv"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>DATADIR <span class="op">=</span> <span class="st">"../rohlik_project/csv/"</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -237,9 +233,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="information-about-datasets">Information about datasets</h2>
 <section id="calendar_df" class="level5">
 <h5 class="anchored" data-anchor-id="calendar_df">calendar_df</h5>
-<div id="cell-13" class="cell" data-execution_count="17">
+<div id="cell-14" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>calendar_df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
 
@@ -313,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="cell-14" class="cell" data-execution_count="18">
+<div id="cell-15" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>calendar_df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -332,7 +328,7 @@ dtypes: int64(4), object(3)
 memory usage: 1.2+ MB</code></pre>
 </div>
 </div>
-<div id="cell-15" class="cell" data-execution_count="19">
+<div id="cell-16" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>display(calendar_df.date.<span class="bu">min</span>())</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>display(calendar_df.date.<span class="bu">max</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -346,9 +342,9 @@ memory usage: 1.2+ MB</code></pre>
 </section>
 <section id="inventory_df" class="level5">
 <h5 class="anchored" data-anchor-id="inventory_df">inventory_df</h5>
-<div id="cell-18" class="cell" data-execution_count="20">
+<div id="cell-19" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>inventory_df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 
 
@@ -428,7 +424,7 @@ memory usage: 1.2+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-19" class="cell" data-execution_count="21">
+<div id="cell-20" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>inventory_df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -451,9 +447,9 @@ memory usage: 339.6+ KB</code></pre>
 </section>
 <section id="sales_train_df" class="level4">
 <h4 class="anchored" data-anchor-id="sales_train_df">sales_train_df</h4>
-<div id="cell-21" class="cell" data-execution_count="22">
+<div id="cell-22" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sales_train_df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <div>
 
 
@@ -569,7 +565,7 @@ memory usage: 339.6+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-22" class="cell" data-execution_count="23">
+<div id="cell-23" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sales_train_df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -595,7 +591,7 @@ dtypes: float64(11), int64(1), object(2)
 memory usage: 112.0+ MB</code></pre>
 </div>
 </div>
-<div id="cell-23" class="cell" data-execution_count="24">
+<div id="cell-24" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>display(sales_train_df.date.<span class="bu">min</span>())</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>display(sales_train_df.date.<span class="bu">max</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -609,9 +605,9 @@ memory usage: 112.0+ MB</code></pre>
 </section>
 <section id="sales_test_df" class="level4">
 <h4 class="anchored" data-anchor-id="sales_test_df">sales_test_df</h4>
-<div id="cell-26" class="cell" data-execution_count="25">
+<div id="cell-27" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>sales_test_df.head(<span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
@@ -865,7 +861,7 @@ memory usage: 112.0+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-27" class="cell" data-execution_count="26">
+<div id="cell-28" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>sales_test_df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -889,7 +885,7 @@ dtypes: float64(9), int64(1), object(2)
 memory usage: 4.3+ MB</code></pre>
 </div>
 </div>
-<div id="cell-28" class="cell" data-execution_count="27">
+<div id="cell-29" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>display(sales_test_df.date.<span class="bu">min</span>())</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>display(sales_test_df.date.<span class="bu">max</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -902,9 +898,9 @@ memory usage: 4.3+ MB</code></pre>
 <p>The earliest and the latest date in the dataset.</p>
 <section id="solution_df" class="level5">
 <h5 class="anchored" data-anchor-id="solution_df">solution_df</h5>
-<div id="cell-31" class="cell" data-execution_count="28">
+<div id="cell-32" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>solution_df.head(<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <div>
 
 
@@ -948,7 +944,7 @@ memory usage: 4.3+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-32" class="cell" data-execution_count="29">
+<div id="cell-33" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>solution_df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -965,9 +961,9 @@ memory usage: 734.8+ KB</code></pre>
 </section>
 <section id="test_weight_df" class="level5">
 <h5 class="anchored" data-anchor-id="test_weight_df">test_weight_df</h5>
-<div id="cell-34" class="cell" data-execution_count="30">
+<div id="cell-35" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>test_weights_df.head(<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="30">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 
 
@@ -1011,7 +1007,7 @@ memory usage: 734.8+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-35" class="cell" data-execution_count="31">
+<div id="cell-36" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>test_weights_df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -1028,9 +1024,9 @@ memory usage: 84.3 KB</code></pre>
 </section>
 </section>
 </section>
-<section id="explanatory-data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="explanatory-data-analysis">Explanatory Data Analysis</h2>
-<div id="cell-37" class="cell" data-execution_count="32">
+<section id="exploratory-data-analysis-eda" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h2>
+<div id="cell-38" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merging</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> sales_train_df.merge(calendar_df, on<span class="op">=</span><span class="st">'date'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>display(data.info())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1067,7 +1063,7 @@ memory usage: 1.1+ GB</code></pre>
 <pre><code>None</code></pre>
 </div>
 </div>
-<div id="cell-38" class="cell" data-execution_count="33">
+<div id="cell-39" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dropping redundant column</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span>data.drop(columns<span class="op">=</span>[<span class="st">'warehouse_y'</span>])</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span>data.rename(columns<span class="op">=</span>{<span class="st">'warehouse_x'</span>:<span class="st">'warehouse'</span>})</span>
@@ -1104,7 +1100,7 @@ memory usage: 1.1+ GB</code></pre>
 <pre><code>None</code></pre>
 </div>
 </div>
-<div id="cell-39" class="cell" data-execution_count="34">
+<div id="cell-40" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data Cleaning and Feature Engineering</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert 'date' column to datetime</span></span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(data[<span class="st">'date'</span>])</span>
@@ -1130,9 +1126,9 @@ memory usage: 1.1+ GB</code></pre>
 <span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Set date as index of dataframe</span></span>
 <span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a><span class="co"># data.set_index('date', inplace=True)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<section id="summary-daily-sales" class="level4">
-<h4 class="anchored" data-anchor-id="summary-daily-sales">Summary daily sales</h4>
-<div id="cell-41" class="cell" data-execution_count="35">
+<section id="daily-sales" class="level4">
+<h4 class="anchored" data-anchor-id="daily-sales">Daily Sales</h4>
+<div id="cell-42" class="cell" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Group by date and warehouse, sum sales, reset index right away</span></span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> (data.groupby([<span class="st">"date"</span>, <span class="st">"warehouse"</span>], as_index<span class="op">=</span><span class="va">False</span>).agg(sales<span class="op">=</span>(<span class="st">"sales"</span>, <span class="st">"sum"</span>)).sort_values([<span class="st">"warehouse"</span>, <span class="st">"date"</span>])</span>
@@ -1213,9 +1209,9 @@ memory usage: 1.1+ GB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-42" class="cell" data-execution_count="36">
+<div id="cell-43" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>ds.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="36">
+<div class="cell-output cell-output-display" data-execution_count="27">
 <div>
 
 
@@ -1269,7 +1265,7 @@ memory usage: 1.1+ GB</code></pre>
 </section>
 <section id="average-sales-during-weekdays" class="level4">
 <h4 class="anchored" data-anchor-id="average-sales-during-weekdays">Average sales during weekdays</h4>
-<div id="cell-45" class="cell" data-execution_count="37">
+<div id="cell-46" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>week_average<span class="op">=</span>data.groupby([<span class="st">'date'</span>, <span class="st">'warehouse'</span>]).agg({<span class="st">'sales'</span>:<span class="st">'mean'</span>, <span class="st">'day_of_week'</span>:<span class="st">'first'</span>, <span class="st">'warehouse'</span>:<span class="st">'first'</span>})</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> wh <span class="kw">in</span> warehouses:</span>
@@ -1337,7 +1333,7 @@ memory usage: 1.1+ GB</code></pre>
 </section>
 <section id="average-monthly-sales" class="level4">
 <h4 class="anchored" data-anchor-id="average-monthly-sales">Average monthly sales</h4>
-<div id="cell-48" class="cell" data-execution_count="38">
+<div id="cell-49" class="cell" data-execution_count="29">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>monthly_average<span class="op">=</span>data.groupby([<span class="st">'date'</span>, <span class="st">'warehouse'</span>]).agg({<span class="st">'sales'</span>:<span class="st">'mean'</span>, <span class="st">'month'</span>:<span class="st">'first'</span>, <span class="st">'warehouse'</span>:<span class="st">'first'</span>})</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> wh <span class="kw">in</span> warehouses:</span>
@@ -1405,14 +1401,14 @@ memory usage: 1.1+ GB</code></pre>
 </section>
 <section id="average-sales-during-holidays-and-common-days" class="level4">
 <h4 class="anchored" data-anchor-id="average-sales-during-holidays-and-common-days">Average sales during holidays and common days</h4>
-<div id="cell-51" class="cell" data-execution_count="39">
+<div id="cell-52" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>avg_holiday_sales<span class="op">=</span>data.groupby([<span class="st">'date'</span>, <span class="st">'warehouse'</span>]).agg({<span class="st">'sales'</span>:<span class="st">'mean'</span>, <span class="st">'holiday'</span>:<span class="st">'first'</span>, <span class="st">'holiday_name'</span>:<span class="st">'first'</span>, <span class="st">'warehouse'</span>:<span class="st">'first'</span>})</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>))</span>
 <span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">'warehouse'</span>, y<span class="op">=</span><span class="st">'sales'</span>, hue<span class="op">=</span><span class="st">'holiday'</span>, data<span class="op">=</span>avg_holiday_sales, palette<span class="op">=</span><span class="st">'magma'</span>)</span>
 <span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="ss">f"</span><span class="sc">{</span>wh<span class="sc">}</span><span class="ss"> — Average Sales: Holiday vs Non-Holiday"</span>, fontsize<span class="op">=</span><span class="dv">16</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Average Sales: Holiday vs Non-Holiday"</span>, fontsize<span class="op">=</span><span class="dv">16</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
 <span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Holiday"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
 <span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Average Sales"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
 <span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1430,7 +1426,7 @@ memory usage: 1.1+ GB</code></pre>
 <h2 class="anchored" data-anchor-id="prediction">Prediction</h2>
 <section id="data-preparation" class="level4">
 <h4 class="anchored" data-anchor-id="data-preparation">Data preparation</h4>
-<div id="cell-54" class="cell" data-execution_count="40">
+<div id="cell-55" class="cell" data-execution_count="31">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sort first</span></span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.sort_values([<span class="st">'date'</span>, <span class="st">'unique_id'</span>])</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1450,7 +1446,7 @@ memory usage: 1.1+ GB</code></pre>
 <span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="co"># simple momentum signals (optional)</span></span>
 <span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"sales_mom_1_7"</span>] <span class="op">=</span> data[<span class="st">"sales_lag_1"</span>] <span class="op">-</span> data[<span class="st">"sales_lag_7"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-55" class="cell" data-execution_count="41">
+<div id="cell-56" class="cell" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>data.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -1497,10 +1493,10 @@ dtypes: datetime64[ns](1), float64(22), int32(1), int64(7), object(4)
 memory usage: 1.9+ GB</code></pre>
 </div>
 </div>
-<div id="cell-56" class="cell" data-execution_count="42">
+<div id="cell-57" class="cell" data-execution_count="33">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.dropna()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-57" class="cell" data-execution_count="43">
+<div id="cell-58" class="cell" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> <span class="dv">14</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>frames <span class="op">=</span> []</span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> h <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, H<span class="op">+</span><span class="dv">1</span>):</span>
@@ -1512,7 +1508,7 @@ memory usage: 1.9+ GB</code></pre>
 <span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>mh <span class="op">=</span> pd.concat(frames, ignore_index<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>mh <span class="op">=</span> mh.dropna(subset<span class="op">=</span>[<span class="st">"target_h"</span>]).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-58" class="cell" data-execution_count="44">
+<div id="cell-59" class="cell" data-execution_count="35">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Using weights:</span></span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>wts <span class="op">=</span> pd.read_csv(<span class="st">"../rohlik_project/csv/test_weights.csv"</span>)  <span class="co"># unique_id, weight</span></span>
@@ -1523,7 +1519,7 @@ memory usage: 1.9+ GB</code></pre>
 <span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.<span class="bu">sum</span>(np.<span class="bu">abs</span>(y_true <span class="op">-</span> y_pred)) <span class="op">/</span> (np.<span class="bu">sum</span>(np.<span class="bu">abs</span>(y_true)) <span class="op">+</span> eps)</span>
 <span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(w <span class="op">*</span> np.<span class="bu">abs</span>(y_true <span class="op">-</span> y_pred)) <span class="op">/</span> (np.<span class="bu">sum</span>(w <span class="op">*</span> np.<span class="bu">abs</span>(y_true)) <span class="op">+</span> eps)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-59" class="cell" data-execution_count="45">
+<div id="cell-60" class="cell" data-execution_count="36">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>mh.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -1573,7 +1569,7 @@ dtypes: datetime64[ns](1), float64(24), int32(1), int64(8), object(4)
 memory usage: 1.2+ GB</code></pre>
 </div>
 </div>
-<div id="cell-60" class="cell" data-execution_count="46">
+<div id="cell-61" class="cell" data-execution_count="37">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>mh <span class="op">=</span> mh.copy()</span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Columns to label-encode</span></span>
@@ -1587,7 +1583,7 @@ memory usage: 1.2+ GB</code></pre>
 </section>
 <section id="model-and-prediction" class="level3">
 <h3 class="anchored" data-anchor-id="model-and-prediction">Model and prediction</h3>
-<div id="cell-62" class="cell" data-execution_count="47">
+<div id="cell-63" class="cell" data-execution_count="38">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># feature columns: keep engineered stuff + calendar flags; drop IDs/date/targets</span></span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>drop_cols <span class="op">=</span> {<span class="st">"sales"</span>,<span class="st">"target_h"</span>,<span class="st">"date"</span>}  <span class="co"># drop raw sales &amp; date</span></span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>id_cols <span class="op">=</span> {<span class="st">"unique_id"</span>,<span class="st">"warehouse"</span>}</span>
@@ -1620,7 +1616,7 @@ memory usage: 1.2+ GB</code></pre>
 <span id="cb56-30"><a href="#cb56-30" aria-hidden="true" tabindex="-1"></a>w_tr <span class="op">=</span> w[train_idx] <span class="cf">if</span> w <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> <span class="va">None</span></span>
 <span id="cb56-31"><a href="#cb56-31" aria-hidden="true" tabindex="-1"></a>w_va <span class="op">=</span> w[valid_idx] <span class="cf">if</span> w <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-63" class="cell" data-execution_count="48">
+<div id="cell-64" class="cell" data-execution_count="39">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> lgb.LGBMRegressor(</span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    objective<span class="op">=</span><span class="st">"tweedie"</span>,</span>
 <span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    tweedie_variance_power<span class="op">=</span><span class="fl">1.4</span>,  </span>
@@ -1647,7 +1643,7 @@ memory usage: 1.2+ GB</code></pre>
 <span id="cb57-24"><a href="#cb57-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb57-25"><a href="#cb57-25" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.237982 seconds.
+<pre><code>[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.199274 seconds.
 You can set `force_row_wise=true` to remove the overhead.
 And if memory is not enough, you can set `force_col_wise=true`.
 [LightGBM] [Info] Total Bins 3463
@@ -1664,10 +1660,10 @@ MAE  : 33.10275893556487
 WMAPE: 0.3124203275922004</code></pre>
 </div>
 </div>
-<div id="cell-64" class="cell" data-execution_count="49">
+<div id="cell-65" class="cell" data-execution_count="40">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> mh.copy()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-65" class="cell" data-execution_count="50">
+<div id="cell-66" class="cell" data-execution_count="41">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># weekday averages with sensible fallbacks → solution.csv </span></span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co"># copies &amp; types</span></span>
@@ -1737,8 +1733,12 @@ WMAPE: 0.3124203275922004</code></pre>
 <pre><code> Saved solution.csv with 47021 rows.</code></pre>
 </div>
 </div>
-<hr>
 </section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In this notebook, I cleaned and enriched the sales dataset with calendar-based features and explored sales patterns across warehouses. Then, I created model for the predicting of sales and saved the results into solution.csv.</p>
+<hr>
 <section id="end" class="level3">
 <h3 class="anchored" data-anchor-id="end">End</h3>
 
