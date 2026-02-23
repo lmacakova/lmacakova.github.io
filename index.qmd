@@ -4,7 +4,7 @@ title: ""
 
 - Data Analysis 
 
-    - Prediction of sales - [Rohlik project](notebooks/project.html)
+    - Prediction of sales - [Rohlik project](notebooks/rohlik_sales_prediction.html)
     - House price prediction - [Prices](notebooks/house_price_prediction.html)
     - A bit of theory of statistics - [Applied statistics – Problems](notebooks/problems.html)
     - Analysis of classical Iris dataset - [Iris analysis](notebooks/iris_analysis.html)
