@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>rohlik_sales_prediction – Lucia Macakova</title>
+<title>Rohlik Sales Prediction – Lucia Macakova</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -116,9 +151,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rohlik-sales-prediction" id="toc-rohlik-sales-prediction" class="nav-link active" data-scroll-target="#rohlik-sales-prediction">Rohlik Sales Prediction</a></li>
-  <li><a href="#about" id="toc-about" class="nav-link" data-scroll-target="#about">About</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data:</a></li>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#information-about-datasets" id="toc-information-about-datasets" class="nav-link" data-scroll-target="#information-about-datasets">Information about datasets</a></li>
   <li><a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link" data-scroll-target="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a></li>
   <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction">Prediction</a>
   <ul class="collapse">
@@ -132,33 +166,45 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Rohlik Sales Prediction</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
 
-<section id="rohlik-sales-prediction" class="level2">
-<h2 class="anchored" data-anchor-id="rohlik-sales-prediction">Rohlik Sales Prediction</h2>
-<p><img src="https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg" class="img-fluid" alt="grocery shelves"> <sup>Carlo Martin Alcordo, pexels.com</sup></p>
-</section>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg" class="img-fluid" alt="grocery shelves"> <sup>Author: Carlo Martin Alcordo, pexels.com</sup></p>
 <section id="about" class="level2">
 <h2 class="anchored" data-anchor-id="about">About</h2>
 <p>Predicting sales values is essential for planning, supplying chains, delivery logistics and inventory management. With accurate forecast, businesses can minimaze waste of resources and volume of unnecessary work-related tasks.</p>
-<p>The data comes from kaggle competition <a href="https://www.kaggle.com/competitions/rohlik-sales-forecasting-challenge-v2">Rohlik Sales Forecasting Challenge</a>.</p>
+<p>The data comes from kaggle competition <a href="https://www.kaggle.com/competitions/rohlik-sales-forecasting-challenge-v2/overview">Rohlik Sales Forecasting Challenge</a>.</p>
 <p>The project analyzes historical sales data across multiple European warehouses of grocery chain <a href="https://www.rohlik.group">Rohlik</a>. The goal is to understand sales patterns over time and to engineer meaningful features that can later be used for demand forecasting.</p>
+<p>Data:<br>
+sales_train.csv - training set containing the historical sales data for given date and inventory with selected features described below<br>
+sales_test.csv - testing set<br>
+inventory.csv - additional information about inventory like its product (same products across all warehouses share same product unique id and name, but have different unique id)<br>
+solution.csv - full submission file in the correct format<br>
+calendar.csv - calendar containing data about holidays or warehouse specific events, some columns are already in the train data but there are additional rows in this file for dates where some warehouses could be closed due to public holiday or Sunday (and therefore they are not in the train set)</p>
 </section>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data:</h2>
-<ul>
-<li>sales_train.csv - training set containing the historical sales data for given date and inventory with selected features described below</li>
-<li>sales_test.csv - full testing set</li>
-<li>inventory.csv - additional information about inventory like its product (same products across all warehouses share same product unique id and name, but have different unique id)</li>
-<li>solution.csv - full submission file in the correct format</li>
-<li>calendar.csv - calendar containing data about holidays or warehouse specific events, some columns are already in the train data but there are additional rows in this file for dates where some warehouses could be closed due to public holiday or Sunday (and therefore they are not in the train set)</li>
-</ul>
+<section id="information-about-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="information-about-datasets">Information about datasets</h2>
 <section id="calendar_df" class="level5">
 <h5 class="anchored" data-anchor-id="calendar_df">calendar_df</h5>
-<div id="cell-12" class="cell" data-execution_count="8">
+<div id="cell-17" class="cell">
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
@@ -233,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<div id="cell-13" class="cell" data-execution_count="9">
+<div id="cell-18" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 23016 entries, 0 to 23015
@@ -251,7 +297,7 @@ dtypes: int64(4), object(3)
 memory usage: 1.2+ MB</code></pre>
 </div>
 </div>
-<div id="cell-14" class="cell" data-execution_count="10">
+<div id="cell-19" class="cell">
 <div class="cell-output cell-output-display">
 <pre><code>'2016-01-01'</code></pre>
 </div>
@@ -263,7 +309,7 @@ memory usage: 1.2+ MB</code></pre>
 </section>
 <section id="inventory_df" class="level5">
 <h5 class="anchored" data-anchor-id="inventory_df">inventory_df</h5>
-<div id="cell-17" class="cell" data-execution_count="11">
+<div id="cell-22" class="cell">
 <div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 
@@ -344,7 +390,7 @@ memory usage: 1.2+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-18" class="cell" data-execution_count="12">
+<div id="cell-23" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 5432 entries, 0 to 5431
@@ -366,7 +412,7 @@ memory usage: 339.6+ KB</code></pre>
 </section>
 <section id="sales_train_df" class="level4">
 <h4 class="anchored" data-anchor-id="sales_train_df">sales_train_df</h4>
-<div id="cell-20" class="cell" data-execution_count="13">
+<div id="cell-25" class="cell">
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
 
@@ -483,7 +529,7 @@ memory usage: 339.6+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-21" class="cell" data-execution_count="14">
+<div id="cell-26" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 1048575 entries, 0 to 1048574
@@ -508,7 +554,7 @@ dtypes: float64(11), int64(1), object(2)
 memory usage: 112.0+ MB</code></pre>
 </div>
 </div>
-<div id="cell-22" class="cell" data-execution_count="15">
+<div id="cell-27" class="cell">
 <div class="cell-output cell-output-display">
 <pre><code>'2020-08-01'</code></pre>
 </div>
@@ -520,7 +566,7 @@ memory usage: 112.0+ MB</code></pre>
 </section>
 <section id="sales_test_df" class="level4">
 <h4 class="anchored" data-anchor-id="sales_test_df">sales_test_df</h4>
-<div id="cell-25" class="cell" data-execution_count="16">
+<div id="cell-30" class="cell">
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
@@ -775,7 +821,7 @@ memory usage: 112.0+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-26" class="cell" data-execution_count="17">
+<div id="cell-31" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 47021 entries, 0 to 47020
@@ -798,7 +844,7 @@ dtypes: float64(9), int64(1), object(2)
 memory usage: 4.3+ MB</code></pre>
 </div>
 </div>
-<div id="cell-27" class="cell" data-execution_count="18">
+<div id="cell-32" class="cell">
 <div class="cell-output cell-output-display">
 <pre><code>'2024-06-03'</code></pre>
 </div>
@@ -809,7 +855,7 @@ memory usage: 4.3+ MB</code></pre>
 <p>The earliest and the latest date in the dataset.</p>
 <section id="solution_df" class="level5">
 <h5 class="anchored" data-anchor-id="solution_df">solution_df</h5>
-<div id="cell-30" class="cell" data-execution_count="19">
+<div id="cell-35" class="cell">
 <div class="cell-output cell-output-display" data-execution_count="19">
 <div>
 
@@ -854,7 +900,7 @@ memory usage: 4.3+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-31" class="cell" data-execution_count="20">
+<div id="cell-36" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 47021 entries, 0 to 47020
@@ -870,7 +916,7 @@ memory usage: 734.8+ KB</code></pre>
 </section>
 <section id="test_weight_df" class="level5">
 <h5 class="anchored" data-anchor-id="test_weight_df">test_weight_df</h5>
-<div id="cell-33" class="cell" data-execution_count="21">
+<div id="cell-38" class="cell">
 <div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 
@@ -915,7 +961,7 @@ memory usage: 734.8+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-34" class="cell" data-execution_count="22">
+<div id="cell-39" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 5390 entries, 0 to 5389
@@ -933,76 +979,9 @@ memory usage: 84.3 KB</code></pre>
 </section>
 <section id="exploratory-data-analysis-eda" class="level2">
 <h2 class="anchored" data-anchor-id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h2>
-<div id="cell-36" class="cell" data-execution_count="23">
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-Int64Index: 7340025 entries, 0 to 7340024
-Data columns (total 20 columns):
- #   Column                  Dtype  
----  ------                  -----  
- 0   unique_id               int64  
- 1   date                    object 
- 2   warehouse_x             object 
- 3   total_orders            float64
- 4   sales                   float64
- 5   sell_price_main         float64
- 6   availability            float64
- 7   type_0_discount         float64
- 8   type_1_discount         float64
- 9   type_2_discount         float64
- 10  type_3_discount         float64
- 11  type_4_discount         float64
- 12  type_5_discount         float64
- 13  type_6_discount         float64
- 14  holiday_name            object 
- 15  holiday                 int64  
- 16  shops_closed            int64  
- 17  winter_school_holidays  int64  
- 18  school_holidays         int64  
- 19  warehouse_y             object 
-dtypes: float64(11), int64(5), object(4)
-memory usage: 1.1+ GB</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<pre><code>None</code></pre>
-</div>
-</div>
-<div id="cell-37" class="cell" data-execution_count="24">
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-Int64Index: 7340025 entries, 0 to 7340024
-Data columns (total 19 columns):
- #   Column                  Dtype  
----  ------                  -----  
- 0   unique_id               int64  
- 1   date                    object 
- 2   warehouse               object 
- 3   total_orders            float64
- 4   sales                   float64
- 5   sell_price_main         float64
- 6   availability            float64
- 7   type_0_discount         float64
- 8   type_1_discount         float64
- 9   type_2_discount         float64
- 10  type_3_discount         float64
- 11  type_4_discount         float64
- 12  type_5_discount         float64
- 13  type_6_discount         float64
- 14  holiday_name            object 
- 15  holiday                 int64  
- 16  shops_closed            int64  
- 17  winter_school_holidays  int64  
- 18  school_holidays         int64  
-dtypes: float64(11), int64(5), object(3)
-memory usage: 1.1+ GB</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<pre><code>None</code></pre>
-</div>
-</div>
 <section id="daily-sales" class="level4">
 <h4 class="anchored" data-anchor-id="daily-sales">Daily Sales</h4>
-<div id="cell-40" class="cell" data-execution_count="26">
+<div id="cell-47" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1053,62 +1032,66 @@ memory usage: 1.1+ GB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-41" class="cell" data-execution_count="27">
-<div class="cell-output cell-output-display" data-execution_count="27">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">date</th>
-<th data-quarto-table-cell-role="th">warehouse</th>
-<th data-quarto-table-cell-role="th">sales</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>2020-08-01</td>
-<td>Brno_1</td>
-<td>147396.27</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">5</th>
-<td>2020-08-02</td>
-<td>Brno_1</td>
-<td>134427.58</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">10</th>
-<td>2020-08-03</td>
-<td>Brno_1</td>
-<td>149112.67</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">15</th>
-<td>2020-08-04</td>
-<td>Brno_1</td>
-<td>133365.47</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">20</th>
-<td>2020-08-05</td>
-<td>Brno_1</td>
-<td>128492.28</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
 <p>Prague and Brno are both in Czech Republic. Summary sales show simmilar repeated pattern of sales during every year with tendency to grow every year. Budapest is the capital of Hungary. Summary sales plot shows again repeated pattern of sales over years, but a bit different than plots from Czech Republic. There seems to be no tendency of growth over the years. City of Munich is in Germany. Plot of summary daily sales shows again repeated pattern of sales over every year with tendency to grow each year. City of Munich is in Germany. Plot of summary daily sales does not seems to show repeated pattern of sales over every year with tendency to grow each year.</p>
 </section>
 <section id="average-sales-during-weekdays" class="level4">
 <h4 class="anchored" data-anchor-id="average-sales-during-weekdays">Average sales during weekdays</h4>
-<div id="cell-44" class="cell" data-execution_count="28">
+<div id="cell-50" class="cell">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="rohlik_sales_prediction_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="rohlik_sales_prediction_files/figure-html/cell-28-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="rohlik_sales_prediction_files/figure-html/cell-28-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="rohlik_sales_prediction_files/figure-html/cell-28-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="rohlik_sales_prediction_files/figure-html/cell-28-output-5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="rohlik_sales_prediction_files/figure-html/cell-28-output-6.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="rohlik_sales_prediction_files/figure-html/cell-28-output-7.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Plots of average sales during weekdays shows tendency of custumers in all countries to do shopping on Thurdays and Fridays.</p>
+</section>
+<section id="average-monthly-sales" class="level4">
+<h4 class="anchored" data-anchor-id="average-monthly-sales">Average monthly sales</h4>
+<div id="cell-53" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1159,70 +1142,15 @@ memory usage: 1.1+ GB</code></pre>
 </div>
 </div>
 </div>
-<p>Plots of average sales during weekdays shows tendency of custumers in all countries to do shopping on Thurdays and Fridays.</p>
-</section>
-<section id="average-monthly-sales" class="level4">
-<h4 class="anchored" data-anchor-id="average-monthly-sales">Average monthly sales</h4>
-<div id="cell-47" class="cell" data-execution_count="29">
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="rohlik_sales_prediction_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="rohlik_sales_prediction_files/figure-html/cell-30-output-2.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="rohlik_sales_prediction_files/figure-html/cell-30-output-3.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="rohlik_sales_prediction_files/figure-html/cell-30-output-4.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="rohlik_sales_prediction_files/figure-html/cell-30-output-5.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="rohlik_sales_prediction_files/figure-html/cell-30-output-6.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="rohlik_sales_prediction_files/figure-html/cell-30-output-7.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
 <p>Plots of average monthly sales seems to reflect regionally differences in shopping habits of customers.</p>
 </section>
 <section id="average-sales-during-holidays-and-common-days" class="level4">
 <h4 class="anchored" data-anchor-id="average-sales-during-holidays-and-common-days">Average sales during holidays and common days</h4>
-<div id="cell-50" class="cell" data-execution_count="30">
+<div id="cell-56" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="rohlik_sales_prediction_files/figure-html/cell-31-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="rohlik_sales_prediction_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1233,7 +1161,29 @@ memory usage: 1.1+ GB</code></pre>
 <h2 class="anchored" data-anchor-id="prediction">Prediction</h2>
 <section id="data-preparation" class="level4">
 <h4 class="anchored" data-anchor-id="data-preparation">Data preparation</h4>
-<div id="cell-54" class="cell" data-execution_count="32">
+<div id="cell-59" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sort first</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.sort_values([<span class="st">'date'</span>, <span class="st">'unique_id'</span>])</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># lag features</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> L <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">14</span>, <span class="dv">28</span>):</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    data[<span class="ss">f"sales_lag_</span><span class="sc">{</span>L<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> data.groupby(<span class="st">"unique_id"</span>)[<span class="st">"sales"</span>].shift(L)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># rolling means/stds (past-only)</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> W <span class="kw">in</span> (<span class="dv">7</span>, <span class="dv">14</span>, <span class="dv">28</span>):</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    data[<span class="ss">f"sales_roll</span><span class="sc">{</span>W<span class="sc">}</span><span class="ss">_mean"</span>] <span class="op">=</span> (</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        data.groupby(<span class="st">"unique_id"</span>)[<span class="st">"sales"</span>].shift(<span class="dv">1</span>).rolling(W).mean()</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    data[<span class="ss">f"sales_roll</span><span class="sc">{</span>W<span class="sc">}</span><span class="ss">_std"</span>] <span class="op">=</span> (</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        data.groupby(<span class="st">"unique_id"</span>)[<span class="st">"sales"</span>].shift(<span class="dv">1</span>).rolling(W).std()</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># simple momentum signals (optional)</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"sales_mom_1_7"</span>] <span class="op">=</span> data[<span class="st">"sales_lag_1"</span>] <span class="op">-</span> data[<span class="st">"sales_lag_7"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-60" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>data.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 Int64Index: 7340025 entries, 953925 to 4088300
@@ -1279,7 +1229,34 @@ dtypes: datetime64[ns](1), float64(22), int32(1), int64(7), object(4)
 memory usage: 1.9+ GB</code></pre>
 </div>
 </div>
-<div id="cell-58" class="cell" data-execution_count="36">
+<div id="cell-61" class="cell" data-execution_count="33">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.dropna()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-62" class="cell" data-execution_count="34">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> <span class="dv">14</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>frames <span class="op">=</span> []</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> h <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, H<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    tmp <span class="op">=</span> data.copy()</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    tmp[<span class="st">"h"</span>] <span class="op">=</span> h</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    tmp[<span class="st">"target_h"</span>] <span class="op">=</span> tmp.groupby(<span class="st">"unique_id"</span>)[<span class="st">"sales"</span>].shift(<span class="op">-</span>h)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    frames.append(tmp)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>mh <span class="op">=</span> pd.concat(frames, ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>mh <span class="op">=</span> mh.dropna(subset<span class="op">=</span>[<span class="st">"target_h"</span>]).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-63" class="cell" data-execution_count="35">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Using weights:</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>wts <span class="op">=</span> pd.read_csv(<span class="st">"../rohlik_project/csv/test_weights.csv"</span>)  <span class="co"># unique_id, weight</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>mh <span class="op">=</span> mh.merge(wts, on<span class="op">=</span><span class="st">"unique_id"</span>, how<span class="op">=</span><span class="st">"left"</span>).fillna({<span class="st">"weight"</span>: <span class="fl">1.0</span>})</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> wmape(y_true, y_pred, w<span class="op">=</span><span class="va">None</span>, eps<span class="op">=</span><span class="fl">1e-9</span>):</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> w <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.<span class="bu">sum</span>(np.<span class="bu">abs</span>(y_true <span class="op">-</span> y_pred)) <span class="op">/</span> (np.<span class="bu">sum</span>(np.<span class="bu">abs</span>(y_true)) <span class="op">+</span> eps)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(w <span class="op">*</span> np.<span class="bu">abs</span>(y_true <span class="op">-</span> y_pred)) <span class="op">/</span> (np.<span class="bu">sum</span>(w <span class="op">*</span> np.<span class="bu">abs</span>(y_true)) <span class="op">+</span> eps)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-64" class="cell" data-execution_count="36">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>mh.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 Int64Index: 4204647 entries, 0 to 4204646
@@ -1328,10 +1305,79 @@ dtypes: datetime64[ns](1), float64(24), int32(1), int64(8), object(4)
 memory usage: 1.2+ GB</code></pre>
 </div>
 </div>
+<div id="cell-65" class="cell" data-execution_count="37">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mh <span class="op">=</span> mh.copy()</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Columns to label-encode</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="op">=</span> [<span class="st">'warehouse'</span>, <span class="st">'day_of_week'</span>, <span class="st">'holiday'</span>, <span class="st">'holiday_name'</span>]</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply LabelEncoder to each column</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> cat_cols:</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    le <span class="op">=</span> LabelEncoder()</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    mh[col] <span class="op">=</span> le.fit_transform(mh[col].astype(<span class="bu">str</span>))  <span class="co"># convert to string for safety</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="model-and-prediction" class="level3">
 <h3 class="anchored" data-anchor-id="model-and-prediction">Model and prediction</h3>
-<div id="cell-62" class="cell" data-execution_count="39">
+<div id="cell-67" class="cell" data-execution_count="38">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># feature columns: keep engineered stuff + calendar flags; drop IDs/date/targets</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>drop_cols <span class="op">=</span> {<span class="st">"sales"</span>,<span class="st">"target_h"</span>,<span class="st">"date"</span>}  <span class="co"># drop raw sales &amp; date</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>id_cols <span class="op">=</span> {<span class="st">"unique_id"</span>,<span class="st">"warehouse"</span>}</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>maybe_features <span class="op">=</span> [</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    c <span class="cf">for</span> c <span class="kw">in</span> mh.columns</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> c <span class="kw">not</span> <span class="kw">in</span> drop_cols <span class="op">|</span> id_cols <span class="kw">and</span> <span class="kw">not</span> c.endswith(<span class="st">"_name"</span>)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="co"># keep typical useful features</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> [</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    c <span class="cf">for</span> c <span class="kw">in</span> maybe_features</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> c.startswith(<span class="st">"sales_"</span>) <span class="kw">or</span> c <span class="kw">in</span> {<span class="st">"holiday"</span>,<span class="st">"shops_closed"</span>,<span class="st">"school_holidays"</span>,<span class="st">"winter_school_holidays"</span>,</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"day_of_week"</span>,<span class="st">"month"</span>,<span class="st">"year"</span>,<span class="st">"h"</span>,<span class="st">"total_orders"</span>,<span class="st">"sell_price_main"</span>,</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"availability"</span>, <span class="st">"Sales_lag_1"</span>, <span class="st">"Sales_lag_7"</span>, <span class="st">"Sales_lag_14"</span>, <span class="st">"Sales_lag_28"</span>,</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"rolling_mean7"</span>, <span class="st">"rolling_std7"</span>, <span class="st">"rolling_mean14"</span>, <span class="st">"rolling_std14"</span>,</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"rolling_mean28"</span>, <span class="st">"rolling_std28"</span>, <span class="st">"sales_mom_1_7"</span>} </span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> mh[features].copy()</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> mh[<span class="st">"target_h"</span>].astype(<span class="bu">float</span>).values</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> mh[<span class="st">"weight"</span>].values <span class="cf">if</span> <span class="st">"weight"</span> <span class="kw">in</span> mh <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a><span class="co"># simple validation: last 14 days across all series</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>cutoff <span class="op">=</span> mh[<span class="st">"date"</span>].<span class="bu">max</span>() <span class="op">-</span> pd.Timedelta(days<span class="op">=</span>H)</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>train_idx <span class="op">=</span> mh[<span class="st">"date"</span>] <span class="op">&lt;</span> cutoff</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>valid_idx <span class="op">=</span> mh[<span class="st">"date"</span>] <span class="op">&gt;=</span> cutoff</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>X_tr, y_tr <span class="op">=</span> X[train_idx], y[train_idx]</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>X_va, y_va <span class="op">=</span> X[valid_idx], y[valid_idx]</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>w_tr <span class="op">=</span> w[train_idx] <span class="cf">if</span> w <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>w_va <span class="op">=</span> w[valid_idx] <span class="cf">if</span> w <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-68" class="cell" data-execution_count="39">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> lgb.LGBMRegressor(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    objective<span class="op">=</span><span class="st">"tweedie"</span>,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    tweedie_variance_power<span class="op">=</span><span class="fl">1.4</span>,  </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    n_estimators<span class="op">=</span><span class="dv">1500</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    learning_rate<span class="op">=</span><span class="fl">0.05</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    num_leaves<span class="op">=</span><span class="dv">63</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    subsample<span class="op">=</span><span class="fl">0.8</span>,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    colsample_bytree<span class="op">=</span><span class="fl">0.8</span>,</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">1337</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Train safely across all LightGBM versions</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>model.fit(</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    X_tr, y_tr,</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    sample_weight<span class="op">=</span>w_tr,                 </span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>    eval_set<span class="op">=</span>[(X_va, y_va)],</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>    eval_metric<span class="op">=</span><span class="st">"mae"</span>,</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>    callbacks<span class="op">=</span>[lgb.log_evaluation(period<span class="op">=</span><span class="dv">200</span>)]  </span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>pred_va <span class="op">=</span> np.clip(model.predict(X_va), <span class="dv">0</span>, <span class="va">None</span>)  <span class="co"># non-negative</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"MAE  :"</span>, mean_absolute_error(y_va, pred_va))</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"WMAPE:"</span>, wmape(y_va, pred_va, w<span class="op">=</span>w_va))</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.249818 seconds.
 You can set `force_row_wise=true` to remove the overhead.
@@ -1350,7 +1396,75 @@ MAE  : 33.10275893556487
 WMAPE: 0.3124203275922004</code></pre>
 </div>
 </div>
-<div id="cell-64" class="cell" data-execution_count="41">
+<div id="cell-69" class="cell" data-execution_count="40">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> mh.copy()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-70" class="cell" data-execution_count="41">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># weekday averages with sensible fallbacks → solution.csv </span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># copies &amp; types</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>train <span class="op">=</span> sales_train_df.copy()</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>test  <span class="op">=</span> sales_test_df.copy()</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>train[<span class="st">"date"</span>] <span class="op">=</span> pd.to_datetime(train[<span class="st">"date"</span>])</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>test[<span class="st">"date"</span>]  <span class="op">=</span> pd.to_datetime(test[<span class="st">"date"</span>])</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="co"># day of week (0=Mon..6=Sun)</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>train[<span class="st">"dow"</span>] <span class="op">=</span> train[<span class="st">"date"</span>].dt.dayofweek</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>test[<span class="st">"dow"</span>]  <span class="op">=</span> test[<span class="st">"date"</span>].dt.dayofweek</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>keys <span class="op">=</span> [<span class="st">"warehouse"</span>,<span class="st">"unique_id"</span>]</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Core stats</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="co"># per series &amp; weekday</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>mean_ser_dow <span class="op">=</span> (train.groupby(keys <span class="op">+</span> [<span class="st">"dow"</span>])[<span class="st">"sales"</span>].mean()</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>                     .rename(<span class="st">"mean_ser_dow"</span>).reset_index())</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="co"># per series overall</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>mean_ser <span class="op">=</span> (train.groupby(keys)[<span class="st">"sales"</span>].mean()</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>                 .rename(<span class="st">"mean_ser"</span>).reset_index())</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a><span class="co"># per warehouse &amp; weekday</span></span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>mean_wh_dow <span class="op">=</span> (train.groupby([<span class="st">"warehouse"</span>,<span class="st">"dow"</span>])[<span class="st">"sales"</span>].mean()</span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>                    .rename(<span class="st">"mean_wh_dow"</span>).reset_index())</span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a><span class="co"># global weekday</span></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>mean_glob_dow <span class="op">=</span> (train.groupby(<span class="st">"dow"</span>)[<span class="st">"sales"</span>].mean()</span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>                      .rename(<span class="st">"mean_glob_dow"</span>).reset_index())</span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a><span class="co"># global overall</span></span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>mean_glob <span class="op">=</span> <span class="bu">float</span>(train[<span class="st">"sales"</span>].mean())</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Merge in descending strength and build fallback</span></span>
+<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> test.copy()</span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> pred.merge(mean_ser_dow, on<span class="op">=</span>keys<span class="op">+</span>[<span class="st">"dow"</span>], how<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> pred.merge(mean_ser,     on<span class="op">=</span>keys,         how<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> pred.merge(mean_wh_dow,  on<span class="op">=</span>[<span class="st">"warehouse"</span>,<span class="st">"dow"</span>], how<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> pred.merge(mean_glob_dow,on<span class="op">=</span>[<span class="st">"dow"</span>],      how<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a><span class="co"># fallback chain: series&amp;dow → series → wh&amp;dow → global&amp;dow → global</span></span>
+<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a>pred_vals <span class="op">=</span> (</span>
+<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a>    pred[<span class="st">"mean_ser_dow"</span>]</span>
+<span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a>    .fillna(pred[<span class="st">"mean_ser"</span>])</span>
+<span id="cb26-42"><a href="#cb26-42" aria-hidden="true" tabindex="-1"></a>    .fillna(pred[<span class="st">"mean_wh_dow"</span>])</span>
+<span id="cb26-43"><a href="#cb26-43" aria-hidden="true" tabindex="-1"></a>    .fillna(pred[<span class="st">"mean_glob_dow"</span>])</span>
+<span id="cb26-44"><a href="#cb26-44" aria-hidden="true" tabindex="-1"></a>    .fillna(mean_glob)</span>
+<span id="cb26-45"><a href="#cb26-45" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-46"><a href="#cb26-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-47"><a href="#cb26-47" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Non-negative and reasonable caps</span></span>
+<span id="cb26-48"><a href="#cb26-48" aria-hidden="true" tabindex="-1"></a>pred_vals <span class="op">=</span> np.clip(pred_vals.values, <span class="dv">0</span>, <span class="va">None</span>)</span>
+<span id="cb26-49"><a href="#cb26-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-50"><a href="#cb26-50" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Build submission</span></span>
+<span id="cb26-51"><a href="#cb26-51" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> test[[<span class="st">"warehouse"</span>,<span class="st">"unique_id"</span>,<span class="st">"date"</span>]].copy()</span>
+<span id="cb26-52"><a href="#cb26-52" aria-hidden="true" tabindex="-1"></a>solution[<span class="st">"id"</span>] <span class="op">=</span> (</span>
+<span id="cb26-53"><a href="#cb26-53" aria-hidden="true" tabindex="-1"></a>    solution[<span class="st">"warehouse"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"_"</span> <span class="op">+</span></span>
+<span id="cb26-54"><a href="#cb26-54" aria-hidden="true" tabindex="-1"></a>    solution[<span class="st">"unique_id"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"_"</span> <span class="op">+</span></span>
+<span id="cb26-55"><a href="#cb26-55" aria-hidden="true" tabindex="-1"></a>    solution[<span class="st">"date"</span>].dt.strftime(<span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">"</span>)</span>
+<span id="cb26-56"><a href="#cb26-56" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-57"><a href="#cb26-57" aria-hidden="true" tabindex="-1"></a>solution[<span class="st">"sales_hat"</span>] <span class="op">=</span> pred_vals.astype(<span class="bu">float</span>)</span>
+<span id="cb26-58"><a href="#cb26-58" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> solution[[<span class="st">"id"</span>,<span class="st">"sales_hat"</span>]]</span>
+<span id="cb26-59"><a href="#cb26-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-60"><a href="#cb26-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Checks &amp; save</span></span>
+<span id="cb26-61"><a href="#cb26-61" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">len</span>(solution) <span class="op">==</span> <span class="bu">len</span>(test), <span class="st">"Row count mismatch vs sales_test_df."</span></span>
+<span id="cb26-62"><a href="#cb26-62" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> solution[<span class="st">"sales_hat"</span>].notna().<span class="bu">all</span>(), <span class="st">"Found NaNs in predictions."</span></span>
+<span id="cb26-63"><a href="#cb26-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-64"><a href="#cb26-64" aria-hidden="true" tabindex="-1"></a>solution.to_csv(<span class="st">"csv/solution.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb26-65"><a href="#cb26-65" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Saved solution.csv with"</span>, <span class="bu">len</span>(solution), <span class="st">"rows."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Saved solution.csv with 47021 rows.</code></pre>
 </div>
