@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1d4f84655f446305ac42a8f1abcf7405.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5d08aeac13616c70e52e80ac851b94f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -99,6 +100,13 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="../aboutme.html"> 
 <span class="menu-text">About Me</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lmacakova"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -163,8 +171,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg" class="img-fluid" alt="image.png"> <sup>Author: Scott Webb, pexels.com</sup></p>
 <section id="ames-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="ames-dataset">Ames Dataset</h2>
-<p>The Ames Housing Dataset contains information on residential property sales in Ames, Iowa, USA, covering the period from 2006 to 2010. The dataset is publicly available through Kaggle at:</p>
-<p>https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview</p>
+<p>The <a href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview">Ames Housing Dataset</a> contains information on residential property sales in Ames, Iowa, USA, covering the period from 2006 to 2010.</p>
 <p>The data consists of three files: train.csv, test.csv, and data_description.txt. The train.csv file includes the target variable SalePrice, while the test.csv file contains the same feature set without the target variable. The data_description.txt file provides detailed explanations of all variables and is included at the end of this notebook to help readers understand the dataset.</p>
 <p>Train_ds:</p>
 <div id="99dadd13" class="cell" data-execution_count="2">
@@ -1543,9 +1550,7 @@ Ridge adds a penalty for large weights. It gently pushes all coefficients to be 
                                  &lt;sklearn.compose._column_transformer.make_column_selector object at 0x0000027F77B37050&gt;)])</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox"><label for="sk-estimator-id-5" class="sk-toggleable__label sk-toggleable__label-arrow">num</label><div class="sk-toggleable__content"><pre>&lt;sklearn.compose._column_transformer.make_column_selector object at 0x0000027F001F8D50&gt;</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox"><label for="sk-estimator-id-6" class="sk-toggleable__label sk-toggleable__label-arrow">SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer(strategy='median')</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox"><label for="sk-estimator-id-7" class="sk-toggleable__label sk-toggleable__label-arrow">StandardScaler</label><div class="sk-toggleable__content"><pre>StandardScaler()</pre></div></div></div></div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox"><label for="sk-estimator-id-8" class="sk-toggleable__label sk-toggleable__label-arrow">cat</label><div class="sk-toggleable__content"><pre>&lt;sklearn.compose._column_transformer.make_column_selector object at 0x0000027F77B37050&gt;</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-9" type="checkbox"><label for="sk-estimator-id-9" class="sk-toggleable__label sk-toggleable__label-arrow">SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer(strategy='most_frequent')</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-10" type="checkbox"><label for="sk-estimator-id-10" class="sk-toggleable__label sk-toggleable__label-arrow">OneHotEncoder</label><div class="sk-toggleable__content"><pre>OneHotEncoder(handle_unknown='ignore')</pre></div></div></div></div></div></div></div></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-11" type="checkbox"><label for="sk-estimator-id-11" class="sk-toggleable__label sk-toggleable__label-arrow">Ridge</label><div class="sk-toggleable__content"><pre>Ridge(alpha=0.001)</pre></div></div></div></div></div></div></div>
 </div>
 </div>
-<p>The model is evaluated on the validation set using RMSE and R² to measure prediction accuracy and explanatory power. RMSE measures the average size of prediction errors. R² measures how much of the target variance the model explains.</p>
-<p>https://en.wikipedia.org/wiki/Root_mean_square_deviation</p>
-<p>https://en.wikipedia.org/wiki/Coefficient_of_determination</p>
+<p>The model is evaluated on the validation set using <a href="https://en.wikipedia.org/wiki/Root_mean_square_deviation">RMSE</a> and <a href="https://en.wikipedia.org/wiki/Coefficient_of_determination">R²</a> to measure prediction accuracy and explanatory power. RMSE measures the average size of prediction errors. R² measures how much of the target variance the model explains.</p>
 <p>RMSE and R²:</p>
 <div id="43a641db" class="cell" data-execution_count="26">
 <div class="cell-output cell-output-stdout">
@@ -2402,6 +2407,19 @@ The final model achieves performance close to the practical ceiling for regulari
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Lucia Macakova</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

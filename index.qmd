@@ -4,13 +4,12 @@ title: ""
 
 - Data Analysis 
 
-    - House price prediction - [Prices](notebooks/house_price_prediction.html)
-    - Prediction of sales - [Rohlik Project](notebooks/rohlik_sales_prediction.html)    
-    - A bit of theory of statistics - [Applied Statistics – Problems](notebooks/problems.html)
-    - Analysis of classical Iris dataset - [Iris Analysis](notebooks/iris_analysis.html)
-    - Analyses of penguins dataset - [Penguins](notebooks/penguins.html)     
+    - House Price Prediction - [Prices](notebooks/house_price_prediction.html)
+    - Sales Forecasting - [Rohlik Project](notebooks/rohlik_sales_prediction.html)    
+    - A Bit of Theory of Statistics - [Applied Statistics – Problems](notebooks/problems.html)
+    - Analysis of Classical Iris Dataset - [Iris Analysis](notebooks/iris_analysis.html)  
 
 -  Inventory Management App - Simple web-based inventory management application built with Python\
     [luciamacakova.pythonanywhere.com](https://luciamacakova.pythonanywhere.com)
 
-- Automated data colection pipeline - [weather_data_pipeline](weather_data_pipeline.html)
+- Automated Weather Data Pipeline - [weather_data_pipeline](weather_data_pipeline.html)

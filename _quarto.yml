@@ -7,13 +7,25 @@ project:
 
 website:
   title: "Lucia Macakova"
+  
   navbar:
     left:
       - href: index.qmd
         text: Portfolio
       - href: aboutme.qmd
         text: About Me
+    right:
+      - icon: github
+        href: https://github.com/lmacakova
       
 
+  page-footer:
+    left: "© 2026 Lucia Macakova"
 
+format:
+  html:
+    theme: cyborg
+    toc: true
+    code-copy: true
+    css: styles.css
 

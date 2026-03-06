@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>iris_analysis – Lucia Macakova</title>
+<title>Data Analysis of Iris Dataset – Lucia Macakova</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1d4f84655f446305ac42a8f1abcf7405.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5d08aeac13616c70e52e80ac851b94f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -101,6 +102,13 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lmacakova"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -116,18 +124,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-analysis-of-iris-dataset" id="toc-data-analysis-of-iris-dataset" class="nav-link active" data-scroll-target="#data-analysis-of-iris-dataset">Data Analysis of Iris Dataset</a>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a>
   <ul class="collapse">
-  <li><a href="#loading-data" id="toc-loading-data" class="nav-link" data-scroll-target="#loading-data">Loading data</a></li>
-  <li><a href="#description-of-dataset" id="toc-description-of-dataset" class="nav-link" data-scroll-target="#description-of-dataset">Description of dataset</a></li>
-  <li><a href="#checking-data-quality" id="toc-checking-data-quality" class="nav-link" data-scroll-target="#checking-data-quality">Checking data quality</a></li>
+  <li><a href="#loading-data" id="toc-loading-data" class="nav-link" data-scroll-target="#loading-data">Loading Data</a></li>
+  <li><a href="#description-of-dataset" id="toc-description-of-dataset" class="nav-link" data-scroll-target="#description-of-dataset">Description of Dataset</a></li>
+  <li><a href="#checking-data-quality" id="toc-checking-data-quality" class="nav-link" data-scroll-target="#checking-data-quality">Checking Data Quality</a></li>
   <li><a href="#summaries" id="toc-summaries" class="nav-link" data-scroll-target="#summaries">Summaries</a></li>
   </ul></li>
-  <li><a href="#explanatory-data-analysis" id="toc-explanatory-data-analysis" class="nav-link" data-scroll-target="#explanatory-data-analysis">Explanatory data analysis</a>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a>
   <ul class="collapse">
-  <li><a href="#histograms-of-morphological-values" id="toc-histograms-of-morphological-values" class="nav-link" data-scroll-target="#histograms-of-morphological-values">Histograms of morphological values</a></li>
-  <li><a href="#violin-plots" id="toc-violin-plots" class="nav-link" data-scroll-target="#violin-plots">Violin plots</a></li>
-  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix">Correlation matrix</a></li>
+  <li><a href="#histograms-of-morphological-values" id="toc-histograms-of-morphological-values" class="nav-link" data-scroll-target="#histograms-of-morphological-values">Histograms of Morphological Values</a></li>
+  <li><a href="#violin-plots" id="toc-violin-plots" class="nav-link" data-scroll-target="#violin-plots">Violin Plots</a></li>
+  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix">Correlation Matrix</a></li>
   <li><a href="#scatterplots" id="toc-scatterplots" class="nav-link" data-scroll-target="#scatterplots">Scatterplots</a></li>
   </ul></li>
   <li><a href="#classification" id="toc-classification" class="nav-link" data-scroll-target="#classification">Classification</a>
@@ -138,14 +146,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Analysis of Iris Dataset</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
 
-<section id="data-analysis-of-iris-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="data-analysis-of-iris-dataset">Data Analysis of Iris Dataset</h2>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1cs36b9rbuc98t7uhb0h.webp" class="img-fluid" alt="iris species"> <sup><a href="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1cs36b9rbuc98t7uhb0h.webp">Source</a></sup></p>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
 <p>The Iris dataset is a small but famous dataset used since 1936 to demonstrate classification techniques. It contains <strong>150 samples</strong> of three Iris species, each with <strong>50 observations</strong>:</p>
 <ul>
 <li><em>Iris setosa</em><br>
@@ -164,10 +188,10 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li>Petal width (cm)</li>
 </ul>
-<p>https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data</p>
+<p>You can downloaded dataset <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data">here</a></p>
 <section id="loading-data" class="level3">
-<h3 class="anchored" data-anchor-id="loading-data">Loading data</h3>
-<div id="cell-5" class="cell">
+<h3 class="anchored" data-anchor-id="loading-data">Loading Data</h3>
+<div id="cell-6" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 
@@ -232,8 +256,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 <section id="description-of-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="description-of-dataset">Description of dataset</h3>
-<div id="cell-7" class="cell">
+<h3 class="anchored" data-anchor-id="description-of-dataset">Description of Dataset</h3>
+<div id="cell-8" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 150 entries, 0 to 149
@@ -322,8 +346,8 @@ memory usage: 6.0+ KB</code></pre>
 </div>
 </section>
 <section id="checking-data-quality" class="level3">
-<h3 class="anchored" data-anchor-id="checking-data-quality">Checking data quality</h3>
-<div id="cell-9" class="cell">
+<h3 class="anchored" data-anchor-id="checking-data-quality">Checking Data Quality</h3>
+<div id="cell-10" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Missing values per column:
  sepal_length    0
@@ -340,7 +364,7 @@ Duplicate rows: 3</code></pre>
 <section id="summaries" class="level3">
 <h3 class="anchored" data-anchor-id="summaries">Summaries</h3>
 <p>Summaries for features:</p>
-<div id="cell-12" class="cell">
+<div id="cell-13" class="cell">
 <div class="cell-output cell-output-display">
 <pre><code>count    150.000000
 mean       5.843333
@@ -387,7 +411,7 @@ Name: petal_width, dtype: float64</code></pre>
 </div>
 </div>
 <p>Summaries for species:</p>
-<div id="cell-14" class="cell">
+<div id="cell-15" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Summary for species: Iris-setosa
@@ -610,13 +634,12 @@ Summary for species: Iris-virginica
 </div>
 </section>
 </section>
-<section id="explanatory-data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="explanatory-data-analysis">Explanatory data analysis</h2>
+<section id="exploratory-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h2>
 <section id="histograms-of-morphological-values" class="level3">
-<h3 class="anchored" data-anchor-id="histograms-of-morphological-values">Histograms of morphological values</h3>
-<p>Histogram is the plot that shows distribution of values. I decided to add lines of kernel density estimation that smooths data distribution for each species of <em>Iris</em> for better data representation.<br>
-https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html</p>
-<div id="cell-17" class="cell">
+<h3 class="anchored" data-anchor-id="histograms-of-morphological-values">Histograms of Morphological Values</h3>
+<p><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html">Histogram</a> is the plot that shows distribution of values. I decided to add lines of kernel density estimation that smooths data distribution for each species of <em>Iris</em> for better data representation.</p>
+<div id="cell-18" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -649,9 +672,9 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html</p>
 <p>According to histograms, flowers of <em>Iris Virginica</em> and <em>Iris Versicolor</em> share similar values, with mean value for <em>Iris Virginica’s</em> flowers higher in any category than for flowers of <em>Iris Versicolor</em>. Flowers of <em>Iris Setosa</em> differ from these species with lower values for petal length, petal width, sepal length, but higher values for sepal width than for <em>Iris Virginica</em> and <em>Iris Versicolor</em>. All histograms are saved in the folder histograms.</p>
 </section>
 <section id="violin-plots" class="level3">
-<h3 class="anchored" data-anchor-id="violin-plots">Violin plots</h3>
-<p>The violin plot combines the information of the boxplot and the density plot. The “violins” show the full distribution of a features for each Iris species, while also marking the medians and quartiles. https://seaborn.pydata.org/generated/seaborn.violinplot.html</p>
-<div id="cell-20" class="cell">
+<h3 class="anchored" data-anchor-id="violin-plots">Violin Plots</h3>
+<p>The <a href="https://seaborn.pydata.org/generated/seaborn.violinplot.html">violin plot</a> combines the information of the boxplot and the density plot. The “violins” show the full distribution of a features for each Iris species, while also marking the medians and quartiles.</p>
+<div id="cell-21" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -666,8 +689,8 @@ For sepal length and width, all three species overlap more, showing these featur
 Overall, violin plots confirm that petal features carry the strongest discriminatory power.</p>
 </section>
 <section id="correlation-matrix" class="level3">
-<h3 class="anchored" data-anchor-id="correlation-matrix">Correlation matrix</h3>
-<div id="cell-23" class="cell">
+<h3 class="anchored" data-anchor-id="correlation-matrix">Correlation Matrix</h3>
+<div id="cell-24" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -676,12 +699,11 @@ Overall, violin plots confirm that petal features carry the strongest discrimina
 </div>
 </div>
 </div>
-<p>Values above 0.59 can be considered as “solid” correlation. Petal length is strongly correlated with petal width along with sepal length, while sepal width is not strongly correlated with any other variable.<br>
-https://seaborn.pydata.org/generated/seaborn.heatmap.html</p>
+<p>In the <a href="https://seaborn.pydata.org/generated/seaborn.heatmap.html">heatmap</a> values above 0.59 can be considered as “solid” correlation. Petal length is strongly correlated with petal width along with sepal length, while sepal width is not strongly correlated with any other variable.</p>
 </section>
 <section id="scatterplots" class="level3">
 <h3 class="anchored" data-anchor-id="scatterplots">Scatterplots</h3>
-<div id="cell-26" class="cell">
+<div id="cell-27" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -696,13 +718,13 @@ Sepal length has moderate positive correlation with petal features, visible as s
 Sepal width shows weaker or even negative correlations, confirmed by the scattered patterns.<br>
 Setosa is perfectly separated from the other species in petal features, while Versicolor and Virginica overlap.<br>
 This confirms the numerical correlation results and visually highlights which features best discriminate the species.<br>
-https://seaborn.pydata.org/generated/seaborn.scatterplot.html</p>
+<a href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html">About scatterplots:</a></p>
 </section>
 </section>
 <section id="classification" class="level2">
 <h2 class="anchored" data-anchor-id="classification">Classification</h2>
 <p>Normality test:</p>
-<div id="cell-30" class="cell">
+<div id="cell-31" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Feature: sepal_length
@@ -726,9 +748,8 @@ Feature: petal_width
   Iris-virginica | W=0.960, p=0.08695 | Normal ✅</code></pre>
 </div>
 </div>
-<p>I tested normality of distribution of features within each species with Shapiro=Wilk test.<br>
-https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html</p>
-<div id="cell-32" class="cell">
+<p>I tested normality of distribution of features within each species with <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html">Shapiro=Wilk test.</a></p>
+<div id="cell-33" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>sepal_length: 0 outliers
 sepal_width: 4 outliers
@@ -737,7 +758,7 @@ petal_width: 0 outliers</code></pre>
 </div>
 </div>
 <p>I found some outliers.</p>
-<div id="cell-34" class="cell">
+<div id="cell-35" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>sepal_length: Levene stat=6.35, p=0.00226
 sepal_width: Levene stat=0.65, p=0.52483
@@ -745,9 +766,8 @@ petal_length: Levene stat=19.72, p=0.00000
 petal_width: Levene stat=19.41, p=0.00000</code></pre>
 </div>
 </div>
-<p>The Levene test tests the null hypothesis that all input samples are from populations with equal variances.Only sepal width is different than other features, when variances are compared<br>
-https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.levene.html</p>
-<div id="cell-36" class="cell">
+<p>The <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.levene.html">Levene test</a> tests the null hypothesis that all input samples are from populations with equal variances.Only sepal width is different than other features, when variances are compared.</p>
+<div id="cell-37" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>sepal_length: ANOVA F=119.26, p=0.0000000000
 sepal_width: ANOVA F=47.36, p=0.0000000000
@@ -759,9 +779,8 @@ petal_length: Kruskal H=130.41, p=0.0000000000
 petal_width: Kruskal H=131.09, p=0.0000000000</code></pre>
 </div>
 </div>
-<p>Before running ANOVA, I checked for outliers and normality. A few extreme values were found in sepal width, but they are consistent with real biological variation and not obvious data entry errors. Since ANOVA is sensitive to outliers and non-normal distribution of data, I also verified the results with the Kruskal–Wallis test, which is more robust to non-normality and extreme values. Both tests agreed, so I kept the outliers in the analysis. ANOVA and Kruskal–Wallis tests produced very small p-values (&lt; 0.00001), indicating strong evidence against the null hypothesis of equal group means. This confirms that at least one species differs significantly from the others.<br>
-https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kruskal.html</p>
-<div id="cell-38" class="cell">
+<p>Before running <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html">ANOVA</a>, I checked for outliers and normality. A few extreme values were found in sepal width, but they are consistent with real biological variation and not obvious data entry errors. Since ANOVA is sensitive to outliers and non-normal distribution of data, I also verified the results with the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kruskal.html">Kruskal–Wallis</a> test, which is more robust to non-normality and extreme values. Both tests agreed, so I kept the outliers in the analysis. ANOVA and Kruskal–Wallis tests produced very small p-values (&lt; 0.00001), indicating strong evidence against the null hypothesis of equal group means. This confirms that at least one species differs significantly from the others.</p>
+<div id="cell-39" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Tukey HSD results for sepal_length:
@@ -810,7 +829,7 @@ Iris-versicolor  Iris-virginica      0.7   0.0 0.6029 0.7971   True
 </div>
 </div>
 <p>Post-hoc Tukey test confirmed that the species are different from each other in every feature.</p>
-<div id="cell-40" class="cell">
+<div id="cell-41" class="cell">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -819,10 +838,9 @@ Iris-versicolor  Iris-virginica      0.7   0.0 0.6029 0.7971   True
 </div>
 </div>
 </div>
-<p>LDA reduces the 4D Iris dataset to 2D by finding axes that maximize species separation. The scatterplot of LD1 vs.&nbsp;LD2 shows that Setosa is perfectly separated, while Versicolor and Virginica overlap partially. This confirms that petal features dominate separation, and LDA effectively summarizes class structure.<br>
-https://scikit-learn.org/0.16/modules/generated/sklearn.lda.LDA.html</p>
+<p><a href="https://scikit-learn.org/0.16/modules/generated/sklearn.lda.LDA.html">LDA</a> reduces the 4D Iris dataset to 2D by finding axes that maximize species separation. The scatterplot of LD1 vs.&nbsp;LD2 shows that Setosa is perfectly separated, while Versicolor and Virginica overlap partially. This confirms that petal features dominate separation, and LDA effectively summarizes class structure.</p>
 <p>Cross-validation:</p>
-<div id="cell-43" class="cell">
+<div id="cell-44" class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Cross-validated accuracy:
 LogisticRegression | CV Acc: 0.953 ± 0.045
@@ -1281,6 +1299,19 @@ The best accuracy was reached with LDA.</p>
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Lucia Macakova</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
