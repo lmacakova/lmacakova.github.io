@@ -1,0 +1,40 @@
+---
+title: "Iris Dataset Analysis"
+date: 2025-10-04
+categories: [Python, Machine Learning, Classification]
+image: "https://images.pexels.com/photos/132476/pexels-photo-132476.jpeg"
+description: "Exploratory data analysis and classification of the classic Iris dataset using statistical and machine learning models."
+---
+
+![Iris flower](https://images.pexels.com/photos/132476/pexels-photo-132476.jpeg){fig-align="center" width=100%}
+
+*Photo: [Anthony 🙂](https://www.pexels.com/sk-sk/@inspiredimages/) — Pexels*
+
+## Problem
+Analyze the Iris dataset and evaluate classification models for predicting Iris species from flower measurements.
+
+## Data
+The **Iris dataset** is a classic dataset in statistics and machine learning, introduced in 1936.  
+It contains **150 samples** from three Iris species, with **50 observations per species**:
+
+- *Iris setosa*
+- *Iris versicolor*
+- *Iris virginica*
+
+## Method
+Exploratory data analysis included **histograms, scatter plots, and violin plots**.  
+Three classification models were applied:
+
+- Linear Discriminant Analysis
+- Logistic Regression
+- Decision Tree Classifier
+
+## Tools
+Python, pandas, NumPy, matplotlib, scikit-learn
+
+## Result
+Logistic Regression and Linear Discriminant Analysis achieved near-perfect classification performance.  
+The Decision Tree model was more interpretable but slightly less stable and less accurate.
+
+## Full Analysis
+[Open the full notebook](../notebooks/iris_analysis.html)

@@ -1,0 +1,24 @@
+---
+title: "A Bit of the Theory of Statistics"
+date: 2025-08-29
+categories: [Python, Statistics]
+image: "https://images.pexels.com/photos/3729557/pexels-photo-3729557.jpeg"
+---
+
+![math's formulas](https://images.pexels.com/photos/3729557/pexels-photo-3729557.jpeg)
+*Photo: [Nothing Ahead](https://www.pexels.com/@ian-panelo/) - pexels*
+
+## Task
+The project demonstrates several fundamental statistical concepts 
+through simulation and hypothesis testing, including:
+
+Combinatorial probability, properties of the normal distribution, 
+t-tests for comparing groups, Type I error in hypothesis testing, 
+behavior of the binomial distribution.
+
+
+## Tools
+Python, pandas, NumPy, itertools, random, SciPy, matplotlib
+
+## Full Analysis
+[Open the full notebook](../notebooks/problems.html)

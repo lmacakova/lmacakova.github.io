@@ -1,0 +1,32 @@
+---
+title: "House Price Prediction"
+date: 2026-02-04
+categories: [Python, Machine Learning, Pricing]
+image: "https://imagescdn.homes.com/i2/SKVfiu2zkYAVlBV4bA7WVLhlkFAf8HXy-LGAqGlBc78/116/northridge-heights-ames-ia.jpg"
+description: Predicting house prices using property features from the Ames Housing dataset.
+---
+
+![](https://imagescdn.homes.com/i2/SKVfiu2zkYAVlBV4bA7WVLhlkFAf8HXy-LGAqGlBc78/116/northridge-heights-ames-ia.jpg?p=1){fig-align="center" width=100%}
+
+*Northridge Heights, Ames, Iowa — source: [homes.com](https://imagescdn.homes.com/i2/SKVfiu2zkYAVlBV4bA7WVLhlkFAf8HXy-LGAqGlBc78/116/northridge-heights-ames-ia.jpg?p=1)*
+
+## Problem
+Predict house prices based on the characteristics of residential properties.
+
+## Data
+The **Ames Housing Dataset** contains detailed information on residential property sales in Ames, Iowa, USA, covering the period **2006–2010**.  
+The dataset includes **79 property features**, such as size, location, quality of construction, and other housing characteristics.
+
+## Method
+Exploratory data analysis was performed to understand the dataset and identify relationships between property features and sale prices.  
+Feature selection was based on correlation analysis, followed by feature engineering to create stronger predictors.  
+A **Ridge regression model** was then used to predict house prices.
+
+## Tools
+Python, pandas, NumPy, matplotlib, Ridge regression
+
+## Result
+Built a predictive model that explains 92.5% of the variability in house prices.
+
+## Full Analysis
+[Open the full notebook](../notebooks/house_price_prediction.html)

@@ -1,0 +1,24 @@
+---
+title: "Weather Data Pipeline"
+date: 2025-09-15
+categories: [Python, API, Automation]
+image: "https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg"
+description: An automated pipeline for collecting, storing, and version-controlling meteorological data using Bash and GitHub Actions.
+---
+
+![](https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg)
+*Photo: [Frank Cone](https://www.pexels.com/@frank-cone-140140) - pexels*
+
+## Overview
+This project automates the collection of weather data and stores it in a repository.  
+It uses **Bash scripting** and **GitHub Actions** to schedule and run the pipeline, ensuring that weather observations are downloaded, timestamped, and saved automatically.
+
+## Tools
+Bash, GitHub Actions, Python, pandas, APIs
+
+## More About:
+[GitHub Repository](https://github.com/lmacakova/weather_data_pipeline)
+
+---
+
+[Latest commit](../weather_data_pipeline.qmd)

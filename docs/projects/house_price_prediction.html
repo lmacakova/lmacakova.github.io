@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-02-04">
+<meta name="description" content="Predicting house prices using property features from the Ames Housing dataset.">
 
-<title>Lucia Macakova</title>
+<title>House Price Prediction – Lucia Macakova</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5d08aeac13616c70e52e80ac851b94f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5d08aeac13616c70e52e80ac851b94f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,17 +72,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Lucia Macakova</span>
     </a>
   </div>
@@ -91,11 +93,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./aboutme.html"> 
+    <a class="nav-link" href="../aboutme.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -113,55 +115,80 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">House Price Prediction</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Pricing</div>
+  </div>
+  </div>
 
-
-
-<section id="featured-projects" class="level2">
-<h2 class="anchored" data-anchor-id="featured-projects">Featured Projects</h2>
-<div class="grid">
-<section id="rohlik-sales-forecasting" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="rohlik-sales-forecasting">Rohlik Sales Forecasting</h3>
-<p>Forecasting warehouse sales using feature engineering and LightGBM.</p>
-<p><strong>Tools:</strong> NumPy, pandas, LightGBM<br>
-<a href="./projects/rohlik_sales_prediction.html">Read more</a></p>
-</section>
-<section id="house-price-prediction" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="house-price-prediction">House Price Prediction</h3>
-<p>Predicting house prices using an advanced linear regression approach.</p>
-<p><strong>Tools:</strong> NumPy, pandas, Ridge regression<br>
-<a href="./projects/house_price_prediction.html">Read more</a></p>
-</section>
-<section id="iris-dataset-analysis" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="iris-dataset-analysis">Iris Dataset Analysis</h3>
-<p>Exploratory analysis and classification of the classic Iris dataset.</p>
-<p><strong>Tools:</strong> pandas, Linear Discriminant Analysis, Logistic Regression, Decision Tree<br>
-<a href="./projects/iris_analysis.html">Read more</a></p>
-</section>
-<section id="a-bit-of-the-theory-of-statistics" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="a-bit-of-the-theory-of-statistics">A Bit of the Theory of Statistics</h3>
-<p>Statistical analysis and probability exercises using Python.</p>
-<p><strong>Tools:</strong> NumPy, pandas, itertools, random, scipy.stats<br>
-<a href="./projects/problems.html">Read more</a></p>
-</section>
-<section id="inventory-management-app" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="inventory-management-app">Inventory Management App</h3>
-<p>Web application for managing inventory.</p>
-<p><strong>Tools:</strong> Python, Flask, SQL, HTML, CSS <a href="./projects/inventory_management_app.html">Read more</a></p>
-</section>
-<section id="weather-data-pipeline" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="weather-data-pipeline">Weather Data Pipeline</h3>
-<p>Automated pipeline for collecting weather data from APIs.</p>
-<p><strong>Tools:</strong> Python, APIs, JSON<br>
-<a href="./projects/about_pipeline.html">Read more</a></p>
-</section>
+<div>
+  <div class="description">
+    Predicting house prices using property features from the Ames Housing dataset.
+  </div>
 </div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 4, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://imagescdn.homes.com/i2/SKVfiu2zkYAVlBV4bA7WVLhlkFAf8HXy-LGAqGlBc78/116/northridge-heights-ames-ia.jpg?p=1" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p><em>Northridge Heights, Ames, Iowa — source: <a href="https://imagescdn.homes.com/i2/SKVfiu2zkYAVlBV4bA7WVLhlkFAf8HXy-LGAqGlBc78/116/northridge-heights-ames-ia.jpg?p=1">homes.com</a></em></p>
+<section id="problem" class="level2">
+<h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<p>Predict house prices based on the characteristics of residential properties.</p>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>The <strong>Ames Housing Dataset</strong> contains detailed information on residential property sales in Ames, Iowa, USA, covering the period <strong>2006–2010</strong>.<br>
+The dataset includes <strong>79 property features</strong>, such as size, location, quality of construction, and other housing characteristics.</p>
+</section>
+<section id="method" class="level2">
+<h2 class="anchored" data-anchor-id="method">Method</h2>
+<p>Exploratory data analysis was performed to understand the dataset and identify relationships between property features and sale prices.<br>
+Feature selection was based on correlation analysis, followed by feature engineering to create stronger predictors.<br>
+A <strong>Ridge regression model</strong> was then used to predict house prices.</p>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p>Python, pandas, NumPy, matplotlib, Ridge regression</p>
+</section>
+<section id="result" class="level2">
+<h2 class="anchored" data-anchor-id="result">Result</h2>
+<p>Built a predictive model that explains 92.5% of the variability in house prices.</p>
+</section>
+<section id="full-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="full-analysis">Full Analysis</h2>
+<p><a href="../notebooks/house_price_prediction.html">Open the full notebook</a></p>
 
 
 </section>

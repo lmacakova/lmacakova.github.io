@@ -1,0 +1,30 @@
+---
+title: "Rohlik Sales Forecasting"
+date: 2025-09-25
+categories: [Python, Machine Learning, Forecasting]
+image: "https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg"
+description: "Sales forecasting project using historical grocery warehouse data and LightGBM."
+---
+
+![](https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg){fig-align="center" width=100%}
+
+*Photo: [Carlo Martin Alcordo](https://www.pexels.com/@carlo-martin-alcordo-1279322/) — Pexels*
+
+## Problem
+Forecast warehouse sales using historical sales data.
+
+## Data
+This project uses historical sales data from 7 warehouses of the grocery company Rohlik across 3 countries.  
+The training period covers **2020-08-01 to 2024-06-02**, and the goal is to predict sales for the following 13 days, from **2024-06-03 to 2024-06-16**.
+
+## Method
+Time-based feature engineering and a gradient boosting model using LightGBM.
+
+## Tools
+Python, pandas, NumPy, LightGBM
+
+## Result
+A forecasting model that captures seasonal patterns and short-term sales trends to predict warehouse sales.
+
+## Full Analysis
+[Open the full notebook](../notebooks/rohlik_sales_prediction.html)

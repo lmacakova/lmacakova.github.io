@@ -4,7 +4,7 @@
     "href": "notebooks/rohlik_sales_prediction.html",
     "title": "Rohlik Sales Forecasting",
     "section": "",
-    "text": "Author: Matheus Cenali, pexels.com"
+    "text": "Photo: Matheus Cenali, pexels.com"
   },
   {
     "objectID": "notebooks/rohlik_sales_prediction.html#about",
@@ -74,7 +74,7 @@
     "href": "notebooks/house_price_prediction.html",
     "title": "House Price Prediction",
     "section": "",
-    "text": "Author: Scott Webb, pexels.com"
+    "text": "Photo: Scott Webb, pexels.com"
   },
   {
     "objectID": "notebooks/house_price_prediction.html#ames-dataset",
@@ -133,6 +133,90 @@
     "text": "The latest committed JSON file from weather_data_pipeline/data/weather\n\n\nLoading latest weather data…"
   },
   {
+    "objectID": "projects/problems.html",
+    "href": "projects/problems.html",
+    "title": "A Bit of the Theory of Statistics",
+    "section": "",
+    "text": "Photo: Nothing Ahead - pexels"
+  },
+  {
+    "objectID": "projects/problems.html#task",
+    "href": "projects/problems.html#task",
+    "title": "A Bit of the Theory of Statistics",
+    "section": "Task",
+    "text": "Task\nThe project demonstrates several fundamental statistical concepts through simulation and hypothesis testing, including:\nCombinatorial probability, properties of the normal distribution, t-tests for comparing groups, Type I error in hypothesis testing, behavior of the binomial distribution."
+  },
+  {
+    "objectID": "projects/problems.html#tools",
+    "href": "projects/problems.html#tools",
+    "title": "A Bit of the Theory of Statistics",
+    "section": "Tools",
+    "text": "Tools\nPython, pandas, NumPy, itertools, random, SciPy, matplotlib"
+  },
+  {
+    "objectID": "projects/problems.html#full-analysis",
+    "href": "projects/problems.html#full-analysis",
+    "title": "A Bit of the Theory of Statistics",
+    "section": "Full Analysis",
+    "text": "Full Analysis\nOpen the full notebook"
+  },
+  {
+    "objectID": "projects/inventory_management_app.html",
+    "href": "projects/inventory_management_app.html",
+    "title": "Inventory Management App",
+    "section": "",
+    "text": "Photo: cottonbro studio - pexels"
+  },
+  {
+    "objectID": "projects/inventory_management_app.html#overview",
+    "href": "projects/inventory_management_app.html#overview",
+    "title": "Inventory Management App",
+    "section": "Overview",
+    "text": "Overview\nThe application provides the following functionality:\n\nadd new products\nupdate product information\nsearch products\ndelete products\nprint inventory records"
+  },
+  {
+    "objectID": "projects/inventory_management_app.html#tools",
+    "href": "projects/inventory_management_app.html#tools",
+    "title": "Inventory Management App",
+    "section": "Tools",
+    "text": "Tools\nPython, Flask, SQL, HTML, CSS"
+  },
+  {
+    "objectID": "projects/inventory_management_app.html#more-about",
+    "href": "projects/inventory_management_app.html#more-about",
+    "title": "Inventory Management App",
+    "section": "More About:",
+    "text": "More About:\nGithub Repository\n\nLive App"
+  },
+  {
+    "objectID": "projects/about_pipeline.html",
+    "href": "projects/about_pipeline.html",
+    "title": "Weather Data Pipeline",
+    "section": "",
+    "text": "Photo: Frank Cone - pexels"
+  },
+  {
+    "objectID": "projects/about_pipeline.html#overview",
+    "href": "projects/about_pipeline.html#overview",
+    "title": "Weather Data Pipeline",
+    "section": "Overview",
+    "text": "Overview\nThis project automates the collection of weather data and stores it in a repository.\nIt uses Bash scripting and GitHub Actions to schedule and run the pipeline, ensuring that weather observations are downloaded, timestamped, and saved automatically."
+  },
+  {
+    "objectID": "projects/about_pipeline.html#tools",
+    "href": "projects/about_pipeline.html#tools",
+    "title": "Weather Data Pipeline",
+    "section": "Tools",
+    "text": "Tools\nBash, GitHub Actions, Python, pandas, APIs"
+  },
+  {
+    "objectID": "projects/about_pipeline.html#more-about",
+    "href": "projects/about_pipeline.html#more-about",
+    "title": "Weather Data Pipeline",
+    "section": "More About:",
+    "text": "More About:\nGitHub Repository\n\nLatest commit"
+  },
+  {
     "objectID": "aboutme.html",
     "href": "aboutme.html",
     "title": "Lucia Macakova",
@@ -144,7 +228,161 @@
     "href": "index.html",
     "title": "Lucia Macakova",
     "section": "",
-    "text": "Data Analysis\n\nHouse Price Prediction - Prices\nSales Forecasting - Rohlik Project\n\nA Bit of Theory of Statistics - Applied Statistics – Problems\nAnalysis of Classical Iris Dataset - Iris Analysis\n\nInventory Management App - Simple web-based inventory management application built with Python\nluciamacakova.pythonanywhere.com\nAutomated Weather Data Pipeline - weather_data_pipeline"
+    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nTools: NumPy, pandas, LightGBM\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nTools: NumPy, pandas, Ridge regression\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nTools: pandas, Linear Discriminant Analysis, Logistic Regression, Decision Tree\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nTools: NumPy, pandas, itertools, random, scipy.stats\nRead more\n\n\n\nWeb application for managing inventory.\nTools: Python, Flask, SQL, HTML, CSS Read more\n\n\n\nAutomated pipeline for collecting weather data from APIs.\nTools: Python, APIs, JSON\nRead more"
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nTools: NumPy, pandas, LightGBM\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nTools: NumPy, pandas, Ridge regression\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nTools: pandas, Linear Discriminant Analysis, Logistic Regression, Decision Tree\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nTools: NumPy, pandas, itertools, random, scipy.stats\nRead more\n\n\n\nWeb application for managing inventory.\nTools: Python, Flask, SQL, HTML, CSS Read more\n\n\n\nAutomated pipeline for collecting weather data from APIs.\nTools: Python, APIs, JSON\nRead more"
+  },
+  {
+    "objectID": "projects/house_price_prediction.html",
+    "href": "projects/house_price_prediction.html",
+    "title": "House Price Prediction",
+    "section": "",
+    "text": "Northridge Heights, Ames, Iowa — source: homes.com"
+  },
+  {
+    "objectID": "projects/house_price_prediction.html#problem",
+    "href": "projects/house_price_prediction.html#problem",
+    "title": "House Price Prediction",
+    "section": "Problem",
+    "text": "Problem\nPredict house prices based on the characteristics of residential properties."
+  },
+  {
+    "objectID": "projects/house_price_prediction.html#data",
+    "href": "projects/house_price_prediction.html#data",
+    "title": "House Price Prediction",
+    "section": "Data",
+    "text": "Data\nThe Ames Housing Dataset contains detailed information on residential property sales in Ames, Iowa, USA, covering the period 2006–2010.\nThe dataset includes 79 property features, such as size, location, quality of construction, and other housing characteristics."
+  },
+  {
+    "objectID": "projects/house_price_prediction.html#method",
+    "href": "projects/house_price_prediction.html#method",
+    "title": "House Price Prediction",
+    "section": "Method",
+    "text": "Method\nExploratory data analysis was performed to understand the dataset and identify relationships between property features and sale prices.\nFeature selection was based on correlation analysis, followed by feature engineering to create stronger predictors.\nA Ridge regression model was then used to predict house prices."
+  },
+  {
+    "objectID": "projects/house_price_prediction.html#tools",
+    "href": "projects/house_price_prediction.html#tools",
+    "title": "House Price Prediction",
+    "section": "Tools",
+    "text": "Tools\nPython, pandas, NumPy, matplotlib, Ridge regression"
+  },
+  {
+    "objectID": "projects/house_price_prediction.html#result",
+    "href": "projects/house_price_prediction.html#result",
+    "title": "House Price Prediction",
+    "section": "Result",
+    "text": "Result\nBuilt a predictive model that explains 92.5% of the variability in house prices."
+  },
+  {
+    "objectID": "projects/house_price_prediction.html#full-analysis",
+    "href": "projects/house_price_prediction.html#full-analysis",
+    "title": "House Price Prediction",
+    "section": "Full Analysis",
+    "text": "Full Analysis\nOpen the full notebook"
+  },
+  {
+    "objectID": "projects/iris_analysis.html",
+    "href": "projects/iris_analysis.html",
+    "title": "Iris Dataset Analysis",
+    "section": "",
+    "text": "Iris flower\nPhoto: Anthony 🙂 — Pexels"
+  },
+  {
+    "objectID": "projects/iris_analysis.html#problem",
+    "href": "projects/iris_analysis.html#problem",
+    "title": "Iris Dataset Analysis",
+    "section": "Problem",
+    "text": "Problem\nAnalyze the Iris dataset and evaluate classification models for predicting Iris species from flower measurements."
+  },
+  {
+    "objectID": "projects/iris_analysis.html#data",
+    "href": "projects/iris_analysis.html#data",
+    "title": "Iris Dataset Analysis",
+    "section": "Data",
+    "text": "Data\nThe Iris dataset is a classic dataset in statistics and machine learning, introduced in 1936.\nIt contains 150 samples from three Iris species, with 50 observations per species:\n\nIris setosa\nIris versicolor\nIris virginica"
+  },
+  {
+    "objectID": "projects/iris_analysis.html#method",
+    "href": "projects/iris_analysis.html#method",
+    "title": "Iris Dataset Analysis",
+    "section": "Method",
+    "text": "Method\nExploratory data analysis included histograms, scatter plots, and violin plots.\nThree classification models were applied:\n\nLinear Discriminant Analysis\nLogistic Regression\nDecision Tree Classifier"
+  },
+  {
+    "objectID": "projects/iris_analysis.html#tools",
+    "href": "projects/iris_analysis.html#tools",
+    "title": "Iris Dataset Analysis",
+    "section": "Tools",
+    "text": "Tools\nPython, pandas, NumPy, matplotlib, scikit-learn"
+  },
+  {
+    "objectID": "projects/iris_analysis.html#result",
+    "href": "projects/iris_analysis.html#result",
+    "title": "Iris Dataset Analysis",
+    "section": "Result",
+    "text": "Result\nLogistic Regression and Linear Discriminant Analysis achieved near-perfect classification performance.\nThe Decision Tree model was more interpretable but slightly less stable and less accurate."
+  },
+  {
+    "objectID": "projects/iris_analysis.html#full-analysis",
+    "href": "projects/iris_analysis.html#full-analysis",
+    "title": "Iris Dataset Analysis",
+    "section": "Full Analysis",
+    "text": "Full Analysis\nOpen the full notebook"
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html",
+    "href": "projects/rohlik_sales_prediction.html",
+    "title": "Rohlik Sales Forecasting",
+    "section": "",
+    "text": "Photo: Carlo Martin Alcordo — Pexels"
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html#problem",
+    "href": "projects/rohlik_sales_prediction.html#problem",
+    "title": "Rohlik Sales Forecasting",
+    "section": "Problem",
+    "text": "Problem\nForecast warehouse sales using historical sales data."
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html#data",
+    "href": "projects/rohlik_sales_prediction.html#data",
+    "title": "Rohlik Sales Forecasting",
+    "section": "Data",
+    "text": "Data\nThis project uses historical sales data from 7 warehouses of the grocery company Rohlik across 3 countries.\nThe training period covers 2020-08-01 to 2024-06-02, and the goal is to predict sales for the following 13 days, from 2024-06-03 to 2024-06-16."
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html#method",
+    "href": "projects/rohlik_sales_prediction.html#method",
+    "title": "Rohlik Sales Forecasting",
+    "section": "Method",
+    "text": "Method\nTime-based feature engineering and a gradient boosting model using LightGBM."
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html#tools",
+    "href": "projects/rohlik_sales_prediction.html#tools",
+    "title": "Rohlik Sales Forecasting",
+    "section": "Tools",
+    "text": "Tools\nPython, pandas, NumPy, LightGBM"
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html#result",
+    "href": "projects/rohlik_sales_prediction.html#result",
+    "title": "Rohlik Sales Forecasting",
+    "section": "Result",
+    "text": "Result\nA forecasting model that captures seasonal patterns and short-term sales trends to predict warehouse sales."
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html#full-analysis",
+    "href": "projects/rohlik_sales_prediction.html#full-analysis",
+    "title": "Rohlik Sales Forecasting",
+    "section": "Full Analysis",
+    "text": "Full Analysis\nOpen the full notebook"
   },
   {
     "objectID": "notebooks/docs/lite/notebooks/jupyter-lite.html",
