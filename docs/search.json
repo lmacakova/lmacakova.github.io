@@ -151,7 +151,7 @@
     "href": "projects/problems.html#tools",
     "title": "A Bit of the Theory of Statistics",
     "section": "Tools",
-    "text": "Tools\nPython, pandas, NumPy, itertools, random, SciPy, matplotlib"
+    "text": "Tools\n, , , ,"
   },
   {
     "objectID": "projects/problems.html#full-analysis",
@@ -179,7 +179,7 @@
     "href": "projects/inventory_management_app.html#tools",
     "title": "Inventory Management App",
     "section": "Tools",
-    "text": "Tools\nPython, Flask, SQL, HTML, CSS"
+    "text": "Tools\n, , , ,"
   },
   {
     "objectID": "projects/inventory_management_app.html#more-about",
@@ -207,7 +207,7 @@
     "href": "projects/about_pipeline.html#tools",
     "title": "Weather Data Pipeline",
     "section": "Tools",
-    "text": "Tools\nBash, GitHub Actions, Python, pandas, APIs"
+    "text": "Tools\n, , , , , GitHub Actions"
   },
   {
     "objectID": "projects/about_pipeline.html#more-about",
@@ -228,14 +228,14 @@
     "href": "portfolio.html",
     "title": "Lucia Macakova",
     "section": "",
-    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nTools: NumPy, pandas, LightGBM\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nTools: NumPy, pandas, Ridge regression\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nTools: pandas, Linear Discriminant Analysis, Logistic Regression, Decision Tree\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nTools: NumPy, pandas, itertools, random, scipy.stats\nRead more\n\n\n\nWeb application for managing inventory.\nTools: Python, Flask, SQL, HTML, CSS Read more\n\n\n\nAutomated pipeline for collecting weather data from APIs.\nTools: Python, APIs, JSON\nRead more"
+    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting weather data from APIs.\nRead more"
   },
   {
     "objectID": "portfolio.html#featured-projects",
     "href": "portfolio.html#featured-projects",
     "title": "Lucia Macakova",
     "section": "",
-    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nTools: NumPy, pandas, LightGBM\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nTools: NumPy, pandas, Ridge regression\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nTools: pandas, Linear Discriminant Analysis, Logistic Regression, Decision Tree\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nTools: NumPy, pandas, itertools, random, scipy.stats\nRead more\n\n\n\nWeb application for managing inventory.\nTools: Python, Flask, SQL, HTML, CSS Read more\n\n\n\nAutomated pipeline for collecting weather data from APIs.\nTools: Python, APIs, JSON\nRead more"
+    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting weather data from APIs.\nRead more"
   },
   {
     "objectID": "projects/house_price_prediction.html",
@@ -270,7 +270,7 @@
     "href": "projects/house_price_prediction.html#tools",
     "title": "House Price Prediction",
     "section": "Tools",
-    "text": "Tools\nPython, pandas, NumPy, matplotlib, Ridge regression"
+    "text": "Tools\n, , , ,  , Ridge regression"
   },
   {
     "objectID": "projects/house_price_prediction.html#result",
@@ -319,7 +319,7 @@
     "href": "projects/iris_analysis.html#tools",
     "title": "Iris Dataset Analysis",
     "section": "Tools",
-    "text": "Tools\nPython, pandas, NumPy, matplotlib, scikit-learn"
+    "text": "Tools\n, , , , , Linear Discriminant Analysis, Logistic Regression, Decision Tree Classifier"
   },
   {
     "objectID": "projects/iris_analysis.html#result",
@@ -368,7 +368,7 @@
     "href": "projects/rohlik_sales_prediction.html#tools",
     "title": "Rohlik Sales Forecasting",
     "section": "Tools",
-    "text": "Tools\nPython, pandas, NumPy, LightGBM"
+    "text": "Tools\n, , , , , LightGBM"
   },
   {
     "objectID": "projects/rohlik_sales_prediction.html#result",

@@ -1,1 +1,19 @@
 /* css styles */
+.hero {
+  padding: 1rem;
+  text-align: center;
+  background: dar;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 2rem;
+  
+}
+
+.grid .g-col-4 {
+  padding: 1rem;
+  text-align: center;
+  background: dar;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;  
+}
+

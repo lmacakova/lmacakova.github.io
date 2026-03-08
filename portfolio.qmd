@@ -4,10 +4,9 @@
 ::: {.grid}
 
 ::: {.g-col-4}
-### Rohlik Sales Forecas-ting
+### Rohlik Sales Forecasting
 Forecasting warehouse sales using feature engineering and LightGBM.
 
-**Tools:** NumPy, pandas, LightGBM  
 [Read more](projects/rohlik_sales_prediction.qmd)
 :::
 
@@ -15,7 +14,6 @@ Forecasting warehouse sales using feature engineering and LightGBM.
 ### House Price Prediction
 Predicting house prices using an advanced linear regression approach.
 
-**Tools:** NumPy, pandas, Ridge regression  
 [Read more](projects/house_price_prediction.qmd)
 :::
 
@@ -23,7 +21,6 @@ Predicting house prices using an advanced linear regression approach.
 ### Iris Dataset Analysis
 Exploratory analysis and classification of the classic Iris dataset.
 
-**Tools:** pandas, Linear Discriminant Analysis, Logistic Regression, Decision Tree  
 [Read more](projects/iris_analysis.qmd)
 :::
 
@@ -31,7 +28,6 @@ Exploratory analysis and classification of the classic Iris dataset.
 ### A Bit of the Theory of Statistics
 Statistical analysis and probability exercises using Python.
 
-**Tools:** NumPy, pandas, itertools, random, scipy.stats  
 [Read more](projects/problems.qmd)
 :::
 
@@ -39,7 +35,6 @@ Statistical analysis and probability exercises using Python.
 ### Inventory Management App
 Web application for managing inventory.
 
-**Tools:** Python, Flask, SQL, HTML, CSS 
 [Read more](projects/inventory_management_app.qmd)
 :::
 
@@ -47,7 +42,6 @@ Web application for managing inventory.
 ### Weather Data Pipeline
 Automated pipeline for collecting weather data from APIs.
 
-**Tools:** Python, APIs, JSON  
 [Read more](projects/about_pipeline.qmd)
 :::
 

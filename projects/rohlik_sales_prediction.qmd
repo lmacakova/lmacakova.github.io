@@ -21,7 +21,12 @@ The training period covers **2020-08-01 to 2024-06-02**, and the goal is to pred
 Time-based feature engineering and a gradient boosting model using LightGBM.
 
 ## Tools
-Python, pandas, NumPy, LightGBM
+![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white),
+![](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white),
+![](https://img.shields.io/badge/pandas-150458?logo=pandas),
+![](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white),
+![](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn),
+`LightGBM`
 
 ## Result
 A forecasting model that captures seasonal patterns and short-term sales trends to predict warehouse sales.

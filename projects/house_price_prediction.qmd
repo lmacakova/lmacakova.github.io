@@ -23,7 +23,13 @@ Feature selection was based on correlation analysis, followed by feature enginee
 A **Ridge regression model** was then used to predict house prices.
 
 ## Tools
-Python, pandas, NumPy, matplotlib, Ridge regression
+![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white),
+![](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white),
+![](https://img.shields.io/badge/pandas-150458?logo=pandas),
+![](https://img.shields.io/badge/Matplotlib-11557C),
+![](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
+![](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn),
+`Ridge regression`
 
 ## Result
 Built a predictive model that explains 92.5% of the variability in house prices.

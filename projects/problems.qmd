@@ -18,7 +18,11 @@ behavior of the binomial distribution.
 
 
 ## Tools
-Python, pandas, NumPy, itertools, random, SciPy, matplotlib
+![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white),
+![](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white),
+![](https://img.shields.io/badge/pandas-150458?logo=pandas),
+![](https://img.shields.io/badge/Matplotlib-11557C),
+![](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
 
 ## Full Analysis
 [Open the full notebook](../notebooks/problems.html)

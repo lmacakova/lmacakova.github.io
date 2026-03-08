@@ -14,7 +14,13 @@ This project automates the collection of weather data and stores it in a reposit
 It uses **Bash scripting** and **GitHub Actions** to schedule and run the pipeline, ensuring that weather observations are downloaded, timestamped, and saved automatically.
 
 ## Tools
-Bash, GitHub Actions, Python, pandas, APIs
+![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white),
+![](https://img.shields.io/badge/pandas-150458?logo=pandasm),
+![](https://img.shields.io/badge/API-Integration-blue),
+![](https://img.shields.io/badge/Bash-Scripting-4EAA25),
+![](https://img.shields.io/badge/JSON-000000?logo=json&logoColor=white),
+`GitHub Actions`
+
 
 ## More About:
 [GitHub Repository](https://github.com/lmacakova/weather_data_pipeline)
