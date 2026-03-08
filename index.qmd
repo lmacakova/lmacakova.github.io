@@ -2,9 +2,15 @@
 title: ""
 ---
 
-::: {.hero}
-I am a data analytics graduate passionate about turning data into useful insights. I work with Python, SQL, machine learning, and visualization, and I enjoy building practical projects that solve real problems.
+::: {.grid}
 
+::: {.g-col-3}
+![](Lucia.jpg){width=100%}
+:::
+
+::: {.g-col-8}
+
+I am a data analytics graduate passionate about turning data into useful insights. I work with Python, SQL, machine learning, and visualization, and I enjoy building practical projects that solve real problems.
 
 Email: l.macakova.sk@gmail.com
 
@@ -15,4 +21,7 @@ Email: l.macakova.sk@gmail.com
 ![](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![](https://img.shields.io/badge/API-Integration-blue)
 ![](https://img.shields.io/badge/Bash-Scripting-4EAA25)
+
+:::
+
 :::

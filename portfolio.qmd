@@ -40,7 +40,7 @@ Web application for managing inventory.
 
 ::: {.g-col-4}
 ### Weather Data Pipeline
-Automated pipeline for collecting weather data from APIs.
+Automated pipeline for collecting and storing weather data from APIs.
 
 [Read more](projects/about_pipeline.qmd)
 :::

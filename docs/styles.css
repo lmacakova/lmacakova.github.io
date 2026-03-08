@@ -17,3 +17,16 @@
   border-radius: 8px;  
 }
 
+.grid .g-col-8 {
+  padding: 1rem;
+  text-align: center;
+  background: dar;  
+  border-radius: 8px; 
+}
+
+.grid .g-col-3 {
+  padding: 1rem;
+  text-align: center;
+  background: dar;
+  border-radius: 8px
+}
