@@ -9,10 +9,11 @@ website:
   title: "Lucia Macakova"
   navbar:
     left:
-      - text: Portfolio
-        href: index.qmd
       - text: About
-        href: aboutme.qmd
+        href: index.qmd
+      - text: Portfolio
+        href: portfolio.qmd
+      
     right:
       - icon: github
         href: https://github.com/lmacakova

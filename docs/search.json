@@ -217,22 +217,22 @@
     "text": "More About:\nGitHub Repository\n\nLatest commit"
   },
   {
-    "objectID": "aboutme.html",
-    "href": "aboutme.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Lucia Macakova",
     "section": "",
     "text": "I am a data analytics graduate passionate about turning data into useful insights. I work with Python, SQL, machine learning, and visualization, and I enjoy building practical projects that solve real problems.\nEmail: l.macakova.sk@gmail.com"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
     "title": "Lucia Macakova",
     "section": "",
     "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nTools: NumPy, pandas, LightGBM\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nTools: NumPy, pandas, Ridge regression\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nTools: pandas, Linear Discriminant Analysis, Logistic Regression, Decision Tree\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nTools: NumPy, pandas, itertools, random, scipy.stats\nRead more\n\n\n\nWeb application for managing inventory.\nTools: Python, Flask, SQL, HTML, CSS Read more\n\n\n\nAutomated pipeline for collecting weather data from APIs.\nTools: Python, APIs, JSON\nRead more"
   },
   {
-    "objectID": "index.html#featured-projects",
-    "href": "index.html#featured-projects",
+    "objectID": "portfolio.html#featured-projects",
+    "href": "portfolio.html#featured-projects",
     "title": "Lucia Macakova",
     "section": "",
     "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nTools: NumPy, pandas, LightGBM\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nTools: NumPy, pandas, Ridge regression\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nTools: pandas, Linear Discriminant Analysis, Logistic Regression, Decision Tree\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nTools: NumPy, pandas, itertools, random, scipy.stats\nRead more\n\n\n\nWeb application for managing inventory.\nTools: Python, Flask, SQL, HTML, CSS Read more\n\n\n\nAutomated pipeline for collecting weather data from APIs.\nTools: Python, APIs, JSON\nRead more"
