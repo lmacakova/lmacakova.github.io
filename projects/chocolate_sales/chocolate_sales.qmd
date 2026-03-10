@@ -11,7 +11,7 @@ image: "https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-
 
 
 ## Overview
-Analysis of chocolate sales over the world
+Analysis of chocolate sales in 6 countries
 
 ## Data
 Data came from [kaggle dataset](https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales)

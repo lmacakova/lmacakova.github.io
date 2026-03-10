@@ -25,11 +25,12 @@ Exploratory analysis and classification of the classic Iris dataset.
 :::
 
 ::: {.g-col-4}
-### Chocolate Sales Analysis
-Statistical analysis with Power BI and ML
+### A Bit of the Theory of Statistics
+Statistical analysis and probability exercises using Python.
 
-[Read more](projects/chocolate_sales/chocolate_sales.qmd)
+[Read more](projects/problems.qmd)
 :::
+
 
 ::: {.g-col-4}
 ### Inventory Management App
