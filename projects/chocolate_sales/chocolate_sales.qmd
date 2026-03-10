@@ -20,7 +20,6 @@ Data came from [kaggle dataset](https://www.kaggle.com/datasets/saidaminsaidaxma
 ## Method
 
 ## Tools
-[Open interactive dashboard](https://app.powerbi.com/view?r=ChocolateSales)
 
 
 
