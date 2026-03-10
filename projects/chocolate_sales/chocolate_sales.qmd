@@ -1,0 +1,37 @@
+---
+title: "Chocolate Sales"
+page-layout: full
+image: "https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg"
+---
+
+
+![](https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg){width=85%}
+
+*[Pixabay](https://www.pexels.com/@pixabay) - pexels*
+
+
+## Overview
+Analysis of chocolate sales over the world
+
+## Data
+Data came from [kaggle dataset](https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales)
+
+
+## Method
+
+## Tools
+
+<iframe
+  title="Chocolate Sales Dashboard"
+  width="100%"
+  height="650"
+  src= "https://app.powerbi.com/groups/4507b310-fe0a-45fd-8f36-c04c20b0402c/reports/5dc4a1f4-b496-4d9a-af99-150255186cee?experience=power-bi"
+  frameborder="0"
+  allowFullScreen="true">
+</iframe>
+
+
+
+
+
+

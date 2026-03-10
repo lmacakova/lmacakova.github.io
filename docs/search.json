@@ -189,6 +189,62 @@
     "text": "More About:\nGithub Repository\n\nLive App"
   },
   {
+    "objectID": "projects/chocolate_sales/chocolate_sales.html",
+    "href": "projects/chocolate_sales/chocolate_sales.html",
+    "title": "Chocolate Sales",
+    "section": "",
+    "text": "Pixabay - pexels"
+  },
+  {
+    "objectID": "projects/chocolate_sales/chocolate_sales.html#overview",
+    "href": "projects/chocolate_sales/chocolate_sales.html#overview",
+    "title": "Chocolate Sales",
+    "section": "Overview",
+    "text": "Overview\nAnalysis of chocolate sales over the world"
+  },
+  {
+    "objectID": "projects/chocolate_sales/chocolate_sales.html#data",
+    "href": "projects/chocolate_sales/chocolate_sales.html#data",
+    "title": "Chocolate Sales",
+    "section": "Data",
+    "text": "Data\nData came from kaggle dataset"
+  },
+  {
+    "objectID": "projects/chocolate_sales/chocolate_sales.html#method",
+    "href": "projects/chocolate_sales/chocolate_sales.html#method",
+    "title": "Chocolate Sales",
+    "section": "Method",
+    "text": "Method"
+  },
+  {
+    "objectID": "projects/chocolate_sales/chocolate_sales.html#tools",
+    "href": "projects/chocolate_sales/chocolate_sales.html#tools",
+    "title": "Chocolate Sales",
+    "section": "Tools",
+    "text": "Tools"
+  },
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nRead more\n\n\n\nStatistical analysis with Power BI and ML\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting and storing weather data from APIs.\nRead more"
+  },
+  {
+    "objectID": "portfolio.html#featured-projects",
+    "href": "portfolio.html#featured-projects",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nRead more\n\n\n\nStatistical analysis with Power BI and ML\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting and storing weather data from APIs.\nRead more"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "I am a data analytics graduate passionate about turning data into useful insights. I work with Python, SQL, machine learning, and visualization, and I enjoy building practical projects that solve real problems.\nEmail: l.macakova.sk@gmail.com"
+  },
+  {
     "objectID": "projects/about_pipeline.html",
     "href": "projects/about_pipeline.html",
     "title": "Weather Data Pipeline",
@@ -215,27 +271,6 @@
     "title": "Weather Data Pipeline",
     "section": "More About:",
     "text": "More About:\nGitHub Repository\n\nLatest commit"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lucia Macakova",
-    "section": "",
-    "text": "I am a data analytics graduate passionate about turning data into useful insights. I work with Python, SQL, machine learning, and visualization, and I enjoy building practical projects that solve real problems.\nEmail: l.macakova.sk@gmail.com"
-  },
-  {
-    "objectID": "portfolio.html",
-    "href": "portfolio.html",
-    "title": "Lucia Macakova",
-    "section": "",
-    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting and storing weather data from APIs.\nRead more"
-  },
-  {
-    "objectID": "portfolio.html#featured-projects",
-    "href": "portfolio.html#featured-projects",
-    "title": "Lucia Macakova",
-    "section": "",
-    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting and storing weather data from APIs.\nRead more"
   },
   {
     "objectID": "projects/house_price_prediction.html",
