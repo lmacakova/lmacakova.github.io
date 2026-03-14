@@ -1,0 +1,289 @@
+---
+title: "Chocolate Sales Dashboard"
+format: dashboard
+scrolling: True
+page-layout: full
+
+
+execute:
+  echo: false
+  warning: false
+  message: false
+jupyter: python3
+---
+
+```{python}
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+
+df = pd.read_csv("chocolate_sales_clean.csv", parse_dates=["Date"])
+
+monthly = (
+    df.groupby("Month Label", as_index=False)
+      .agg(Sales=("Amount", "sum"),
+           Boxes=("Boxes Shipped", "sum"),
+           Orders=("Amount", "size"))
+      .sort_values("Month Label")
+)
+
+country = (
+    df.groupby("Country", as_index=False)
+      .agg(Sales=("Amount", "sum"),
+           Boxes=("Boxes Shipped", "sum"),
+           Orders=("Amount", "size"))
+      .sort_values("Sales", ascending=False)
+)
+
+product = (
+    df.groupby("Product", as_index=False)
+      .agg(Sales=("Amount", "sum"),
+           Boxes=("Boxes Shipped", "sum"),
+           Orders=("Amount", "size"))
+      .sort_values("Sales", ascending=False)
+)
+
+salesperson = (
+    df.groupby("Sales Person", as_index=False)
+      .agg(Sales=("Amount", "sum"),
+           Boxes=("Boxes Shipped", "sum"),
+           Orders=("Amount", "size"))
+      .sort_values("Sales", ascending=False)
+)
+
+yearly = (
+    df.groupby("Year", as_index=False)
+      .agg(Sales=("Amount", "sum"),
+           Boxes=("Boxes Shipped", "sum"),
+           Orders=("Amount", "size"))
+      .sort_values("Year")
+)
+
+total_sales = df["Amount"].sum()
+total_boxes = int(df["Boxes Shipped"].sum())
+total_orders = len(df)
+avg_order = df["Amount"].mean()
+num_countries = df["Country"].nunique()
+num_persons = df["Sales Person"].nunique()
+num_products = df["Product"].nunique()
+top_country = country.iloc[0]["Country"]
+top_product = product.iloc[0]["Product"]
+```
+
+## Row  {height=150px}
+
+```{python}
+#| content: valuebox
+#| title: "Total Sales"
+dict(
+    icon="cash-coin",
+    color="primary",
+    value=f"${total_sales:,.0f}"
+)
+
+```
+
+
+```{python}
+#| content: valuebox
+#| title: "Total Orders"
+dict (
+    icon = "pencil-square",
+    color = "primary",
+    value = f"{total_orders:,}"
+)
+```
+
+
+```{python}
+#| content: valuebox
+#| title: "Salespeople"
+dict (
+    icon = "people-fill",
+    color = "primary",
+    value = num_persons
+)
+```
+## Row {height=150px}
+
+```{python}
+#| content: valuebox
+#| title: "Average Order"
+dict (
+    icon = "cash-coin",
+    color = "primary",
+    value = f"${avg_order:,.0f}"
+)
+```
+
+
+
+```{python}
+#| content: valuebox
+#| title: "Number of Countries"
+dict (
+    icon = "globe2",
+    color = "primary",
+    value = f"{num_countries}"
+)
+```
+
+
+
+```{python}
+#| content: valuebox
+#| title: "Number of Products"
+dict (
+    icon = "",
+    color = "primary",
+    value = f"{num_products}"
+)
+```
+
+
+## Row {height=300px}
+
+```{python}
+fig = px.line(
+    monthly,
+    x="Month Label",
+    y="Sales",
+    markers=True,
+    title="Revenue Trend by Month"
+)
+
+fig.update_layout(
+    xaxis_title="Month",
+    yaxis_title="Sales ($)",
+    margin=dict(l=20, r=20, t=60, b=20)
+)
+
+fig.update_yaxes(tickformat="$,.0f")
+fig.show();
+```
+
+
+## Row {height=300px}
+
+```{python}
+fig = px.bar(
+    country,
+    x="Country",
+    y="Sales",
+    title="Revenue by Country",
+    text_auto=".2s"
+)
+fig.update_layout(
+    xaxis_title="Country",
+    yaxis_title="Sales ($)",
+    margin=dict(l=20, r=20, t=60, b=20)
+)
+fig.update_yaxes(tickformat="$,.0f")
+fig.show();
+```
+## Row {height=300px}
+
+```{python}
+top_products = product.head(10)
+fig = px.bar(
+    top_products,
+    x="Sales",
+    y="Product",
+    orientation="h",
+    title="Top 10 Products by Revenue",
+    text_auto=".2s"
+)
+fig.update_layout(
+    xaxis_title="Sales ($)",
+    yaxis_title="Product",
+    yaxis=dict(categoryorder="total ascending"),
+    margin=dict(l=20, r=20, t=60, b=20)
+)
+fig.update_yaxes(tickformat="$,.0f")
+fig.show();
+```
+## Row {height=300px}
+```{python}
+top_people = salesperson.head(10)
+fig = px.bar(
+    top_people,
+    x="Sales",
+    y="Sales Person",
+    orientation="h",
+    title="Top 10 Salespeople by Revenue",
+    text_auto=".2s"
+)
+fig.update_layout(
+    xaxis_title="Sales ($)",
+    yaxis_title="Sales Person",
+    yaxis=dict(categoryorder="total ascending"),
+    margin=dict(l=20, r=20, t=60, b=20)
+)
+fig.update_yaxes(tickformat="$,.0f")
+fig.show();
+```
+
+## Row {height=300px}
+
+```{python}
+fig = go.Figure()
+fig.add_bar(x=yearly["Year"], y=yearly["Sales"], name="Sales")
+fig.add_scatter(x=yearly["Year"], y=yearly["Boxes"], name="Boxes", yaxis="y2", mode="lines+markers")
+fig.update_layout(
+    title="Yearly Sales and Shipment Volume",
+    xaxis_title="Year",
+    yaxis=dict(title="Sales ($)"),
+    yaxis2=dict(title="Boxes", overlaying="y", side="right"),
+    margin=dict(l=20, r=20, t=60, b=20)
+)
+fig.update_yaxes(tickformat="$,.0f")
+fig.show();
+```
+## Row {height=300px}
+
+```{python}
+country.assign(
+    Avg_Order_Value=(country["Sales"] / country["Orders"]).round(2)
+).rename(columns={
+    "Sales": "Sales ($)",
+    "Boxes": "Boxes Shipped",
+    "Orders": "Orders",
+    "Avg_Order_Value": "Avg Order Value ($)"
+}
+)
+```
+
+## Row {height=600px}
+
+```{python}
+product.assign(
+    Avg_Order_Value=(product["Sales"] / product["Orders"]).round(2)
+).rename(columns={
+    "Sales": "Sales ($)",
+    "Boxes": "Boxes Shipped",
+    "Orders": "Orders",
+    "Avg_Order_Value": "Avg Order Value ($)"
+}
+)
+```
+## Row {height=300px}
+
+```{python}
+summary = pd.DataFrame({
+    "Metric": [
+        "Top country by sales",
+        "Top product by sales",
+        "Highest revenue salesperson",
+        "Average order value",
+        "Total shipment volume"
+    ],
+    "Value": [
+        top_country,
+        top_product,
+        salesperson.iloc[0]["Sales Person"],
+        f"${avg_order:,.0f}",
+        f"{total_boxes:,} boxes"
+    ]
+})
+summary
+```

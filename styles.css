@@ -30,3 +30,7 @@
   background: dar;
   border-radius: 8px
 }
+
+.smaller-box .value-box-value {
+  font-size: 1.5rem;
+}

@@ -16,10 +16,11 @@ Analysis of chocolate sales in 6 countries
 ## Data
 Data came from [kaggle dataset](https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales)
 
-
 ## Method
 
 ## Tools
+
+[Dashboard](chocolate_sales_dashboard.qmd)
 
 
 
