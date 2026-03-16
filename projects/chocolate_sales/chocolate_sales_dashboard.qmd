@@ -139,29 +139,6 @@ dict (
 )
 ```
 
-
-## Row {height=300px}
-
-```{python}
-fig = px.line(
-    monthly,
-    x="Month Label",
-    y="Sales",
-    markers=True,
-    title="Revenue Trend by Month"
-)
-
-fig.update_layout(
-    xaxis_title="Month",
-    yaxis_title="Sales ($)",
-    margin=dict(l=20, r=20, t=60, b=20)
-)
-
-fig.update_yaxes(tickformat="$,.0f")
-fig.show();
-```
-
-
 ## Row {height=300px}
 
 ```{python}
@@ -241,29 +218,42 @@ fig.show();
 ## Row {height=300px}
 
 ```{python}
-country.assign(
-    Avg_Order_Value=(country["Sales"] / country["Orders"]).round(2)
-).rename(columns={
-    "Sales": "Sales ($)",
-    "Boxes": "Boxes Shipped",
-    "Orders": "Orders",
-    "Avg_Order_Value": "Avg Order Value ($)"
-}
+country_table = (
+    country
+    .sort_values("Sales", ascending=False)
+    .assign(
+        Avg_Order_Value=(country["Sales"] / country["Orders"]).round(2)
+    )
+    .rename(columns={
+        "Sales": "Sales ($)",
+        "Boxes": "Boxes Shipped",
+        "Orders": "Orders",
+        "Avg_Order_Value": "Avg Order Value ($)"
+    })
+    .reset_index(drop=True)
 )
+
+country_table
 ```
 
 ## Row {height=600px}
-
+## Performance by Orders
 ```{python}
-product.assign(
-    Avg_Order_Value=(product["Sales"] / product["Orders"]).round(2)
-).rename(columns={
-    "Sales": "Sales ($)",
-    "Boxes": "Boxes Shipped",
-    "Orders": "Orders",
-    "Avg_Order_Value": "Avg Order Value ($)"
-}
+product_table = (
+    product
+    .sort_values("Orders", ascending=False)
+    .assign(
+        Avg_Order_Value=(product["Sales"] / product["Orders"]).round(2)
+    )
+    .rename(columns={
+        "Orders": "Orders",
+        "Sales": "Sales ($)",
+        "Boxes": "Boxes Shipped",
+        "Avg_Order_Value": "Avg Order Value ($)"
+    })
+    .reset_index(drop=True)
 )
+product_table
 ```
 ## Row {height=300px}
 
