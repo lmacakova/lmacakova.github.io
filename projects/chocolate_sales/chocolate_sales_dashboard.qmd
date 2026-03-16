@@ -218,6 +218,7 @@ fig.show();
 ## Row {height=300px}
 
 ```{python}
+
 country_table = (
     country
     .sort_values("Sales", ascending=False)
@@ -232,6 +233,8 @@ country_table = (
     })
     .reset_index(drop=True)
 )
+
+country_table.index = country_table.index + 1
 
 country_table
 ```
@@ -253,6 +256,7 @@ product_table = (
     })
     .reset_index(drop=True)
 )
+product_table.index = product_table.index + 1
 product_table
 ```
 ## Row {height=300px}
@@ -274,5 +278,6 @@ summary = pd.DataFrame({
         f"{total_boxes:,} boxes"
     ]
 })
+summary.index=summary.index + 1
 summary
 ```
