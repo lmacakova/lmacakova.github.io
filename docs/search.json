@@ -256,28 +256,14 @@
     "href": "projects/chocolate_sales/chocolate_sales.html#overview",
     "title": "Chocolate Sales",
     "section": "Overview",
-    "text": "Overview\nAnalysis of chocolate sales in 6 countries"
+    "text": "Overview\nAnalysis of chocolate sales in 6 countries."
   },
   {
     "objectID": "projects/chocolate_sales/chocolate_sales.html#data",
     "href": "projects/chocolate_sales/chocolate_sales.html#data",
     "title": "Chocolate Sales",
     "section": "Data",
-    "text": "Data\nData came from kaggle dataset"
-  },
-  {
-    "objectID": "projects/chocolate_sales/chocolate_sales.html#method",
-    "href": "projects/chocolate_sales/chocolate_sales.html#method",
-    "title": "Chocolate Sales",
-    "section": "Method",
-    "text": "Method"
-  },
-  {
-    "objectID": "projects/chocolate_sales/chocolate_sales.html#tools",
-    "href": "projects/chocolate_sales/chocolate_sales.html#tools",
-    "title": "Chocolate Sales",
-    "section": "Tools",
-    "text": "Tools\nDashboard"
+    "text": "Data\nData came from kaggle dataset.\nDashboard"
   },
   {
     "objectID": "projects/house_price_prediction.html",
