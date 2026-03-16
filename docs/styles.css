@@ -31,6 +31,20 @@
   border-radius: 8px
 }
 
-.smaller-box .value-box-value {
-  font-size: 1.5rem;
+.quarto-dashboard .bslib-value-box .value-box-value {
+    font-size: clamp(.1em, 10cqw, 5em);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .form-sections {
+        flex-direction: column;
+    }
+
+    .container-search,
+    .container-add-product,
+    .container-edit-product {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }

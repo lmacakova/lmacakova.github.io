@@ -97,7 +97,7 @@ dict (
 
 ```{python}
 #| content: valuebox
-#| title: "Salespeople"
+#| title: "Salesmen"
 dict (
     icon = "people-fill",
     color = "primary",
@@ -210,7 +210,7 @@ fig = px.bar(
     x="Sales",
     y="Sales Person",
     orientation="h",
-    title="Top 10 Salespeople by Revenue",
+    title="Top 10 Salesmen by Revenue",
     text_auto=".2s"
 )
 fig.update_layout(
