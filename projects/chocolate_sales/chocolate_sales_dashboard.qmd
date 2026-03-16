@@ -76,7 +76,6 @@ top_product = product.iloc[0]["Product"]
 #| content: valuebox
 #| title: "Total Sales"
 dict(
-    icon="cash-coin",
     color="primary",
     value=f"${total_sales:,.0f}"
 )

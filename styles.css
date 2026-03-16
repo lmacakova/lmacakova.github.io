@@ -32,7 +32,8 @@
 }
 
 .quarto-dashboard .bslib-value-box .value-box-value {
-    font-size: clamp(.1em, 10cqw, 5em);
+    font-size: 4rem;
+    font-weight: 700;
 }
 
 /* Responsive Design */
