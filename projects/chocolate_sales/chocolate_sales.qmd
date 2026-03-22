@@ -18,10 +18,3 @@ Data came from [kaggle dataset](https://www.kaggle.com/datasets/saidaminsaidaxma
 
 
 [Dashboard](chocolate_sales_dashboard.qmd)
-
-
-
-
-
-
-
