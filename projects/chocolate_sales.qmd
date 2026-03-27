@@ -1,0 +1,34 @@
+---
+title: "Chocolate Sales"
+date: 2026-03-27
+categories: [Machine Learning, Forecasting, EDA]
+image: "https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg"
+description: "Visual Analysis and forecasting project using historical data and Random Forest Regressor."
+---
+
+
+![](https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg){width=85%}
+
+*[Pixabay](https://www.pexels.com/@pixabay) - pexels*
+
+
+## Overview
+Exploratory analysis of chocolate sales in 6 countries
+ and prediction of chocolate sales for the next year with Random Forest Regressor model.
+
+## Data
+Data came from [this dataset](https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales).
+The dataset represents a global chocolate company tracking sales performance across products, regions, and employees.
+
+## Tools
+![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white),
+![](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white),
+![](https://img.shields.io/badge/pandas-150458?logo=pandas),
+![](https://img.shields.io/badge/Matplotlib-11557C),
+![](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn),
+`Random Forrest Regressor`
+
+## Analysis
+[Dashboard](chocolate_sales/chocolate_sales_dashboard.qmd)\
+[Open the notebook](../notebooks/chocolate_sales_notebook.html)
+

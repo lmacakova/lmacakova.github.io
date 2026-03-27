@@ -1,7 +1,7 @@
 ---
 title: "Iris Dataset Analysis"
 date: 2025-10-04
-categories: [Python, Machine Learning, Classification]
+categories: [Machine Learning, Classification]
 image: "https://images.pexels.com/photos/132476/pexels-photo-132476.jpeg"
 description: "Exploratory data analysis and classification of the classic Iris dataset using statistical and machine learning models."
 ---
@@ -37,9 +37,7 @@ Three classification models were applied:
 ![](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn),
 `Linear Discriminant Analysis`, `Logistic Regression`, `Decision Tree Classifier`
 
-## Result
-Logistic Regression and Linear Discriminant Analysis achieved near-perfect classification performance.  
-The Decision Tree model was more interpretable but slightly less stable and less accurate.
 
-## Full Analysis
-[Open the full notebook](../notebooks/iris_analysis.html)
+
+## Analysis
+[Open the notebook](../notebooks/iris_analysis.html)

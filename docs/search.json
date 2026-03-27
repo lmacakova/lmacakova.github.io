@@ -126,193 +126,81 @@
     "text": "Data Description\nMSSubClass: Identifies the type of dwelling involved in the sale.\n    20  1-STORY 1946 & NEWER ALL STYLES\n    30  1-STORY 1945 & OLDER\n    40  1-STORY W/FINISHED ATTIC ALL AGES\n    45  1-1/2 STORY - UNFINISHED ALL AGES\n    50  1-1/2 STORY FINISHED ALL AGES\n    60  2-STORY 1946 & NEWER\n    70  2-STORY 1945 & OLDER\n    75  2-1/2 STORY ALL AGES\n    80  SPLIT OR MULTI-LEVEL\n    85  SPLIT FOYER\n    90  DUPLEX - ALL STYLES AND AGES\n   120  1-STORY PUD (Planned Unit Development) - 1946 & NEWER\n   150  1-1/2 STORY PUD - ALL AGES\n   160  2-STORY PUD - 1946 & NEWER\n   180  PUD - MULTILEVEL - INCL SPLIT LEV/FOYER\n   190  2 FAMILY CONVERSION - ALL STYLES AND AGES\nMSZoning: Identifies the general zoning classification of the sale.\n   A    Agriculture\n   C    Commercial\n   FV   Floating Village Residential\n   I    Industrial\n   RH   Residential High Density\n   RL   Residential Low Density\n   RP   Residential Low Density Park \n   RM   Residential Medium Density\nLotFrontage: Linear feet of street connected to property\nLotArea: Lot size in square feet\nStreet: Type of road access to property\n   Grvl Gravel  \n   Pave Paved\n    \nAlley: Type of alley access to property\n   Grvl Gravel\n   Pave Paved\n   NA   No alley access\n    \nLotShape: General shape of property\n   Reg  Regular \n   IR1  Slightly irregular\n   IR2  Moderately Irregular\n   IR3  Irregular\n   \nLandContour: Flatness of the property\n   Lvl  Near Flat/Level \n   Bnk  Banked - Quick and significant rise from street grade to building\n   HLS  Hillside - Significant slope from side to side\n   Low  Depression\n    \nUtilities: Type of utilities available\n   AllPub   All public Utilities (E,G,W,& S)    \n   NoSewr   Electricity, Gas, and Water (Septic Tank)\n   NoSeWa   Electricity and Gas Only\n   ELO  Electricity only    \nLotConfig: Lot configuration\n   Inside   Inside lot\n   Corner   Corner lot\n   CulDSac  Cul-de-sac\n   FR2  Frontage on 2 sides of property\n   FR3  Frontage on 3 sides of property\nLandSlope: Slope of property\n   Gtl  Gentle slope\n   Mod  Moderate Slope  \n   Sev  Severe Slope\nNeighborhood: Physical locations within Ames city limits\n   Blmngtn  Bloomington Heights\n   Blueste  Bluestem\n   BrDale   Briardale\n   BrkSide  Brookside\n   ClearCr  Clear Creek\n   CollgCr  College Creek\n   Crawfor  Crawford\n   Edwards  Edwards\n   Gilbert  Gilbert\n   IDOTRR   Iowa DOT and Rail Road\n   MeadowV  Meadow Village\n   Mitchel  Mitchell\n   Names    North Ames\n   NoRidge  Northridge\n   NPkVill  Northpark Villa\n   NridgHt  Northridge Heights\n   NWAmes   Northwest Ames\n   OldTown  Old Town\n   SWISU    South & West of Iowa State University\n   Sawyer   Sawyer\n   SawyerW  Sawyer West\n   Somerst  Somerset\n   StoneBr  Stone Brook\n   Timber   Timberland\n   Veenker  Veenker\n        \nCondition1: Proximity to various conditions\n   Artery   Adjacent to arterial street\n   Feedr    Adjacent to feeder street   \n   Norm Normal  \n   RRNn Within 200' of North-South Railroad\n   RRAn Adjacent to North-South Railroad\n   PosN Near positive off-site feature--park, greenbelt, etc.\n   PosA Adjacent to postive off-site feature\n   RRNe Within 200' of East-West Railroad\n   RRAe Adjacent to East-West Railroad\nCondition2: Proximity to various conditions (if more than one is present)\n   Artery   Adjacent to arterial street\n   Feedr    Adjacent to feeder street   \n   Norm Normal  \n   RRNn Within 200' of North-South Railroad\n   RRAn Adjacent to North-South Railroad\n   PosN Near positive off-site feature--park, greenbelt, etc.\n   PosA Adjacent to postive off-site feature\n   RRNe Within 200' of East-West Railroad\n   RRAe Adjacent to East-West Railroad\nBldgType: Type of dwelling\n   1Fam Single-family Detached  \n   2FmCon   Two-family Conversion; originally built as one-family dwelling\n   Duplx    Duplex\n   TwnhsE   Townhouse End Unit\n   TwnhsI   Townhouse Inside Unit\nHouseStyle: Style of dwelling\n   1Story   One story\n   1.5Fin   One and one-half story: 2nd level finished\n   1.5Unf   One and one-half story: 2nd level unfinished\n   2Story   Two story\n   2.5Fin   Two and one-half story: 2nd level finished\n   2.5Unf   Two and one-half story: 2nd level unfinished\n   SFoyer   Split Foyer\n   SLvl Split Level\nOverallQual: Rates the overall material and finish of the house\n   10   Very Excellent\n   9    Excellent\n   8    Very Good\n   7    Good\n   6    Above Average\n   5    Average\n   4    Below Average\n   3    Fair\n   2    Poor\n   1    Very Poor\nOverallCond: Rates the overall condition of the house\n   10   Very Excellent\n   9    Excellent\n   8    Very Good\n   7    Good\n   6    Above Average   \n   5    Average\n   4    Below Average   \n   3    Fair\n   2    Poor\n   1    Very Poor\n    \nYearBuilt: Original construction date\nYearRemodAdd: Remodel date (same as construction date if no remodeling or additions)\nRoofStyle: Type of roof\n   Flat Flat\n   Gable    Gable\n   Gambrel  Gabrel (Barn)\n   Hip  Hip\n   Mansard  Mansard\n   Shed Shed\n    \nRoofMatl: Roof material\n   ClyTile  Clay or Tile\n   CompShg  Standard (Composite) Shingle\n   Membran  Membrane\n   Metal    Metal\n   Roll Roll\n   Tar&Grv  Gravel & Tar\n   WdShake  Wood Shakes\n   WdShngl  Wood Shingles\n    \nExterior1st: Exterior covering on house\n   AsbShng  Asbestos Shingles\n   AsphShn  Asphalt Shingles\n   BrkComm  Brick Common\n   BrkFace  Brick Face\n   CBlock   Cinder Block\n   CemntBd  Cement Board\n   HdBoard  Hard Board\n   ImStucc  Imitation Stucco\n   MetalSd  Metal Siding\n   Other    Other\n   Plywood  Plywood\n   PreCast  PreCast \n   Stone    Stone\n   Stucco   Stucco\n   VinylSd  Vinyl Siding\n   Wd Sdng  Wood Siding\n   WdShing  Wood Shingles\nExterior2nd: Exterior covering on house (if more than one material)\n   AsbShng  Asbestos Shingles\n   AsphShn  Asphalt Shingles\n   BrkComm  Brick Common\n   BrkFace  Brick Face\n   CBlock   Cinder Block\n   CemntBd  Cement Board\n   HdBoard  Hard Board\n   ImStucc  Imitation Stucco\n   MetalSd  Metal Siding\n   Other    Other\n   Plywood  Plywood\n   PreCast  PreCast\n   Stone    Stone\n   Stucco   Stucco\n   VinylSd  Vinyl Siding\n   Wd Sdng  Wood Siding\n   WdShing  Wood Shingles\nMasVnrType: Masonry veneer type\n   BrkCmn   Brick Common\n   BrkFace  Brick Face\n   CBlock   Cinder Block\n   None None\n   Stone    Stone\nMasVnrArea: Masonry veneer area in square feet\nExterQual: Evaluates the quality of the material on the exterior\n   Ex   Excellent\n   Gd   Good\n   TA   Average/Typical\n   Fa   Fair\n   Po   Poor\n    \nExterCond: Evaluates the present condition of the material on the exterior\n   Ex   Excellent\n   Gd   Good\n   TA   Average/Typical\n   Fa   Fair\n   Po   Poor\n    \nFoundation: Type of foundation\n   BrkTil   Brick & Tile\n   CBlock   Cinder Block\n   PConc    Poured Contrete \n   Slab Slab\n   Stone    Stone\n   Wood Wood\n    \nBsmtQual: Evaluates the height of the basement\n   Ex   Excellent (100+ inches) \n   Gd   Good (90-99 inches)\n   TA   Typical (80-89 inches)\n   Fa   Fair (70-79 inches)\n   Po   Poor (&lt;70 inches\n   NA   No Basement\n    \nBsmtCond: Evaluates the general condition of the basement\n   Ex   Excellent\n   Gd   Good\n   TA   Typical - slight dampness allowed\n   Fa   Fair - dampness or some cracking or settling\n   Po   Poor - Severe cracking, settling, or wetness\n   NA   No Basement\nBsmtExposure: Refers to walkout or garden level walls\n   Gd   Good Exposure\n   Av   Average Exposure (split levels or foyers typically score average or above)  \n   Mn   Mimimum Exposure\n   No   No Exposure\n   NA   No Basement\nBsmtFinType1: Rating of basement finished area\n   GLQ  Good Living Quarters\n   ALQ  Average Living Quarters\n   BLQ  Below Average Living Quarters   \n   Rec  Average Rec Room\n   LwQ  Low Quality\n   Unf  Unfinshed\n   NA   No Basement\n    \nBsmtFinSF1: Type 1 finished square feet\nBsmtFinType2: Rating of basement finished area (if multiple types)\n   GLQ  Good Living Quarters\n   ALQ  Average Living Quarters\n   BLQ  Below Average Living Quarters   \n   Rec  Average Rec Room\n   LwQ  Low Quality\n   Unf  Unfinshed\n   NA   No Basement\nBsmtFinSF2: Type 2 finished square feet\nBsmtUnfSF: Unfinished square feet of basement area\nTotalBsmtSF: Total square feet of basement area\nHeating: Type of heating\n   Floor    Floor Furnace\n   GasA Gas forced warm air furnace\n   GasW Gas hot water or steam heat\n   Grav Gravity furnace \n   OthW Hot water or steam heat other than gas\n   Wall Wall furnace\n    \nHeatingQC: Heating quality and condition\n   Ex   Excellent\n   Gd   Good\n   TA   Average/Typical\n   Fa   Fair\n   Po   Poor\n    \nCentralAir: Central air conditioning\n   N    No\n   Y    Yes\n    \nElectrical: Electrical system\n   SBrkr    Standard Circuit Breakers & Romex\n   FuseA    Fuse Box over 60 AMP and all Romex wiring (Average) \n   FuseF    60 AMP Fuse Box and mostly Romex wiring (Fair)\n   FuseP    60 AMP Fuse Box and mostly knob & tube wiring (poor)\n   Mix  Mixed\n    \n1stFlrSF: First Floor square feet\n2ndFlrSF: Second floor square feet\nLowQualFinSF: Low quality finished square feet (all floors)\nGrLivArea: Above grade (ground) living area square feet\nBsmtFullBath: Basement full bathrooms\nBsmtHalfBath: Basement half bathrooms\nFullBath: Full bathrooms above grade\nHalfBath: Half baths above grade\nBedroom: Bedrooms above grade (does NOT include basement bedrooms)\nKitchen: Kitchens above grade\nKitchenQual: Kitchen quality\n   Ex   Excellent\n   Gd   Good\n   TA   Typical/Average\n   Fa   Fair\n   Po   Poor\n    \nTotRmsAbvGrd: Total rooms above grade (does not include bathrooms)\nFunctional: Home functionality (Assume typical unless deductions are warranted)\n   Typ  Typical Functionality\n   Min1 Minor Deductions 1\n   Min2 Minor Deductions 2\n   Mod  Moderate Deductions\n   Maj1 Major Deductions 1\n   Maj2 Major Deductions 2\n   Sev  Severely Damaged\n   Sal  Salvage only\n    \nFireplaces: Number of fireplaces\nFireplaceQu: Fireplace quality\n   Ex   Excellent - Exceptional Masonry Fireplace\n   Gd   Good - Masonry Fireplace in main level\n   TA   Average - Prefabricated Fireplace in main living area or Masonry Fireplace in basement\n   Fa   Fair - Prefabricated Fireplace in basement\n   Po   Poor - Ben Franklin Stove\n   NA   No Fireplace\n    \nGarageType: Garage location\n   2Types   More than one type of garage\n   Attchd   Attached to home\n   Basment  Basement Garage\n   BuiltIn  Built-In (Garage part of house - typically has room above garage)\n   CarPort  Car Port\n   Detchd   Detached from home\n   NA   No Garage\n    \nGarageYrBlt: Year garage was built\nGarageFinish: Interior finish of the garage\n   Fin  Finished\n   RFn  Rough Finished  \n   Unf  Unfinished\n   NA   No Garage\n    \nGarageCars: Size of garage in car capacity\nGarageArea: Size of garage in square feet\nGarageQual: Garage quality\n   Ex   Excellent\n   Gd   Good\n   TA   Typical/Average\n   Fa   Fair\n   Po   Poor\n   NA   No Garage\n    \nGarageCond: Garage condition\n   Ex   Excellent\n   Gd   Good\n   TA   Typical/Average\n   Fa   Fair\n   Po   Poor\n   NA   No Garage\n    \nPavedDrive: Paved driveway\n   Y    Paved \n   P    Partial Pavement\n   N    Dirt/Gravel\n    \nWoodDeckSF: Wood deck area in square feet\nOpenPorchSF: Open porch area in square feet\nEnclosedPorch: Enclosed porch area in square feet\n3SsnPorch: Three season porch area in square feet\nScreenPorch: Screen porch area in square feet\nPoolArea: Pool area in square feet\nPoolQC: Pool quality\n   Ex   Excellent\n   Gd   Good\n   TA   Average/Typical\n   Fa   Fair\n   NA   No Pool\n    \nFence: Fence quality\n   GdPrv    Good Privacy\n   MnPrv    Minimum Privacy\n   GdWo Good Wood\n   MnWw Minimum Wood/Wire\n   NA   No Fence\nMiscFeature: Miscellaneous feature not covered in other categories\n   Elev Elevator\n   Gar2 2nd Garage (if not described in garage section)\n   Othr Other\n   Shed Shed (over 100 SF)\n   TenC Tennis Court\n   NA   None\n    \nMiscVal: $Value of miscellaneous feature\nMoSold: Month Sold (MM)\nYrSold: Year Sold (YYYY)\nSaleType: Type of sale\n   WD   Warranty Deed - Conventional\n   CWD  Warranty Deed - Cash\n   VWD  Warranty Deed - VA Loan\n   New  Home just constructed and sold\n   COD  Court Officer Deed/Estate\n   Con  Contract 15% Down payment regular terms\n   ConLw    Contract Low Down payment and low interest\n   ConLI    Contract Low Interest\n   ConLD    Contract Low Down\n   Oth  Other\n    \nSaleCondition: Condition of sale\n   Normal   Normal Sale\n   Abnorml  Abnormal Sale -  trade, foreclosure, short sale\n   AdjLand  Adjoining Land Purchase\n   Alloca   Allocation - two linked properties with separate deeds, typically condo with a garage unit  \n   Family   Sale between family members\n   Partial  Home was not completed when last assessed (associated with New Homes)"
   },
   {
-    "objectID": "weather_data_pipeline.html",
-    "href": "weather_data_pipeline.html",
-    "title": "weather_data_pipeline",
-    "section": "",
-    "text": "The latest committed JSON file from weather_data_pipeline/data/weather\n\n\nLoading latest weather data…"
-  },
-  {
-    "objectID": "projects/problems.html",
-    "href": "projects/problems.html",
-    "title": "A Bit of the Theory of Statistics",
-    "section": "",
-    "text": "Photo: Nothing Ahead - pexels"
-  },
-  {
-    "objectID": "projects/problems.html#task",
-    "href": "projects/problems.html#task",
-    "title": "A Bit of the Theory of Statistics",
-    "section": "Task",
-    "text": "Task\nThe project demonstrates several fundamental statistical concepts through simulation and hypothesis testing, including:\nCombinatorial probability, properties of the normal distribution, t-tests for comparing groups, Type I error in hypothesis testing, behavior of the binomial distribution."
-  },
-  {
-    "objectID": "projects/problems.html#tools",
-    "href": "projects/problems.html#tools",
-    "title": "A Bit of the Theory of Statistics",
-    "section": "Tools",
-    "text": "Tools\n, , , ,"
-  },
-  {
-    "objectID": "projects/problems.html#full-analysis",
-    "href": "projects/problems.html#full-analysis",
-    "title": "A Bit of the Theory of Statistics",
-    "section": "Full Analysis",
-    "text": "Full Analysis\nOpen the full notebook"
-  },
-  {
-    "objectID": "projects/inventory_management_app.html",
-    "href": "projects/inventory_management_app.html",
-    "title": "Inventory Management App",
-    "section": "",
-    "text": "Photo: cottonbro studio - pexels"
-  },
-  {
-    "objectID": "projects/inventory_management_app.html#overview",
-    "href": "projects/inventory_management_app.html#overview",
-    "title": "Inventory Management App",
-    "section": "Overview",
-    "text": "Overview\nThe application provides the following functionality:\n\nadd new products\nupdate product information\nsearch products\ndelete products\nprint inventory records"
-  },
-  {
-    "objectID": "projects/inventory_management_app.html#tools",
-    "href": "projects/inventory_management_app.html#tools",
-    "title": "Inventory Management App",
-    "section": "Tools",
-    "text": "Tools\n, , , , ,"
-  },
-  {
-    "objectID": "projects/inventory_management_app.html#more-about",
-    "href": "projects/inventory_management_app.html#more-about",
-    "title": "Inventory Management App",
-    "section": "More About:",
-    "text": "More About:\nGithub Repository\n\nLive App"
-  },
-  {
-    "objectID": "projects/chocolate_sales/chocolate_sales_dashboard.html",
-    "href": "projects/chocolate_sales/chocolate_sales_dashboard.html",
-    "title": "Lucia Macakova",
-    "section": "",
-    "text": "Total Sales\n\n\n$19,791,572\n\n\n\n\n\n\n\n\n\n\n\n\nTotal Orders\n\n\n3,282\n\n\n\n\n\n\n\n\n\n\n\n\nSalesmen\n\n\n25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAverage Order\n\n\n$6,030\n\n\n\n\n\n\n\n\n\n\n\n\nNumber of Countries\n\n\n6\n\n\n\n\n\n\n\n\n\n\n\n\nNumber of Products\n\n\n22\n\n\n\n\n\n\n\n\n\n\n                                                \n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n                                                \n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n                                                \n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n                                                \n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\nCountry\nSales ($)\nBoxes Shipped\nOrders\nAvg Order Value ($)\n\n\n\n\n1\nAustralia\n3646444.35\n99618\n615\n5929.18\n\n\n2\nUK\n3365388.90\n92523\n534\n6302.23\n\n\n3\nIndia\n3343730.83\n89968\n552\n6057.48\n\n\n4\nUSA\n3313858.09\n81820\n537\n6171.06\n\n\n5\nCanada\n3078495.65\n95158\n525\n5863.80\n\n\n6\nNew Zealand\n3043654.04\n81350\n519\n5864.46\n\n\n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\nProduct\nSales ($)\nBoxes Shipped\nOrders\nAvg Order Value ($)\n\n\n\n\n1\nEclairs\n996947.96\n26678\n180\n5538.60\n\n\n2\n50% Dark Bites\n1087659.35\n29810\n180\n6042.55\n\n\n3\nSmooth Silky Salty\n1120201.09\n26969\n177\n6328.82\n\n\n4\nWhite Choc\n1054257.00\n25158\n174\n6058.95\n\n\n5\nDrinking Choco\n822245.57\n26402\n168\n4894.32\n\n\n6\nSpicy Special Slims\n938131.69\n26662\n162\n5790.94\n\n\n7\nOrganic Choco Syrup\n945345.73\n23602\n156\n6059.91\n\n\n8\n85% Dark Bars\n955268.24\n23828\n150\n6368.45\n\n\n9\nAfter Nines\n837215.67\n25156\n150\n5581.44\n\n\n10\nFruit & Nut Bars\n829278.96\n23632\n150\n5528.53\n\n\n11\nPeanut Butter Cubes\n1036591.09\n25339\n147\n7051.64\n\n\n12\n99% Dark & Pure\n960033.45\n24818\n147\n6530.84\n\n\n13\nMilk Bars\n866273.62\n25436\n147\n5893.02\n\n\n14\nAlmond Choco\n890454.65\n20558\n144\n6183.71\n\n\n15\nRaspberry Choco\n845388.41\n21672\n144\n5870.75\n\n\n16\nOrange Choco\n824070.85\n23607\n141\n5844.47\n\n\n17\nManuka Honey Choco\n885208.03\n23736\n135\n6557.10\n\n\n18\nMint Chip Choco\n904989.55\n25149\n135\n6703.63\n\n\n19\nCaramel Stuffed Bars\n742516.15\n26576\n129\n5755.94\n\n\n20\n70% Dark Bites\n677346.22\n24524\n126\n5375.76\n\n\n21\nBaker's Choco Chips\n799085.67\n21448\n123\n6496.63\n\n\n22\nChoco Coated Almonds\n773062.91\n19677\n117\n6607.38\n\n\n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\nMetric\nValue\n\n\n\n\n1\nTop country by sales\nAustralia\n\n\n2\nTop product by sales\nSmooth Silky Salty\n\n\n3\nHighest revenue salesperson\nChes Bonnell\n\n\n4\nAverage order value\n$6,030\n\n\n5\nTotal shipment volume\n540,437 boxes"
-  },
-  {
-    "objectID": "projects/about_pipeline.html",
-    "href": "projects/about_pipeline.html",
-    "title": "Weather Data Pipeline",
-    "section": "",
-    "text": "Photo: Frank Cone - pexels"
-  },
-  {
-    "objectID": "projects/about_pipeline.html#overview",
-    "href": "projects/about_pipeline.html#overview",
-    "title": "Weather Data Pipeline",
-    "section": "Overview",
-    "text": "Overview\nThis project automates the collection of weather data and stores it in a repository.\nIt uses Bash scripting and GitHub Actions to schedule and run the pipeline, ensuring that weather observations are downloaded, timestamped, and saved automatically."
-  },
-  {
-    "objectID": "projects/about_pipeline.html#tools",
-    "href": "projects/about_pipeline.html#tools",
-    "title": "Weather Data Pipeline",
-    "section": "Tools",
-    "text": "Tools\n, , , , , GitHub Actions"
-  },
-  {
-    "objectID": "projects/about_pipeline.html#more-about",
-    "href": "projects/about_pipeline.html#more-about",
-    "title": "Weather Data Pipeline",
-    "section": "More About:",
-    "text": "More About:\nGitHub Repository\n\nLatest commit"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lucia Macakova",
-    "section": "",
-    "text": "I am a data analytics graduate passionate about turning data into useful insights. I work with Python, SQL, machine learning, and visualization, and I enjoy building practical projects that solve real problems.\nEmail: l.macakova.sk@gmail.com"
-  },
-  {
-    "objectID": "portfolio.html",
-    "href": "portfolio.html",
-    "title": "Lucia Macakova",
-    "section": "",
-    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nRead more\n\n\n\nAnalysis of chocolate sales\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting and storing weather data from APIs.\nRead more"
-  },
-  {
-    "objectID": "portfolio.html#featured-projects",
-    "href": "portfolio.html#featured-projects",
-    "title": "Lucia Macakova",
-    "section": "",
-    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nExploratory analysis and classification of the classic Iris dataset.\nRead more\n\n\n\nAnalysis of chocolate sales\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting and storing weather data from APIs.\nRead more"
-  },
-  {
-    "objectID": "projects/chocolate_sales/chocolate_sales.html",
-    "href": "projects/chocolate_sales/chocolate_sales.html",
+    "objectID": "notebooks/chocolate_sales_notebook.html",
+    "href": "notebooks/chocolate_sales_notebook.html",
     "title": "Chocolate Sales",
     "section": "",
-    "text": "Pixabay - pexels"
+    "text": "Author: Alleksana, pexels.com"
   },
   {
-    "objectID": "projects/chocolate_sales/chocolate_sales.html#overview",
-    "href": "projects/chocolate_sales/chocolate_sales.html#overview",
+    "objectID": "notebooks/chocolate_sales_notebook.html#about-the-dataset",
+    "href": "notebooks/chocolate_sales_notebook.html#about-the-dataset",
     "title": "Chocolate Sales",
-    "section": "Overview",
-    "text": "Overview\nAnalysis of chocolate sales in 6 countries."
+    "section": "About the Dataset",
+    "text": "About the Dataset\nThe dataset used in this project contains transactional records of chocolate product sales across multiple countries and sales representatives.\nEach row in the dataset represents a single sales transaction, including information about the product sold, the salesperson responsible, the country of sale, the transaction date, and the associated revenue and quantity.\n\n\n\n\n\n\n\n\n\nSales Person\nCountry\nProduct\nDate\nAmount\nBoxes Shipped\nYear\nMonth\nMonth Label\nQuarter\n\n\n\n\n0\nJehu Rudeforth\nUK\nMint Chip Choco\n2022-01-04\n5320.0\n180\n2022\n1\n2022-01\nQ1\n\n\n1\nVan Tuxwell\nIndia\n85% Dark Bars\n2022-08-01\n7896.0\n94\n2022\n8\n2022-08\nQ3\n\n\n2\nGigi Bohling\nIndia\nPeanut Butter Cubes\n2022-07-07\n4501.0\n91\n2022\n7\n2022-07\nQ3\n\n\n3\nJan Morforth\nAustralia\nPeanut Butter Cubes\n2022-04-27\n12726.0\n342\n2022\n4\n2022-04\nQ2\n\n\n4\nJehu Rudeforth\nUK\nPeanut Butter Cubes\n2022-02-24\n13685.0\n184\n2022\n2\n2022-02\nQ1\n\n\n\n\n\n\n\n\nInformation about Dataset\n\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 3282 entries, 0 to 3281\nData columns (total 10 columns):\n #   Column         Non-Null Count  Dtype         \n---  ------         --------------  -----         \n 0   Sales Person   3282 non-null   object        \n 1   Country        3282 non-null   object        \n 2   Product        3282 non-null   object        \n 3   Date           3282 non-null   datetime64[ns]\n 4   Amount         3282 non-null   float64       \n 5   Boxes Shipped  3282 non-null   int64         \n 6   Year           3282 non-null   int64         \n 7   Month          3282 non-null   int64         \n 8   Month Label    3282 non-null   object        \n 9   Quarter        3282 non-null   object        \ndtypes: datetime64[ns](1), float64(1), int64(3), object(5)\nmemory usage: 256.5+ KB\n\n\n\n\nOverview for the Whole Dataset\n\n\nSales Persons: ['Jehu Rudeforth' 'Van Tuxwell' 'Gigi Bohling' 'Jan Morforth' 'Oby Sorrel'\n 'Gunar Cockshoot' 'Brien Boise' 'Rafaelita Blaksland' 'Barr Faughny'\n 'Mallorie Waber' 'Karlen McCaffrey' \"Marney O'Breen\" 'Beverie Moffet'\n 'Roddy Speechley' 'Curtice Advani' 'Husein Augar' 'Kaine Padly'\n 'Dennison Crosswaite' \"Wilone O'Kielt\" 'Andria Kimpton' 'Kelci Walkden'\n 'Camilla Castle' 'Madelene Upcott' 'Dotty Strutley' 'Ches Bonnell']\n\nCountries: ['UK' 'India' 'Australia' 'New Zealand' 'USA' 'Canada']\n\nProducts: ['Mint Chip Choco' '85% Dark Bars' 'Peanut Butter Cubes'\n 'Smooth Silky Salty' '99% Dark & Pure' 'After Nines' '50% Dark Bites'\n 'Orange Choco' 'Eclairs' 'Drinking Choco' 'Organic Choco Syrup'\n 'Milk Bars' 'Spicy Special Slims' 'Fruit & Nut Bars' 'White Choc'\n 'Manuka Honey Choco' 'Almond Choco' 'Raspberry Choco'\n 'Choco Coated Almonds' \"Baker's Choco Chips\" 'Caramel Stuffed Bars'\n '70% Dark Bites']\n\nRange: 2022-01-03 00:00:00 - 2024-08-31 00:00:00\nTotal Amount: 19791571.86\nTotal Boxes Shipped: 540437\n\n\n\n\nOverview for Years\n\n\nEarliest dates: \n2022-01-03 00:00:00\n2023-01-03 00:00:00\n2024-01-03 00:00:00\n\nLatest dates: \n2022-08-31 00:00:00\n2023-08-31 00:00:00\n2024-08-31 00:00:00\n\nSalesmen list for year 2022:\n['Jehu Rudeforth' 'Van Tuxwell' 'Gigi Bohling' 'Jan Morforth' 'Oby Sorrel'\n 'Gunar Cockshoot' 'Brien Boise' 'Rafaelita Blaksland' 'Barr Faughny'\n 'Mallorie Waber' 'Karlen McCaffrey' \"Marney O'Breen\" 'Beverie Moffet'\n 'Roddy Speechley' 'Curtice Advani' 'Husein Augar' 'Kaine Padly'\n 'Dennison Crosswaite' \"Wilone O'Kielt\" 'Andria Kimpton' 'Kelci Walkden'\n 'Camilla Castle' 'Madelene Upcott' 'Dotty Strutley' 'Ches Bonnell']\n\nSalesmen list for year 2023:\n['Jehu Rudeforth' 'Van Tuxwell' 'Gigi Bohling' 'Jan Morforth' 'Oby Sorrel'\n 'Gunar Cockshoot' 'Brien Boise' 'Rafaelita Blaksland' 'Barr Faughny'\n 'Mallorie Waber' 'Karlen McCaffrey' \"Marney O'Breen\" 'Beverie Moffet'\n 'Roddy Speechley' 'Curtice Advani' 'Husein Augar' 'Kaine Padly'\n 'Dennison Crosswaite' \"Wilone O'Kielt\" 'Andria Kimpton' 'Kelci Walkden'\n 'Camilla Castle' 'Madelene Upcott' 'Dotty Strutley' 'Ches Bonnell']\n\nSalesmen list for year 2024:\n['Jehu Rudeforth' 'Van Tuxwell' 'Gigi Bohling' 'Jan Morforth' 'Oby Sorrel'\n 'Gunar Cockshoot' 'Brien Boise' 'Rafaelita Blaksland' 'Barr Faughny'\n 'Mallorie Waber' 'Karlen McCaffrey' \"Marney O'Breen\" 'Beverie Moffet'\n 'Roddy Speechley' 'Curtice Advani' 'Husein Augar' 'Kaine Padly'\n 'Dennison Crosswaite' \"Wilone O'Kielt\" 'Andria Kimpton' 'Kelci Walkden'\n 'Camilla Castle' 'Madelene Upcott' 'Dotty Strutley' 'Ches Bonnell']\n\nProduct list for 2022: \n['Mint Chip Choco' '85% Dark Bars' 'Peanut Butter Cubes'\n 'Smooth Silky Salty' '99% Dark & Pure' 'After Nines' '50% Dark Bites'\n 'Orange Choco' 'Eclairs' 'Drinking Choco' 'Organic Choco Syrup'\n 'Milk Bars' 'Spicy Special Slims' 'Fruit & Nut Bars' 'White Choc'\n 'Manuka Honey Choco' 'Almond Choco' 'Raspberry Choco'\n 'Choco Coated Almonds' \"Baker's Choco Chips\" 'Caramel Stuffed Bars'\n '70% Dark Bites']\n\nProduct list for 2023: \n['Mint Chip Choco' '85% Dark Bars' 'Peanut Butter Cubes'\n 'Smooth Silky Salty' '99% Dark & Pure' 'After Nines' '50% Dark Bites'\n 'Orange Choco' 'Eclairs' 'Drinking Choco' 'Organic Choco Syrup'\n 'Milk Bars' 'Spicy Special Slims' 'Fruit & Nut Bars' 'White Choc'\n 'Manuka Honey Choco' 'Almond Choco' 'Raspberry Choco'\n 'Choco Coated Almonds' \"Baker's Choco Chips\" 'Caramel Stuffed Bars'\n '70% Dark Bites']\n\nProduct list for 2024: \n['Mint Chip Choco' '85% Dark Bars' 'Peanut Butter Cubes'\n 'Smooth Silky Salty' '99% Dark & Pure' 'After Nines' '50% Dark Bites'\n 'Orange Choco' 'Eclairs' 'Drinking Choco' 'Organic Choco Syrup'\n 'Milk Bars' 'Spicy Special Slims' 'Fruit & Nut Bars' 'White Choc'\n 'Manuka Honey Choco' 'Almond Choco' 'Raspberry Choco'\n 'Choco Coated Almonds' \"Baker's Choco Chips\" 'Caramel Stuffed Bars'\n '70% Dark Bites']\n\nCountries list for year 2022: \n['UK' 'India' 'Australia' 'New Zealand' 'USA' 'Canada']\n\nCountries list for year 2023: \n['UK' 'India' 'Australia' 'New Zealand' 'USA' 'Canada']\n\nCountries list for year 2024: \n['UK' 'India' 'Australia' 'New Zealand' 'USA' 'Canada']\n\nTotal Amount in 2022: 6183625.0\nTotal Boxes Shipped in 2022: 177007\n\nTotal Amount in 2023: 6643377.96\nTotal Boxes Shipped 2023: 181411\n\nTotal Amount in 2024: 6964568.9\nTotal Boxes Shipped in 2024: 182019"
   },
   {
-    "objectID": "projects/chocolate_sales/chocolate_sales.html#data",
-    "href": "projects/chocolate_sales/chocolate_sales.html#data",
+    "objectID": "notebooks/chocolate_sales_notebook.html#exploratory-data-analysis",
+    "href": "notebooks/chocolate_sales_notebook.html#exploratory-data-analysis",
     "title": "Chocolate Sales",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\n\n\n\n\n\n\n\n\n\nMonthly sales show a seasonal pattern with a mid-period dip (April), strong recovery, and peak around June followed by a gradual decline. What is atypical is the period of sales from January to August only.\n\n\n\n\n\n\n\n\n\nSales vary strongly by country, with a common mid-year peak (Month 6–7), high volatility in UK/New Zealand, and steady growth in India.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe business shows strong, consistent, and diversified growth across years, countries, products, and salesmen.\n\n\n\n\n\n\n\n\n\nThe charts represent product popularity based on sales volume, showing that demand is well distributed across products. Common winners across countries are Eclairs, Milk Bars, and Dark chocolate variants.\n\n\n\n\n\n\n\n\n\nSales are evenly distributed across countries, with Australia leading slightly, while all other markets contribute at similar levels—indicating a well-balanced and globally diversified business.\n\n\n\n\n\n\n\n\n\nTop Performers are: Smooth Silky Salty (~1.12M), followed by 50% Dark Bites, White Choc, and Peanut Butter Cubes.\n\n\n\n\n\n\n\n\n\nLeading salesmen are Ches Bonnell (~1.02M), Oby Sorrel, Madelene Upcott, Kelci Walkden, and Brien Boise.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData are sparse with the unusual seasonal pattern."
+  },
+  {
+    "objectID": "notebooks/chocolate_sales_notebook.html#random-forest-regressor-model",
+    "href": "notebooks/chocolate_sales_notebook.html#random-forest-regressor-model",
+    "title": "Chocolate Sales",
+    "section": "Random Forest Regressor Model",
+    "text": "Random Forest Regressor Model\n\n#  trend feature \ndf[\"year_trend\"] = df[\"Year\"] - df[\"Year\"].min()\n\nkf = KFold(n_splits=5, shuffle=False)\n\namount_mae_list = []\nboxes_mae_list = []\n\namount_pct_list = []\nboxes_pct_list = []\n\n# features\nfor train_idx, test_idx in kf.split(df):\n\n    train_df = df.iloc[train_idx].copy()\n    test_df = df.iloc[test_idx].copy()\n\n    # --- feature engineering ---\n    global_avg = train_df[\"Amount\"].mean()\n\n    product_avg = train_df.groupby(\"Product\")[\"Amount\"].mean()\n    person_avg = train_df.groupby(\"Sales Person\")[\"Amount\"].mean()\n    country_avg = train_df.groupby(\"Country\")[\"Amount\"].mean()\n    year_avg = train_df.groupby(\"Year\")[\"Amount\"].mean()\n    quarter_avg = train_df.groupby(\"Quarter\")[\"Amount\"].mean()\n\n    product_country_avg = train_df.groupby([\"Product\", \"Country\"])[\"Amount\"].mean()\n    product_person_avg = train_df.groupby([\"Product\", \"Sales Person\"])[\"Amount\"].mean()\n    product_year_avg = train_df.groupby([\"Product\", \"Year\"])[\"Amount\"].mean()\n    product_month_avg = train_df.groupby([\"Product\", \"Month\"])[\"Amount\"].mean()\n\n    person_country_avg = train_df.groupby([\"Sales Person\", \"Country\"])[\"Amount\"].mean()\n\n    def add_features(data):\n        out = data.copy()\n\n        out[\"product_avg\"] = out[\"Product\"].map(product_avg).fillna(global_avg)\n        out[\"person_avg\"] = out[\"Sales Person\"].map(person_avg).fillna(global_avg)\n        out[\"country_avg\"] = out[\"Country\"].map(country_avg).fillna(global_avg)\n        out[\"year_avg\"] = out[\"Year\"].map(year_avg).fillna(global_avg)\n        out[\"quarter_avg\"] = out[\"Quarter\"].map(quarter_avg).fillna(global_avg)\n\n        out[\"product_country_avg\"] = out.apply(\n            lambda row: product_country_avg.get((row[\"Product\"], row[\"Country\"]), global_avg),\n            axis=1\n        )\n\n        out[\"product_person_avg\"] = out.apply(\n            lambda row: product_person_avg.get((row[\"Product\"], row[\"Sales Person\"]), global_avg),\n            axis=1\n        )\n\n        out[\"product_year_avg\"] = out.apply(\n            lambda row: product_year_avg.get((row[\"Product\"], row[\"Year\"]), global_avg),\n            axis=1\n        )\n\n        out[\"product_month_avg\"] = out.apply(\n            lambda row: product_month_avg.get((row[\"Product\"], row[\"Month\"]), global_avg),\n            axis=1\n        )\n\n        out[\"person_country_avg\"] = out.apply(\n            lambda row: person_country_avg.get((row[\"Sales Person\"], row[\"Country\"]), global_avg),\n            axis=1\n        )\n\n        \n        out[\"year_trend\"] = out[\"Year\"] - df[\"Year\"].min()\n\n        return out\n\n    train_feat = add_features(train_df)\n    test_feat = add_features(test_df)\n\n    feature_cols = [\n        \"quarter_avg\",\n        \"product_avg\",\n        \"person_avg\",\n        \"country_avg\",\n        \"product_country_avg\",\n        \"product_person_avg\",\n        \"product_month_avg\",\n        \"person_country_avg\",\n        \"year_trend\"\n    ]\n\n    X_train = train_feat[feature_cols]\n    X_test = test_feat[feature_cols]\n\n    y_train = train_feat[[\"Amount\", \"Boxes Shipped\"]]\n    y_test = test_feat[[\"Amount\", \"Boxes Shipped\"]]\n\n    model = RandomForestRegressor(\n        n_estimators=200,\n        random_state=42,\n        n_jobs=-1\n    )\n\n    model.fit(X_train, y_train)\n    preds = model.predict(X_test)\n\n    # --- fold MAE ---\n    amount_mae = mean_absolute_error(y_test[\"Amount\"], preds[:, 0])\n    boxes_mae = mean_absolute_error(y_test[\"Boxes Shipped\"], preds[:, 1])\n\n    # --- fold MAE % ---\n    amount_pct = amount_mae / y_test[\"Amount\"].mean()\n    boxes_pct = boxes_mae / y_test[\"Boxes Shipped\"].mean()\n\n    amount_mae_list.append(amount_mae)\n    boxes_mae_list.append(boxes_mae)\n\n    amount_pct_list.append(amount_pct)\n    boxes_pct_list.append(boxes_pct)\n\n# --- fold-average results ---\nprint(\"FOLD-AVERAGED RESULTS\")\nprint(f\"Amount MAE: {np.mean(amount_mae_list):.2f}\")\nprint(f\"Amount MAE %: {np.mean(amount_pct_list):.2%}\")\n\nprint(f\"Boxes Shipped MAE: {np.mean(boxes_mae_list):.2f}\")\nprint(f\"Boxes Shipped MAE %: {np.mean(boxes_pct_list):.2%}\")\n\nFOLD-AVERAGED RESULTS\nAmount MAE: 552.16\nAmount MAE %: 9.12%\nBoxes Shipped MAE: 25.50\nBoxes Shipped MAE %: 15.49%\n\n\n\nFinal Evaluation\n\n# --- separate actual values ---\ny_test_amount = y_test[\"Amount\"].values\ny_test_boxes = y_test[\"Boxes Shipped\"].values\n\n# --- separate predictions ---\npred_amount = preds[:, 0]\npred_boxes = preds[:, 1]\n\n# --- MAE ---\nmae_amount = mean_absolute_error(y_test_amount, pred_amount)\nmae_boxes = mean_absolute_error(y_test_boxes, pred_boxes)\n\n# --- MAE % ---\nmae_amount_pct = mae_amount / y_test_amount.mean()\nmae_boxes_pct = mae_boxes / y_test_boxes.mean()\n\n# --- print ---\nprint(f\"Amount MAE: {mae_amount:.2f}\")\nprint(f\"Amount MAE %: {mae_amount_pct:.2%}\")\n\nprint(f\"Boxes Shipped MAE: {mae_boxes:.2f}\")\nprint(f\"Boxes Shipped MAE %: {mae_boxes_pct:.2%}\")\n\nAmount MAE: 664.61\nAmount MAE %: 10.37%\nBoxes Shipped MAE: 25.53\nBoxes Shipped MAE %: 14.85%"
+  },
+  {
+    "objectID": "notebooks/chocolate_sales_notebook.html#prediciton-for-the-year-2025",
+    "href": "notebooks/chocolate_sales_notebook.html#prediciton-for-the-year-2025",
+    "title": "Chocolate Sales",
+    "section": "Prediciton for the Year 2025",
+    "text": "Prediciton for the Year 2025\n\n# training of model on all history\n\ntrain_full = add_features(df)\n\nX_full = train_full[feature_cols]\ny_full = train_full[[\"Amount\", \"Boxes Shipped\"]]\n\nfinal_model = RandomForestRegressor(\n    n_estimators=200,\n    random_state=42,\n    n_jobs=-1\n)\n\nfinal_model.fit(X_full, y_full)\n\n\n# building future 2025 dataset\n# copy last real year structure\n\n\nfuture_2025 = filtered_2024.copy()\nfuture_2025[\"Year\"] = 2025\nfuture_2025[\"Date\"] = pd.to_datetime(future_2025[\"Date\"]) + pd.DateOffset(years=1)\nfuture_2025[\"Month\"] = future_2025[\"Date\"].dt.month\nfuture_2025[\"Quarter\"] = future_2025[\"Date\"].dt.quarter\n\nfuture_2025 = future_2025.drop(columns=[\"Amount\", \"Boxes Shipped\"], errors=\"ignore\")\n\n# predict 2025\nfuture_2025_feat = add_features(future_2025)\nfuture_preds = final_model.predict(future_2025_feat[feature_cols])\n\nfuture_2025[\"Predicted Amount\"] = future_preds[:, 0]\nfuture_2025[\"Predicted Boxes Shipped\"] = future_preds[:, 1]\n# conservative growth rate around 4.8%\ngrowth_rate = 0.048\nfuture_2025[\"Predicted Amount\"] = future_2025[\"Predicted Amount\"] * (1+growth_rate)\nfuture_2025[\"Predicted Boxes Shipped\"] = future_2025[\"Predicted Boxes Shipped\"] * (1+ growth_rate)\nfuture_2025=future_2025.reset_index()\nfuture_2025.head()\n\n\n\n\n\n\n\n\nindex\nSales Person\nCountry\nProduct\nDate\nYear\nMonth\nMonth Label\nQuarter\nPredicted Amount\nPredicted Boxes Shipped\n\n\n\n\n0\n2188\nJehu Rudeforth\nUK\nMint Chip Choco\n2025-01-04\n2025\n1\n2024-01\n1\n6496.683000\n215.11772\n\n\n1\n2189\nVan Tuxwell\nIndia\n85% Dark Bars\n2025-08-01\n2025\n8\n2024-08\n3\n9143.718570\n101.75032\n\n\n2\n2190\nGigi Bohling\nIndia\nPeanut Butter Cubes\n2025-07-07\n2025\n7\n2024-07\n3\n5305.962168\n105.04104\n\n\n3\n2191\nJan Morforth\nAustralia\nPeanut Butter Cubes\n2025-04-27\n2025\n4\n2024-04\n2\n14254.663973\n325.49308\n\n\n4\n2192\nJehu Rudeforth\nUK\nPeanut Butter Cubes\n2025-02-24\n2025\n2\n2024-02\n1\n14624.041791\n197.45892\n\n\n\n\n\n\n\n\n\n\nSales Persons: ['Jehu Rudeforth' 'Van Tuxwell' 'Gigi Bohling' 'Jan Morforth' 'Oby Sorrel'\n 'Gunar Cockshoot' 'Brien Boise' 'Rafaelita Blaksland' 'Barr Faughny'\n 'Mallorie Waber' 'Karlen McCaffrey' \"Marney O'Breen\" 'Beverie Moffet'\n 'Roddy Speechley' 'Curtice Advani' 'Husein Augar' 'Kaine Padly'\n 'Dennison Crosswaite' \"Wilone O'Kielt\" 'Andria Kimpton' 'Kelci Walkden'\n 'Camilla Castle' 'Madelene Upcott' 'Dotty Strutley' 'Ches Bonnell']\n\n\nCountries: ['UK' 'India' 'Australia' 'New Zealand' 'USA' 'Canada']\n\n\nProducts: ['Mint Chip Choco' '85% Dark Bars' 'Peanut Butter Cubes'\n 'Smooth Silky Salty' '99% Dark & Pure' 'After Nines' '50% Dark Bites'\n 'Orange Choco' 'Eclairs' 'Drinking Choco' 'Organic Choco Syrup'\n 'Milk Bars' 'Spicy Special Slims' 'Fruit & Nut Bars' 'White Choc'\n 'Manuka Honey Choco' 'Almond Choco' 'Raspberry Choco'\n 'Choco Coated Almonds' \"Baker's Choco Chips\" 'Caramel Stuffed Bars'\n '70% Dark Bites']\n\n\nRange: 2025-01-03 00:00:00 - 2024-08-31 00:00:00\n\nPredicted Amount: 7166263.7\n\nPredicted Boxes Shipped: 190394.0\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 1094 entries, 0 to 1093\nData columns (total 11 columns):\n #   Column                   Non-Null Count  Dtype         \n---  ------                   --------------  -----         \n 0   index                    1094 non-null   int64         \n 1   Sales Person             1094 non-null   object        \n 2   Country                  1094 non-null   object        \n 3   Product                  1094 non-null   object        \n 4   Date                     1094 non-null   datetime64[ns]\n 5   Year                     1094 non-null   int64         \n 6   Month                    1094 non-null   int64         \n 7   Month Label              1094 non-null   object        \n 8   Quarter                  1094 non-null   int64         \n 9   Predicted Amount         1094 non-null   float64       \n 10  Predicted Boxes Shipped  1094 non-null   float64       \ndtypes: datetime64[ns](1), float64(2), int64(4), object(4)\nmemory usage: 94.1+ KB\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnd"
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html",
+    "href": "projects/rohlik_sales_prediction.html",
+    "title": "Rohlik Sales Forecasting",
+    "section": "",
+    "text": "Photo: Carlo Martin Alcordo — Pexels"
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html#about",
+    "href": "projects/rohlik_sales_prediction.html#about",
+    "title": "Rohlik Sales Forecasting",
+    "section": "About",
+    "text": "About\nForecast warehouse sales using historical sales data."
+  },
+  {
+    "objectID": "projects/rohlik_sales_prediction.html#data",
+    "href": "projects/rohlik_sales_prediction.html#data",
+    "title": "Rohlik Sales Forecasting",
     "section": "Data",
-    "text": "Data\nData came from kaggle dataset.\nDashboard"
+    "text": "Data\nThis project uses historical sales data from 7 warehouses of the grocery company Rohlik across 3 countries.\nThe training period covers 2020-08-01 to 2024-06-02, and the goal is to predict sales for the following 13 days, from 2024-06-03 to 2024-06-16."
   },
   {
-    "objectID": "projects/house_price_prediction.html",
-    "href": "projects/house_price_prediction.html",
-    "title": "House Price Prediction",
-    "section": "",
-    "text": "Northridge Heights, Ames, Iowa — source: homes.com"
-  },
-  {
-    "objectID": "projects/house_price_prediction.html#problem",
-    "href": "projects/house_price_prediction.html#problem",
-    "title": "House Price Prediction",
-    "section": "Problem",
-    "text": "Problem\nPredict house prices based on the characteristics of residential properties."
-  },
-  {
-    "objectID": "projects/house_price_prediction.html#data",
-    "href": "projects/house_price_prediction.html#data",
-    "title": "House Price Prediction",
-    "section": "Data",
-    "text": "Data\nThe Ames Housing Dataset contains detailed information on residential property sales in Ames, Iowa, USA, covering the period 2006–2010.\nThe dataset includes 79 property features, such as size, location, quality of construction, and other housing characteristics."
-  },
-  {
-    "objectID": "projects/house_price_prediction.html#method",
-    "href": "projects/house_price_prediction.html#method",
-    "title": "House Price Prediction",
+    "objectID": "projects/rohlik_sales_prediction.html#method",
+    "href": "projects/rohlik_sales_prediction.html#method",
+    "title": "Rohlik Sales Forecasting",
     "section": "Method",
-    "text": "Method\nExploratory data analysis was performed to understand the dataset and identify relationships between property features and sale prices.\nFeature selection was based on correlation analysis, followed by feature engineering to create stronger predictors.\nA Ridge regression model was then used to predict house prices."
+    "text": "Method\nTime-based feature engineering and a gradient boosting model using LightGBM."
   },
   {
-    "objectID": "projects/house_price_prediction.html#tools",
-    "href": "projects/house_price_prediction.html#tools",
-    "title": "House Price Prediction",
+    "objectID": "projects/rohlik_sales_prediction.html#tools",
+    "href": "projects/rohlik_sales_prediction.html#tools",
+    "title": "Rohlik Sales Forecasting",
     "section": "Tools",
-    "text": "Tools\n, , , ,  , Ridge regression"
+    "text": "Tools\n, , , , , LightGBM"
   },
   {
-    "objectID": "projects/house_price_prediction.html#result",
-    "href": "projects/house_price_prediction.html#result",
-    "title": "House Price Prediction",
-    "section": "Result",
-    "text": "Result\nBuilt a predictive model that explains 92.5% of the variability in house prices."
-  },
-  {
-    "objectID": "projects/house_price_prediction.html#full-analysis",
-    "href": "projects/house_price_prediction.html#full-analysis",
-    "title": "House Price Prediction",
-    "section": "Full Analysis",
-    "text": "Full Analysis\nOpen the full notebook"
+    "objectID": "projects/rohlik_sales_prediction.html#analysis",
+    "href": "projects/rohlik_sales_prediction.html#analysis",
+    "title": "Rohlik Sales Forecasting",
+    "section": "Analysis",
+    "text": "Analysis\nOpen the notebook"
   },
   {
     "objectID": "projects/iris_analysis.html",
@@ -350,67 +238,207 @@
     "text": "Tools\n, , , , , Linear Discriminant Analysis, Logistic Regression, Decision Tree Classifier"
   },
   {
-    "objectID": "projects/iris_analysis.html#result",
-    "href": "projects/iris_analysis.html#result",
+    "objectID": "projects/iris_analysis.html#analysis",
+    "href": "projects/iris_analysis.html#analysis",
     "title": "Iris Dataset Analysis",
-    "section": "Result",
-    "text": "Result\nLogistic Regression and Linear Discriminant Analysis achieved near-perfect classification performance.\nThe Decision Tree model was more interpretable but slightly less stable and less accurate."
+    "section": "Analysis",
+    "text": "Analysis\nOpen the notebook"
   },
   {
-    "objectID": "projects/iris_analysis.html#full-analysis",
-    "href": "projects/iris_analysis.html#full-analysis",
-    "title": "Iris Dataset Analysis",
-    "section": "Full Analysis",
-    "text": "Full Analysis\nOpen the full notebook"
-  },
-  {
-    "objectID": "projects/rohlik_sales_prediction.html",
-    "href": "projects/rohlik_sales_prediction.html",
-    "title": "Rohlik Sales Forecasting",
+    "objectID": "projects/house_price_prediction.html",
+    "href": "projects/house_price_prediction.html",
+    "title": "House Price Prediction",
     "section": "",
-    "text": "Photo: Carlo Martin Alcordo — Pexels"
+    "text": "Northridge Heights, Ames, Iowa — source: homes.com"
   },
   {
-    "objectID": "projects/rohlik_sales_prediction.html#problem",
-    "href": "projects/rohlik_sales_prediction.html#problem",
-    "title": "Rohlik Sales Forecasting",
+    "objectID": "projects/house_price_prediction.html#problem",
+    "href": "projects/house_price_prediction.html#problem",
+    "title": "House Price Prediction",
     "section": "Problem",
-    "text": "Problem\nForecast warehouse sales using historical sales data."
+    "text": "Problem\nPredict house prices based on the characteristics of residential properties."
   },
   {
-    "objectID": "projects/rohlik_sales_prediction.html#data",
-    "href": "projects/rohlik_sales_prediction.html#data",
-    "title": "Rohlik Sales Forecasting",
+    "objectID": "projects/house_price_prediction.html#data",
+    "href": "projects/house_price_prediction.html#data",
+    "title": "House Price Prediction",
     "section": "Data",
-    "text": "Data\nThis project uses historical sales data from 7 warehouses of the grocery company Rohlik across 3 countries.\nThe training period covers 2020-08-01 to 2024-06-02, and the goal is to predict sales for the following 13 days, from 2024-06-03 to 2024-06-16."
+    "text": "Data\nThe Ames Housing Dataset contains detailed information on residential property sales in Ames, Iowa, USA, covering the period 2006–2010.\nThe dataset includes 79 property features, such as size, location, quality of construction, and other housing characteristics."
   },
   {
-    "objectID": "projects/rohlik_sales_prediction.html#method",
-    "href": "projects/rohlik_sales_prediction.html#method",
-    "title": "Rohlik Sales Forecasting",
+    "objectID": "projects/house_price_prediction.html#method",
+    "href": "projects/house_price_prediction.html#method",
+    "title": "House Price Prediction",
     "section": "Method",
-    "text": "Method\nTime-based feature engineering and a gradient boosting model using LightGBM."
+    "text": "Method\nExploratory data analysis was performed to understand the dataset and identify relationships between property features and sale prices.\nFeature selection was based on correlation analysis, followed by feature engineering to create stronger predictors.\nA Ridge regression model was then used to predict house prices."
   },
   {
-    "objectID": "projects/rohlik_sales_prediction.html#tools",
-    "href": "projects/rohlik_sales_prediction.html#tools",
-    "title": "Rohlik Sales Forecasting",
+    "objectID": "projects/house_price_prediction.html#tools",
+    "href": "projects/house_price_prediction.html#tools",
+    "title": "House Price Prediction",
     "section": "Tools",
-    "text": "Tools\n, , , , , LightGBM"
+    "text": "Tools\n, , , ,  , Ridge regression"
   },
   {
-    "objectID": "projects/rohlik_sales_prediction.html#result",
-    "href": "projects/rohlik_sales_prediction.html#result",
-    "title": "Rohlik Sales Forecasting",
-    "section": "Result",
-    "text": "Result\nA forecasting model that captures seasonal patterns and short-term sales trends to predict warehouse sales."
+    "objectID": "projects/house_price_prediction.html#analysis",
+    "href": "projects/house_price_prediction.html#analysis",
+    "title": "House Price Prediction",
+    "section": "Analysis",
+    "text": "Analysis\nOpen the notebook"
   },
   {
-    "objectID": "projects/rohlik_sales_prediction.html#full-analysis",
-    "href": "projects/rohlik_sales_prediction.html#full-analysis",
-    "title": "Rohlik Sales Forecasting",
-    "section": "Full Analysis",
-    "text": "Full Analysis\nOpen the full notebook"
+    "objectID": "projects/chocolate_sales.html",
+    "href": "projects/chocolate_sales.html",
+    "title": "Chocolate Sales",
+    "section": "",
+    "text": "Pixabay - pexels"
+  },
+  {
+    "objectID": "projects/chocolate_sales.html#overview",
+    "href": "projects/chocolate_sales.html#overview",
+    "title": "Chocolate Sales",
+    "section": "Overview",
+    "text": "Overview\nExploratory analysis of chocolate sales in 6 countries and prediction of chocolate sales for the next year with Random Forest Regressor model."
+  },
+  {
+    "objectID": "projects/chocolate_sales.html#data",
+    "href": "projects/chocolate_sales.html#data",
+    "title": "Chocolate Sales",
+    "section": "Data",
+    "text": "Data\nData came from this dataset. The dataset represents a global chocolate company tracking sales performance across products, regions, and employees."
+  },
+  {
+    "objectID": "projects/chocolate_sales.html#tools",
+    "href": "projects/chocolate_sales.html#tools",
+    "title": "Chocolate Sales",
+    "section": "Tools",
+    "text": "Tools\n, , , , , Random Forrest Regressor"
+  },
+  {
+    "objectID": "projects/chocolate_sales.html#analysis",
+    "href": "projects/chocolate_sales.html#analysis",
+    "title": "Chocolate Sales",
+    "section": "Analysis",
+    "text": "Analysis\nDashboard\nOpen the notebook"
+  },
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nAnalysis of chocolate sales\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting and storing weather data from APIs.\nRead more"
+  },
+  {
+    "objectID": "portfolio.html#featured-projects",
+    "href": "portfolio.html#featured-projects",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "Forecasting warehouse sales using feature engineering and LightGBM.\nRead more\n\n\n\nPredicting house prices using an advanced linear regression approach.\nRead more\n\n\n\nAnalysis of chocolate sales\nRead more\n\n\n\nStatistical analysis and probability exercises using Python.\nRead more\n\n\n\nWeb application for managing inventory.\nRead more\n\n\n\nAutomated pipeline for collecting and storing weather data from APIs.\nRead more"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "I am a data analytics graduate passionate about turning data into useful insights. I work with Python, SQL, machine learning, and visualization, and I enjoy building practical projects that solve real problems.\nEmail: l.macakova.sk@gmail.com"
+  },
+  {
+    "objectID": "projects/about_pipeline.html",
+    "href": "projects/about_pipeline.html",
+    "title": "Weather Data Pipeline",
+    "section": "",
+    "text": "Photo: Frank Cone - pexels"
+  },
+  {
+    "objectID": "projects/about_pipeline.html#overview",
+    "href": "projects/about_pipeline.html#overview",
+    "title": "Weather Data Pipeline",
+    "section": "Overview",
+    "text": "Overview\nThis project automates the collection of weather data and stores it in a repository.\nIt uses Bash scripting and GitHub Actions to schedule and run the pipeline, ensuring that weather observations are downloaded, timestamped, and saved automatically."
+  },
+  {
+    "objectID": "projects/about_pipeline.html#tools",
+    "href": "projects/about_pipeline.html#tools",
+    "title": "Weather Data Pipeline",
+    "section": "Tools",
+    "text": "Tools\n, , , , , GitHub Actions"
+  },
+  {
+    "objectID": "projects/about_pipeline.html#more-about",
+    "href": "projects/about_pipeline.html#more-about",
+    "title": "Weather Data Pipeline",
+    "section": "More About:",
+    "text": "More About:\nGitHub Repository\n\nLatest commit"
+  },
+  {
+    "objectID": "projects/chocolate_sales/chocolate_sales_dashboard.html",
+    "href": "projects/chocolate_sales/chocolate_sales_dashboard.html",
+    "title": "Lucia Macakova",
+    "section": "",
+    "text": "Total Sales\n\n\n$19,791,572\n\n\n\n\n\n\n\n\n\n\n\n\nTotal Orders\n\n\n3,282\n\n\n\n\n\n\n\n\n\n\n\n\nSalesmen\n\n\n25\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAverage Order\n\n\n$6,030\n\n\n\n\n\n\n\n\n\n\n\n\nNumber of Countries\n\n\n6\n\n\n\n\n\n\n\n\n\n\n\n\nNumber of Products\n\n\n22\n\n\n\n\n\n\n\n\n\n\n                                                \n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n                                                \n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n                                                \n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n                                                \n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\nCountry\nSales ($)\nBoxes Shipped\nOrders\nAvg Order Value ($)\n\n\n\n\n1\nAustralia\n3646444.35\n99618\n615\n5929.18\n\n\n2\nUK\n3365388.90\n92523\n534\n6302.23\n\n\n3\nIndia\n3343730.83\n89968\n552\n6057.48\n\n\n4\nUSA\n3313858.09\n81820\n537\n6171.06\n\n\n5\nCanada\n3078495.65\n95158\n525\n5863.80\n\n\n6\nNew Zealand\n3043654.04\n81350\n519\n5864.46\n\n\n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\nProduct\nSales ($)\nBoxes Shipped\nOrders\nAvg Order Value ($)\n\n\n\n\n1\nEclairs\n996947.96\n26678\n180\n5538.60\n\n\n2\n50% Dark Bites\n1087659.35\n29810\n180\n6042.55\n\n\n3\nSmooth Silky Salty\n1120201.09\n26969\n177\n6328.82\n\n\n4\nWhite Choc\n1054257.00\n25158\n174\n6058.95\n\n\n5\nDrinking Choco\n822245.57\n26402\n168\n4894.32\n\n\n6\nSpicy Special Slims\n938131.69\n26662\n162\n5790.94\n\n\n7\nOrganic Choco Syrup\n945345.73\n23602\n156\n6059.91\n\n\n8\n85% Dark Bars\n955268.24\n23828\n150\n6368.45\n\n\n9\nAfter Nines\n837215.67\n25156\n150\n5581.44\n\n\n10\nFruit & Nut Bars\n829278.96\n23632\n150\n5528.53\n\n\n11\nPeanut Butter Cubes\n1036591.09\n25339\n147\n7051.64\n\n\n12\n99% Dark & Pure\n960033.45\n24818\n147\n6530.84\n\n\n13\nMilk Bars\n866273.62\n25436\n147\n5893.02\n\n\n14\nAlmond Choco\n890454.65\n20558\n144\n6183.71\n\n\n15\nRaspberry Choco\n845388.41\n21672\n144\n5870.75\n\n\n16\nOrange Choco\n824070.85\n23607\n141\n5844.47\n\n\n17\nManuka Honey Choco\n885208.03\n23736\n135\n6557.10\n\n\n18\nMint Chip Choco\n904989.55\n25149\n135\n6703.63\n\n\n19\nCaramel Stuffed Bars\n742516.15\n26576\n129\n5755.94\n\n\n20\n70% Dark Bites\n677346.22\n24524\n126\n5375.76\n\n\n21\nBaker's Choco Chips\n799085.67\n21448\n123\n6496.63\n\n\n22\nChoco Coated Almonds\n773062.91\n19677\n117\n6607.38\n\n\n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\nMetric\nValue\n\n\n\n\n1\nTop country by sales\nAustralia\n\n\n2\nTop product by sales\nSmooth Silky Salty\n\n\n3\nHighest revenue salesperson\nChes Bonnell\n\n\n4\nAverage order value\n$6,030\n\n\n5\nTotal shipment volume\n540,437 boxes"
+  },
+  {
+    "objectID": "projects/inventory_management_app.html",
+    "href": "projects/inventory_management_app.html",
+    "title": "Inventory Management App",
+    "section": "",
+    "text": "Photo: cottonbro studio - pexels"
+  },
+  {
+    "objectID": "projects/inventory_management_app.html#overview",
+    "href": "projects/inventory_management_app.html#overview",
+    "title": "Inventory Management App",
+    "section": "Overview",
+    "text": "Overview\nThe application provides the following functionality:\n\nadd new products\nupdate product information\nsearch products\ndelete products\nprint inventory records"
+  },
+  {
+    "objectID": "projects/inventory_management_app.html#tools",
+    "href": "projects/inventory_management_app.html#tools",
+    "title": "Inventory Management App",
+    "section": "Tools",
+    "text": "Tools\n, , , , ,"
+  },
+  {
+    "objectID": "projects/inventory_management_app.html#more-about",
+    "href": "projects/inventory_management_app.html#more-about",
+    "title": "Inventory Management App",
+    "section": "More About:",
+    "text": "More About:\nGithub Repository\n\nLive App"
+  },
+  {
+    "objectID": "projects/problems.html",
+    "href": "projects/problems.html",
+    "title": "A Bit of the Theory of Statistics",
+    "section": "",
+    "text": "Photo: Nothing Ahead - pexels"
+  },
+  {
+    "objectID": "projects/problems.html#task",
+    "href": "projects/problems.html#task",
+    "title": "A Bit of the Theory of Statistics",
+    "section": "Task",
+    "text": "Task\nThe project demonstrates several fundamental statistical concepts through simulation and hypothesis testing, including:\nCombinatorial probability, properties of the normal distribution, t-tests for comparing groups, Type I error in hypothesis testing, behavior of the binomial distribution."
+  },
+  {
+    "objectID": "projects/problems.html#tools",
+    "href": "projects/problems.html#tools",
+    "title": "A Bit of the Theory of Statistics",
+    "section": "Tools",
+    "text": "Tools\n, , , ,"
+  },
+  {
+    "objectID": "projects/problems.html#analysis",
+    "href": "projects/problems.html#analysis",
+    "title": "A Bit of the Theory of Statistics",
+    "section": "Analysis",
+    "text": "Analysis\nOpen the notebook"
+  },
+  {
+    "objectID": "weather_data_pipeline.html",
+    "href": "weather_data_pipeline.html",
+    "title": "weather_data_pipeline",
+    "section": "",
+    "text": "The latest committed JSON file from weather_data_pipeline/data/weather\n\n\nLoading latest weather data…"
   },
   {
     "objectID": "notebooks/docs/lite/notebooks/jupyter-lite.html",

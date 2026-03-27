@@ -1,7 +1,7 @@
 ---
 title: "Rohlik Sales Forecasting"
 date: 2025-09-25
-categories: [Python, Machine Learning, Forecasting]
+categories: [Machine Learning, Forecasting]
 image: "https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg"
 description: "Sales forecasting project using historical grocery warehouse data and LightGBM."
 ---
@@ -10,7 +10,7 @@ description: "Sales forecasting project using historical grocery warehouse data 
 
 *Photo: [Carlo Martin Alcordo](https://www.pexels.com/@carlo-martin-alcordo-1279322/) — Pexels*
 
-## Problem
+## About
 Forecast warehouse sales using historical sales data.
 
 ## Data
@@ -28,8 +28,5 @@ Time-based feature engineering and a gradient boosting model using LightGBM.
 ![](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn),
 `LightGBM`
 
-## Result
-A forecasting model that captures seasonal patterns and short-term sales trends to predict warehouse sales.
-
-## Full Analysis
-[Open the full notebook](../notebooks/rohlik_sales_prediction.html)
+## Analysis
+[Open the notebook](../notebooks/rohlik_sales_prediction.html)

@@ -1,7 +1,7 @@
 ---
 title: "Weather Data Pipeline"
 date: 2025-09-15
-categories: [Python, API, Automation]
+categories: [API, Automation]
 image: "https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg"
 description: An automated pipeline for collecting, storing, and version-controlling meteorological data using Bash and GitHub Actions.
 ---

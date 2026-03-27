@@ -1,7 +1,7 @@
 ---
 title: "House Price Prediction"
 date: 2026-02-04
-categories: [Python, Machine Learning, Pricing]
+categories: [Machine Learning, Pricing]
 image: "https://imagescdn.homes.com/i2/SKVfiu2zkYAVlBV4bA7WVLhlkFAf8HXy-LGAqGlBc78/116/northridge-heights-ames-ia.jpg"
 description: Predicting house prices using property features from the Ames Housing dataset.
 ---
@@ -31,8 +31,6 @@ A **Ridge regression model** was then used to predict house prices.
 ![](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn),
 `Ridge regression`
 
-## Result
-Built a predictive model that explains 92.5% of the variability in house prices.
 
-## Full Analysis
-[Open the full notebook](../notebooks/house_price_prediction.html)
+## Analysis
+[Open the notebook](../notebooks/house_price_prediction.html)

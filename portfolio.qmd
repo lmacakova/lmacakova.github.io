@@ -17,18 +17,20 @@ Predicting house prices using an advanced linear regression approach.
 [Read more](projects/house_price_prediction.qmd)
 :::
 
-::: {.g-col-4}
-### Iris Dataset Analysis
-Exploratory analysis and classification of the classic Iris dataset.
-
-[Read more](projects/iris_analysis.qmd)
-:::
 
 ::: {.g-col-4}
 ### Chocolate Sales
 Analysis of chocolate sales
 
-[Read more](projects/chocolate_sales/chocolate_sales.qmd)
+[Read more](projects/chocolate_sales.qmd)
+:::
+
+
+::: {.g-col-4}
+### A Bit of the Theory of Statistics
+Statistical analysis and probability exercises using Python.
+
+[Read more](projects/problems.qmd)
 :::
 
 

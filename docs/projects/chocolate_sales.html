@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-03-27">
+<meta name="description" content="Visual Analysis and forecasting project using historical data and Random Forest Regressor.">
 
 <title>Chocolate Sales – Lucia Macakova</title>
 <style>
@@ -23,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5d08aeac13616c70e52e80ac851b94f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5d08aeac13616c70e52e80ac851b94f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,17 +72,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Lucia Macakova</span>
     </a>
   </div>
@@ -91,11 +93,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../portfolio.html"> 
+    <a class="nav-link" href="../portfolio.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
 </ul>
@@ -113,23 +115,39 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Chocolate Sales</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Forecasting</div>
+    <div class="quarto-category">EDA</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Visual Analysis and forecasting project using historical data and Random Forest Regressor.
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 27, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -143,12 +161,20 @@ ul.task-list li input[type="checkbox"] {
 <p><em><a href="https://www.pexels.com/@pixabay">Pixabay</a> - pexels</em></p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Analysis of chocolate sales in 6 countries.</p>
+<p>Exploratory analysis of chocolate sales in 6 countries and prediction of chocolate sales for the next year with Random Forest Regressor model.</p>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>Data came from <a href="https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales">kaggle dataset</a>.</p>
-<p><a href="../../projects/chocolate_sales/chocolate_sales_dashboard.html">Dashboard</a></p>
+<p>Data came from <a href="https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales">this dataset</a>. The dataset represents a global chocolate company tracking sales performance across products, regions, and employees.</p>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p><img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white.png" class="img-fluid">, <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&amp;logoColor=white.png" class="img-fluid">, <img src="https://img.shields.io/badge/pandas-150458?logo=pandas.png" class="img-fluid">, <img src="https://img.shields.io/badge/Matplotlib-11557C.png" class="img-fluid">, <img src="https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn.png" class="img-fluid">, <code>Random Forrest Regressor</code></p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p><a href="../projects/chocolate_sales/chocolate_sales_dashboard.html">Dashboard</a><br>
+<a href="../notebooks/chocolate_sales_notebook.html">Open the notebook</a></p>
 
 
 </section>
