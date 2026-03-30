@@ -20,7 +20,7 @@ Predicting house prices using an advanced linear regression approach.
 
 ::: {.g-col-4}
 ### Chocolate Sales
-Analysis of chocolate sales
+Analysis of chocolate sales and prediction with Random Forest Regressor
 
 [Read more](projects/chocolate_sales.qmd)
 :::
@@ -35,11 +35,12 @@ Statistical analysis and probability exercises using Python.
 
 
 ::: {.g-col-4}
-### Inventory Management App
-Web application for managing inventory.
+### Iris Dataset Analysis
+Exploratory analysis and classification of the classic Iris dataset.
 
-[Read more](projects/inventory_management_app.qmd)
+[Read more](projects/iris_analysis.qmd)
 :::
+
 
 ::: {.g-col-4}
 ### Weather Data Pipeline
