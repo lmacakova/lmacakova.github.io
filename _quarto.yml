@@ -6,6 +6,7 @@ project:
     - "notebooks/*.ipynb"
 
 website:
+  google-analytics: G-KWHRVQXNLK
   title: "Lucia Macakova"
   navbar:
     left:
