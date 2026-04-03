@@ -33,4 +33,5 @@ A **Ridge regression model** was then used to predict house prices.
 
 
 ## Analysis
-[Open the notebook](../notebooks/house_price_prediction.html)
+[Open the notebook](../notebooks/house_price_prediction.html)\
+[Original Github Repository](https://github.com/lmacakova/house_price_prediction)

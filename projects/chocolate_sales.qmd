@@ -30,5 +30,6 @@ The dataset represents a global chocolate company tracking sales performance acr
 
 ## Analysis
 [Dashboard](chocolate_sales/chocolate_sales_dashboard.qmd)\
-[Open the notebook](../notebooks/chocolate_sales_notebook.html)
+[Open the notebook](../notebooks/chocolate_sales_notebook.html)\
+[Github Repository](https://github.com/lmacakova/chocolate_sales)
 

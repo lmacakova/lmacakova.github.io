@@ -40,4 +40,5 @@ Three classification models were applied:
 
 
 ## Analysis
-[Open the notebook](../notebooks/iris_analysis.html)
+[Open the notebook](../notebooks/iris_analysis.html)\
+[Original Github Repository](https://github.com/lmacakova/iris_project)

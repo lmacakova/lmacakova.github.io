@@ -29,4 +29,5 @@ Time-based feature engineering and a gradient boosting model using LightGBM.
 `LightGBM`
 
 ## Analysis
-[Open the notebook](../notebooks/rohlik_sales_prediction.html)
+[Open the notebook](../notebooks/rohlik_sales_prediction.html)\
+[Original Github Repository](https://github.com/lmacakova/rohlik_project)

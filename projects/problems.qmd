@@ -25,4 +25,5 @@ behavior of the binomial distribution.
 ![](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
 
 ## Analysis
-[Open the notebook](../notebooks/problems.html)
+[Open the notebook](../notebooks/problems.html)\
+[Original GitHub Repository](https://github.com/lmacakova/statistics)
