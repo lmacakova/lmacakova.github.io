@@ -171,7 +171,7 @@ gtag('config', 'G-KWHRVQXNLK', { 'anonymize_ip': true});
   <li><a href="#about-the-dataset" id="toc-about-the-dataset" class="nav-link active" data-scroll-target="#about-the-dataset">About the Dataset</a></li>
   <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
   <li><a href="#random-forest-regressor-model" id="toc-random-forest-regressor-model" class="nav-link" data-scroll-target="#random-forest-regressor-model">Random Forest Regressor Model</a></li>
-  <li><a href="#prediciton-for-the-year-2025" id="toc-prediciton-for-the-year-2025" class="nav-link" data-scroll-target="#prediciton-for-the-year-2025">Prediciton for the Year 2025</a>
+  <li><a href="#prediciton-for-year-2025" id="toc-prediciton-for-year-2025" class="nav-link" data-scroll-target="#prediciton-for-year-2025">Prediciton for Year 2025</a>
   <ul class="collapse">
   <li><a href="#end" id="toc-end" class="nav-link" data-scroll-target="#end">End</a></li>
   </ul></li>
@@ -203,8 +203,7 @@ gtag('config', 'G-KWHRVQXNLK', { 'anonymize_ip': true});
 <p><img src="https://images.pexels.com/photos/4113305/pexels-photo-4113305.jpeg" class="img-fluid" alt="various chocolate bars"> <sup>Author: Alleksana, pexels.com</sup></p>
 <section id="about-the-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="about-the-dataset">About the Dataset</h2>
-<p>The dataset used in this project contains transactional records of chocolate product sales across multiple countries and sales representatives.</p>
-<p>Each row in the dataset represents a single sales transaction, including information about the product sold, the salesperson responsible, the country of sale, the transaction date, and the associated revenue and quantity.</p>
+<p>This dataset contains transactional sales records covering multiple countries, products, and salespeople across a time period from roughly 2022 to 2024.</p>
 <div id="9c1eb7bd" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
@@ -345,7 +344,15 @@ Products: ['Mint Chip Choco' '85% Dark Bars' 'Peanut Butter Cubes'
 
 Range: 2022-01-03 00:00:00 - 2024-08-31 00:00:00
 Total Amount: 19791571.86
-Total Boxes Shipped: 540437</code></pre>
+Total Boxes Shipped: 540437
+
+Yearly Sales and Growth:
+          Amount  Growth %
+Year                      
+2022  6183625.00       NaN
+2023  6643377.96  7.435007
+2024  6964568.90  4.834753
+</code></pre>
 </div>
 </div>
 </section>
@@ -503,7 +510,7 @@ Total Boxes Shipped in 2024: 182019</code></pre>
 </div>
 </div>
 </div>
-<p>The charts represent product popularity based on sales volume, showing that demand is well distributed across products. Common winners across countries are Eclairs, Milk Bars, and Dark chocolate variants.</p>
+<p>The charts represent product popularity based on boxes shipped, showing that demand is well distributed across products. Common winners across countries are Eclairs, Milk Bars, and Dark chocolate variants.</p>
 <div id="3ef14449" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-display">
 <div>
@@ -731,8 +738,8 @@ Boxes Shipped MAE %: 14.85%</code></pre>
 </div>
 </section>
 </section>
-<section id="prediciton-for-the-year-2025" class="level2">
-<h2 class="anchored" data-anchor-id="prediciton-for-the-year-2025">Prediciton for the Year 2025</h2>
+<section id="prediciton-for-year-2025" class="level2">
+<h2 class="anchored" data-anchor-id="prediciton-for-year-2025">Prediciton for Year 2025</h2>
 <div id="fa710a74" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># training of model on all history</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -768,8 +775,8 @@ Boxes Shipped MAE %: 14.85%</code></pre>
 <span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>future_2025[<span class="st">"Predicted Amount"</span>] <span class="op">=</span> future_preds[:, <span class="dv">0</span>]</span>
 <span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>future_2025[<span class="st">"Predicted Boxes Shipped"</span>] <span class="op">=</span> future_preds[:, <span class="dv">1</span>]</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="co"># conservative growth rate around 4.8%</span></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>growth_rate <span class="op">=</span> <span class="fl">0.048</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="co"># average growth rate around 6.13 %</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>growth_rate <span class="op">=</span> <span class="fl">0.0613</span></span>
 <span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>future_2025[<span class="st">"Predicted Amount"</span>] <span class="op">=</span> future_2025[<span class="st">"Predicted Amount"</span>] <span class="op">*</span> (<span class="dv">1</span><span class="op">+</span>growth_rate)</span>
 <span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>future_2025[<span class="st">"Predicted Boxes Shipped"</span>] <span class="op">=</span> future_2025[<span class="st">"Predicted Boxes Shipped"</span>] <span class="op">*</span> (<span class="dv">1</span><span class="op">+</span> growth_rate)</span>
 <span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>future_2025<span class="op">=</span>future_2025.reset_index()</span>
@@ -807,8 +814,8 @@ Boxes Shipped MAE %: 14.85%</code></pre>
 <td>1</td>
 <td>2024-01</td>
 <td>1</td>
-<td>6496.683000</td>
-<td>215.11772</td>
+<td>6579.131362</td>
+<td>217.847744</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">1</th>
@@ -821,8 +828,8 @@ Boxes Shipped MAE %: 14.85%</code></pre>
 <td>8</td>
 <td>2024-08</td>
 <td>3</td>
-<td>9143.718570</td>
-<td>101.75032</td>
+<td>9259.760037</td>
+<td>103.041617</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2</th>
@@ -835,8 +842,8 @@ Boxes Shipped MAE %: 14.85%</code></pre>
 <td>7</td>
 <td>2024-07</td>
 <td>3</td>
-<td>5305.962168</td>
-<td>105.04104</td>
+<td>5373.299283</td>
+<td>106.374099</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">3</th>
@@ -849,8 +856,8 @@ Boxes Shipped MAE %: 14.85%</code></pre>
 <td>4</td>
 <td>2024-04</td>
 <td>2</td>
-<td>14254.663973</td>
-<td>325.49308</td>
+<td>14435.567628</td>
+<td>329.623860</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">4</th>
@@ -863,8 +870,8 @@ Boxes Shipped MAE %: 14.85%</code></pre>
 <td>2</td>
 <td>2024-02</td>
 <td>1</td>
-<td>14624.041791</td>
-<td>197.45892</td>
+<td>14809.633161</td>
+<td>199.964839</td>
 </tr>
 </tbody>
 </table>
@@ -897,9 +904,9 @@ Products: ['Mint Chip Choco' '85% Dark Bars' 'Peanut Butter Cubes'
 
 Range: 2025-01-03 00:00:00 - 2024-08-31 00:00:00
 
-Predicted Amount: 7166263.7
+Predicted Amount: 7257209.6
 
-Predicted Boxes Shipped: 190394.0
+Predicted Boxes Shipped: 192811.0
 
 &lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 1094 entries, 0 to 1093
@@ -922,7 +929,7 @@ memory usage: 94.1+ KB
 None</code></pre>
 </div>
 </div>
-<div id="9a14a31b" class="cell" data-execution_count="27">
+<div id="9a14a31b" class="cell" data-execution_count="29">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

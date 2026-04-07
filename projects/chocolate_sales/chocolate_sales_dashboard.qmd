@@ -59,6 +59,10 @@ yearly = (
       .sort_values("Year")
 )
 
+yearly["Growth %"] = yearly["Sales"].pct_change() * 100
+
+yearly_avg_growth = yearly["Growth %"].mean()
+
 total_sales = df["Amount"].sum()
 total_boxes = int(df["Boxes Shipped"].sum())
 total_orders = len(df)
@@ -68,6 +72,7 @@ num_persons = df["Sales Person"].nunique()
 num_products = df["Product"].nunique()
 top_country = country.iloc[0]["Country"]
 top_product = product.iloc[0]["Product"]
+
 ```
 
 ## Row  {height=150px}
@@ -107,11 +112,11 @@ dict (
 
 ```{python}
 #| content: valuebox
-#| title: "Average Order"
+#| title: "Average Yearly Growth"
 dict (
-    icon = "cash-coin",
+    icon = "bar-chart",
     color = "primary",
-    value = f"${avg_order:,.0f}"
+    value = f"{yearly_avg_growth:.2f}%"
 )
 ```
 
@@ -137,6 +142,23 @@ dict (
     color = "primary",
     value = f"{num_products}"
 )
+```
+
+## Row {height=300px}
+
+```{python}
+fig = go.Figure()
+fig.add_bar(x=yearly["Year"], y=yearly["Sales"], name="Sales")
+fig.add_scatter(x=yearly["Year"], y=yearly["Boxes"], name="Boxes", yaxis="y2", mode="lines+markers")
+fig.update_layout(
+    title="Yearly Sales and Shipment Volume",
+    xaxis_title="Year",
+    yaxis=dict(title="Sales ($)"),
+    yaxis2=dict(title="Boxes", overlaying="y", side="right"),
+    margin=dict(l=20, r=20, t=60, b=20)
+)
+fig.update_yaxes(tickformat="$,.0f")
+fig.show();
 ```
 
 ## Row {height=300px}
@@ -201,21 +223,6 @@ fig.show();
 
 ## Row {height=300px}
 
-```{python}
-fig = go.Figure()
-fig.add_bar(x=yearly["Year"], y=yearly["Sales"], name="Sales")
-fig.add_scatter(x=yearly["Year"], y=yearly["Boxes"], name="Boxes", yaxis="y2", mode="lines+markers")
-fig.update_layout(
-    title="Yearly Sales and Shipment Volume",
-    xaxis_title="Year",
-    yaxis=dict(title="Sales ($)"),
-    yaxis2=dict(title="Boxes", overlaying="y", side="right"),
-    margin=dict(l=20, r=20, t=60, b=20)
-)
-fig.update_yaxes(tickformat="$,.0f")
-fig.show();
-```
-## Row {height=300px}
 
 ```{python}
 
