@@ -35,18 +35,17 @@ Statistical analysis and probability exercises using Python.
 
 
 ::: {.g-col-4}
-### Iris Dataset Analysis
-Exploratory analysis and classification of the classic Iris dataset.
-
-[Read more](projects/iris_analysis.qmd)
-:::
-
-
-::: {.g-col-4}
 ### Weather Data Pipeline
 Automated pipeline for collecting and storing weather data from APIs.
 
 [Read more](projects/about_pipeline.qmd)
+:::
+
+::: {.g-col-4}
+### Inventory Management App
+Web application for managing inventory.
+
+[Read more](projects/inventory_management_app.qmd)
 :::
 
 :::
