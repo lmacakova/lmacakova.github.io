@@ -385,11 +385,11 @@
     "text": "Photo: cottonbro studio - pexels"
   },
   {
-    "objectID": "projects/inventory_management_app.html#overview",
-    "href": "projects/inventory_management_app.html#overview",
+    "objectID": "projects/inventory_management_app.html#features",
+    "href": "projects/inventory_management_app.html#features",
     "title": "Inventory Management App",
-    "section": "Overview",
-    "text": "Overview\nThe application provides the following functionality:\n\nadd new products\nupdate product information\nsearch products\ndelete products\nprint inventory records"
+    "section": "Features",
+    "text": "Features\n\nCreate, update, delete, and view products (CRUD operations)\nSearch functionality for filtering products\nBackend API built with Flask\nIntegration with MySQL database\nData access layer using DAO pattern"
   },
   {
     "objectID": "projects/inventory_management_app.html#tools",
@@ -399,11 +399,18 @@
     "text": "Tools\n, , , , ,"
   },
   {
+    "objectID": "projects/inventory_management_app.html#application",
+    "href": "projects/inventory_management_app.html#application",
+    "title": "Inventory Management App",
+    "section": "Application:",
+    "text": "Application:\nLink"
+  },
+  {
     "objectID": "projects/inventory_management_app.html#more-about",
     "href": "projects/inventory_management_app.html#more-about",
     "title": "Inventory Management App",
     "section": "More About:",
-    "text": "More About:\nGithub Repository\n\nLive App"
+    "text": "More About:\nGithub Repository"
   },
   {
     "objectID": "projects/problems.html",

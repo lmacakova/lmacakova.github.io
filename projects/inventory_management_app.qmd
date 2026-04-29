@@ -3,21 +3,23 @@ title: "Inventory Management App"
 date: 2025-09-02
 categories: [Python, Databases, API]
 image: "https://images.pexels.com/photos/3094041/pexels-photo-3094041.jpeg"
-description: A Flask-based web application for managing inventory with create, update, search, delete, and print functionality.
+description: Fullstack web application for managing inventory items that provides create, update, search, and delete functions, along with a print function. Made with Flask.
 ---
 
 ![](https://images.pexels.com/photos/3094041/pexels-photo-3094041.jpeg){fig-align="center" width=100%}
 *Photo: [cottonbro studio](https://www.pexels.com/@cottonbro) - pexels*
 
-## Overview
-The application provides the following functionality:
 
-- add new products
-- update product information
-- search products
-- delete products
-- print inventory records
+---
 
+## Features
+- Create, update, delete, and view products (CRUD operations)
+- Search functionality for filtering products
+- Backend API built with Flask
+- Integration with MySQL database
+- Data access layer using DAO pattern
+
+---
 
 ## Tools
 ![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white),
@@ -27,10 +29,12 @@ The application provides the following functionality:
 ![](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black),
 ![](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 
+---
 
-## More About:
-[Github Repository](https://github.com/lmacakova/inventory_management_app)
+## Application:
+[Link](https://luciamacakova.pythonanywhere.com)
 
 ---
 
-[Live App](https://luciamacakova.pythonanywhere.com)
+## More About:
+[Github Repository](https://github.com/lmacakova/inventory_management_app)
