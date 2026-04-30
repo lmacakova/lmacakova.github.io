@@ -27,7 +27,7 @@ Analysis of chocolate sales and prediction with Random Forest Regressor
 
 
 ::: {.g-col-4}
-### A Bit of the Theory of Statistics
+###  A Bit of the Theory of Statistics
 Statistical analysis and probability exercises using Python.
 
 [Read more](projects/problems.qmd)
