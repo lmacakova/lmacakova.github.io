@@ -8,7 +8,7 @@ This dashboard combines:\
 
 <iframe
     title="Chocolate Sales Dashboard"
-    width="100%"
+    width="90%"
     height="800"
     src="https://app.powerbi.com/reportEmbed?reportId=07f0075f-694b-4c68-ae13-6a4aa841430b&autoAuth=true&ctid=47855545-00bb-4800-a65f-e79104ec0fc4"
     frameborder="0"
