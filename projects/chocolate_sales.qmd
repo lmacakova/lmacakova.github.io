@@ -26,10 +26,10 @@ The dataset represents a global chocolate company tracking sales performance acr
 ![](https://img.shields.io/badge/pandas-150458?logo=pandas),
 ![](https://img.shields.io/badge/Matplotlib-11557C),
 ![](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn),
+![](https://img.shields.io/badge/Power%20BI-F2C811?logo=powerbi&logoColor=black)
 `Random Forrest Regressor`
 
 ## Analysis
 [Dashboard](chocolate_sales/chocolate_sales_dashboard.qmd)\
 [Open the notebook](../notebooks/chocolate_sales_notebook.html)\
 [Github Repository](https://github.com/lmacakova/chocolate_sales)
-
