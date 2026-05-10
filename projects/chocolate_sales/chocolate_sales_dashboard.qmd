@@ -4,7 +4,7 @@ This dashboard combines:\
 - historical chocolate sales analysis\
 - Forecasting
 
-<div style="width:100vw; margin-right: calc(1% - 1vw); margin-left: calc(1% - 1vw)">
+<div style="width:100vw; margin-right: calc(10% - 10vw); margin-left: calc(10% - 10vw)">
 
 <iframe
     title="Chocolate Sales Dashboard"
