@@ -13,7 +13,7 @@ page-layout: full
 
 I am a data analytics graduate passionate about turning data into useful insights. I work with Python, SQL, machine learning, and visualization, and I enjoy building practical projects that solve real problems.
 
-Email: l.macakova.sk@gmail.com
+Email: l.macakova@proton.me
 
 ![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
