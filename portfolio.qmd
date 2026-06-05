@@ -4,6 +4,22 @@
 ::: {.grid}
 
 ::: {.g-col-4}
+###  A Bit of the Theory of Statistics
+Statistical analysis and probability exercises using Python.
+
+[Read more](projects/problems.qmd)
+:::
+
+
+::: {.g-col-4}
+### Iris Dataset Analysis
+Exploratory analysis and classification of the classic Iris dataset.
+
+[Read more](projects/iris_analysis.qmd)
+:::
+
+
+::: {.g-col-4}
 ### Rohlik Sales Forecasting
 Forecasting warehouse sales using feature engineering and LightGBM.
 
@@ -23,14 +39,6 @@ Predicting house prices using an advanced linear regression approach.
 Analysis of chocolate sales and prediction with Random Forest Regressor
 
 [Read more](projects/chocolate_sales.qmd)
-:::
-
-
-::: {.g-col-4}
-###  A Bit of the Theory of Statistics
-Statistical analysis and probability exercises using Python.
-
-[Read more](projects/problems.qmd)
 :::
 
 
