@@ -25,6 +25,13 @@ Predicting house prices using an advanced linear regression approach.
 [Read more](projects/house_price_prediction.qmd)
 :::
 
+::: {.g-col-4}
+### Uber with SQL
+Exploratory analysis of a ride-sharing database using SQL and Python.
+
+[Read more](projects/uber_with_sql.qmd)
+:::
+
 
 ::: {.g-col-4}
 ### Chocolate Sales
@@ -55,6 +62,7 @@ Web application for managing inventory.
 
 [Read more](projects/inventory_management_app.qmd)
 :::
+
 
 :::
 

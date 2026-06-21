@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-06-20">
+<meta name="description" content="Exploratory analysis of a ride-sharing database using SQL and Python to investigate demand patterns, revenue performance, customer behavior, and operational efficiency.">
 
-<title>chocolate_sales_dashboard – Lucia Macakova</title>
+<title>Uber with SQL – Lucia Macakova</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-bc4db5c61264de318de50eae4a26e476.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bc4db5c61264de318de50eae4a26e476.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +81,7 @@ gtag('config', 'G-KWHRVQXNLK', { 'anonymize_ip': true});
 </script>
 
 
-<link rel="stylesheet" href="../../styles_fixed.css">
+<link rel="stylesheet" href="../styles_fixed.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -89,7 +91,7 @@ gtag('config', 'G-KWHRVQXNLK', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Lucia Macakova</span>
     </a>
   </div>
@@ -100,11 +102,11 @@ gtag('config', 'G-KWHRVQXNLK', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../portfolio.html"> 
+    <a class="nav-link" href="../portfolio.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
 </ul>
@@ -127,22 +129,78 @@ gtag('config', 'G-KWHRVQXNLK', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Uber with SQL</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">SQL</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Business Analysis</div>
+  </div>
+  </div>
 
-
-
-<section id="interactive-dashboard-of-chocolate-sales" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-dashboard-of-chocolate-sales">📊 Interactive Dashboard of Chocolate Sales</h2>
-<p>This dashboard combines:<br>
-- historical chocolate sales analysis<br>
-- Forecasting</p>
-<div style="width:100vw; margin-right: calc(10% - 10vw); margin-left: calc(10% - 10vw)">
-<iframe title="chocolate_sales_dashboard" width="90%" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiMDcwMThjNzItNDY5Mi00ODYxLTljODQtYTlhOGFkMTQ0NGZhIiwidCI6ImVmNTBjNjc4LTA2OTMtNDk4MC1hMGY4LWIzNTNlMmIwMjg4MyJ9" frameborder="0" allowfullscreen="true" style="border:none; border-radius:10px; display:block;">
-</iframe>
+<div>
+  <div class="description">
+    Exploratory analysis of a ride-sharing database using SQL and Python to investigate demand patterns, revenue performance, customer behavior, and operational efficiency.
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="https://images.pexels.com/photos/27639789/pexels-photo-27639789.jpeg" class="img-fluid" alt="Uber car"> <sup>Erik Mclean, pexels.com</sup></p>
+<section id="uber_with_sql" class="level1">
+<h1>uber_with_sql</h1>
+<p>Ride-sharing companies generate large volumes of operational data covering trips, drivers, riders, pricing, and cancellations. The objective of this project is to use SQL to explore an Uber-like transactional database and identify operational and financial insights that could help management improve service quality, driver performance, and revenue generation.</p>
+<p>The analysis focuses on trip activity, demand patterns, revenue performance, driver contribution, and cancellation behavior. All analyses were performed using SQL queries against a relational database, with key results visualized in Power BI.</p>
+<p>Data for this project are from from <a href="https://www.kaggle.com/datasets/rockyt07/uber-sql-database/code">Uber SQL database</a></p>
+<section id="goals" class="level2">
+<h2 class="anchored" data-anchor-id="goals">Goals:</h2>
+<ol type="1">
+<li>Researching data</li>
+<li>Checking for duplicity</li>
+<li>Finding key indicators:
+<ul>
+<li>KPI for Trips</li>
+<li>Revenue by city</li>
+<li>Top pick-up zones</li>
+<li>Demand hours</li>
+<li>Cancellation reasons</li>
+<li>Driver leaderboard by revenue</li>
+<li>Drivers revenue as rider value</li>
+</ul></li>
+</ol>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools:</h2>
+<p><img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white.png" class="img-fluid"> <img src="https://img.shields.io/badge/SQL-4479A1?logo=mysql&amp;logoColor=white.png" class="img-fluid"> <img src="https://img.shields.io/badge/Power%20BI-F2C811?logo=powerbi&amp;logoColor=black.png" class="img-fluid"></p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p><a href="../notebooks/uber_with_sql.html">Open the notebook</a><br>
+<a href="../projects/uber_with_sql_dashboard.html">Interactive dashboard</a><br>
+<a href="https://github.com/lmacakova/uber_with_sql">Original Github Repository</a></p>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->

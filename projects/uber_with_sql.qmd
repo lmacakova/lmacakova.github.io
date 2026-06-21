@@ -1,0 +1,39 @@
+---
+title: "Uber with SQL"
+date: 2026-06-20
+categories: [SQL, Python, Business Analysis]
+image: "https://images.pexels.com/photos/27639789/pexels-photo-27639789.jpeg"
+description: Exploratory analysis of a ride-sharing database using SQL and Python to investigate demand patterns, revenue performance, customer behavior, and operational efficiency.
+---
+
+![Uber car](https://images.pexels.com/photos/27639789/pexels-photo-27639789.jpeg)
+<sup>Erik Mclean, pexels.com</sup>
+
+# uber_with_sql
+Ride-sharing companies generate large volumes of operational data covering trips, drivers, riders, pricing, and cancellations. The objective of this project is to use SQL to explore an Uber-like transactional database and identify operational and financial insights that could help management improve service quality, driver performance, and revenue generation.
+
+The analysis focuses on trip activity, demand patterns, revenue performance, driver contribution, and cancellation behavior. All analyses were performed using SQL queries against a relational database, with key results visualized in Power BI.
+
+Data for  this project are from from [Uber SQL database](https://www.kaggle.com/datasets/rockyt07/uber-sql-database/code)
+
+## Goals:
+1.  Researching data
+2.  Checking for duplicity
+3.  Finding key indicators:
+    - KPI for Trips
+    - Revenue by city
+    - Top pick-up zones
+    - Demand hours
+    - Cancellation reasons
+    - Driver leaderboard by revenue
+    - Drivers revenue as rider value
+
+## Tools:
+![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![](https://img.shields.io/badge/SQL-4479A1?logo=mysql&logoColor=white)
+![](https://img.shields.io/badge/Power%20BI-F2C811?logo=powerbi&logoColor=black)
+
+## Analysis
+[Open the notebook](../notebooks/uber_with_sql.html)\
+[Interactive dashboard](uber_with_sql_dashboard.qmd)\
+[Original Github Repository](https://github.com/lmacakova/uber_with_sql)

@@ -1,0 +1,15 @@
+## 📊 Interactive Report
+
+
+<div style="width:100vw; margin-right: calc(10% - 10vw); margin-left: calc(10% - 10vw)">
+
+<iframe
+    title="chocolate_sales_dashboard"
+    width="90%"
+    height="800"
+    src="https://app.powerbi.com/view?r=eyJrIjoiOGI3M2ZiZDQtZjZkNi00MjUxLTg0ZjgtZGE4MWJjZTMzYmQ3IiwidCI6ImVmNTBjNjc4LTA2OTMtNDk4MC1hMGY4LWIzNTNlMmIwMjg4MyJ9"
+    frameborder="0"
+    allowfullscreen="true"
+    style="border:none; border-radius:10px; display:block;">
+</iframe>
+</div>
