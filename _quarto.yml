@@ -28,5 +28,5 @@ format:
     theme: superhero
     toc: false
     code-copy: true
-    css: styles_fixed.css
+    css: style.css
 
